@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="banner">
+    <swipers imgs="{{bannerList}}" height="350rpx" radius="20rpx" width="700rpx"></swipers>
+</view>
+<!--menu-->
+<view class="index_menu_box">
+    <view class="index_menu" wx:for="{{menuList}}" wx:for-item="item" data-index="{{index}}">
+        <image class="icon_menu" src="{{item.logo}}"></image>
+        <text class="text_menu">{{item.name}}</text>
+    </view>
+</view>
+<!--recycle-->
+<view>
+    <view class="index_menu_box">
+        <image src="../../static/images/huishoufenlei.png" class="recycle_image"></image>
+        <image src="../../static/images/huishoubangdan.png" class="recycle_image"></image>
+    </view>
+    <image src="../../static/images/recyclesm.png" class="recycle_image2"></image>
+</view>
+<!--recyclemoney-->
+<view>
+    <view class="green-gold-title">
+        <view class="vertical"></view>
+        <text class="">我的环保金</text>
+    </view>
+    <view  class="green-gold-login" >
+        <view class="green-gold-login-btn" >登录</view>
+    </view>
+    <view class="my-vertical ">
+        <view  class="my-vertical-box ">
+            <image class="my-vertical-img" src="../../static/images/home_icon_dingwei@2x.png"></image>
+        </view>
+        <view class="my-vertical-box">
+            <view class="segmentation"></view>
+        </view>
+        <view class="my-vertical-item ">
+            <view class="my-vertical-item-num ">10</view>
+            <view class="my-vertical-item-text ">环保金额</view>
+        </view>
+        <view class="my-vertical-item ">
+            <view class="my-vertical-item-num ">20</view>
+            <view class="my-vertical-item-text ">投递次数</view>
+        </view>
+    </view>
+    <view class="green-gold-location " wx:if="{{!showsub}}">
+        <text class="green-gold-location-title ">点击获取您的位置</text>
+        <view class="green-gold-location-content ">
+            <view bindtap="__e" class="green-gold-location-content-position " data-event-opts="{{[ [ 'tap',[ [ 'getPositon',[1] ] ] ] ]}}">获取定位</view>
+        </view>
+    </view>
+    <view class="ready-green-gold-location " wx:else>
+        <view class="ready-green-gold-location-top ">
+            <view bindtap="__e" class="ready-green-gold-location-top-left " data-event-opts="{{[ [ 'tap',[ [ 'getPositon',[1] ] ] ] ]}}">
+                <image class="" src="../../static/images/www.png"></image>
+                <view class="adress-text ">
+                    <view class="adress-text-1 ">{{address}}</view>
+                </view>
+            </view>
+            <view class="ready-green-gold-location-top-right ">
+                <image class="" src="../../static/images/gnegudo@2x.png"></image>
+            </view>
+        </view>
+        <view class="ready-green-gold-location-bottom ">
+            <button bindtap="__e" class="" data-event-opts="{{[ [ 'tap',[ [ 'toSubscribe',['$event'] ] ] ] ]}}">立即预约</button>
+        </view>
+    </view>
+
+</view>
+<!--information-->
+<view class="new-consult ">
+    <view  class="new-consult-title ">
+        <view class="new-consult-title-left ">
+            <view class="vertical "></view>
+            <text class="">最新资讯</text>
+        </view>
+        <view class="new-consult-title-right ">
+            <text class="new-consult-title-right-more ">更多</text>
+            <image class="" src="../../static/images/gnegudo@2x.png"></image>
+        </view>
+    </view>
+    <view class="new-consult-list ">
+<!--        <consult-list bind:__l="__l" class="" newList="{{newList}}" vueId="8dd740cc-1"></consult-list>-->
+    </view>
+</view>
+
+
+
+
+
+

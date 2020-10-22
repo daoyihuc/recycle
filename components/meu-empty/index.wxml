@@ -1,0 +1,9 @@
+<!--component/empty/index.wxml-->
+<view class="empty" hover-class="none" hover-stop-propagation="false">
+	<view class="meu-icon meu-icon-empty empty-icon" />
+	<view class="empty-lable" hover-class="none" hover-stop-propagation="false">
+		{{tips||'暂无数据~~'}}
+	</view>
+	<slot/>
+</view>
+

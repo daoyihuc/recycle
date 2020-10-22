@@ -1,0 +1,35 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.empty-img {
+    width: 160px;
+    height: 160px;
+}
+
+.empty-icon{
+    font-size:160rpx;
+}
+
+.empty-lable {
+    margin: 10px;
+    color: #999;
+}
+
+.pd-btn {
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.pd-btn-main {
+    color: #ff6633;
+    border: 1px solid #ff6633;
+}
+
+.br20{
+    border-radius: 20px;
+}

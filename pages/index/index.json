@@ -1,0 +1,12 @@
+
+{
+
+  "navigationBarTitleText": "首页",
+
+  "usingComponents": {
+    "navbar": "/components/navbar/index",
+    "swipers": "/components/meu-swiper/index"
+  }
+  
+  
+}
