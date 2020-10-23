@@ -5,19 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-keyword: "",
-                        scrollTop: 0,
-                        oldScrollTop: 0,
-                        con: [],
-                        current: 0,
-                        menuHeight: 0,
-                        menuItemHeight: 0,
-                        itemId: "",
-                        tabbar: c.default,
-                        menuItemPos: [],
-                        arr: [],
-                        scrollRightTop: 0,
-                        timer: null
+    keyword: "",
+      scrollTop: 0,
+      oldScrollTop: 0,
+      con: [],
+      current: 0,
+      menuHeight: 0,
+      menuItemHeight: 0,
+      itemId: "",
+      menuItemPos: [],
+      arr: [],
+      scrollRightTop: 0,
+      timer: null
   },
 
   /**

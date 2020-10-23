@@ -1,23 +1,23 @@
 <view class="u-wrap  ">
     <view class="u-search-box  ">
         <view class="u-search-inner  ">
-            <u-search bind:__l="__l" bind:input="__e"   data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','keyword','$event',[] ] ] ] ] ]}}" inputAlign="center" placeholder="搜索您想要的商品" shape="round" value="{{keyword}}" vueId="0b214f55-1"></u-search>
+
         </view>
     </view>
     <view class="u-menu-wrap  ">
         <scroll-view class="u-tab-view menu-scroll-view  " scrollIntoView="{{itemId}}" scrollTop="{{scrollTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
-            <view catchtap="__e" class="{{['u-tab-item  ',current==index?'u-tab-item-active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'swichMenu',[index] ] ] ] ]}}" wx:for="{{tabbar}}" wx:key="index">
+            <view  wx:for="{{tabbar}}" wx:key="index">
                 <text class="u-line-1  ">{{item.cate_name}}</text>
             </view>
         </scroll-view>
-        <scroll-view bindscroll="__e" class="right-box  " data-event-opts="{{[ [ 'scroll',[ [ 'rightScroll',['$event'] ] ] ] ]}}" scrollTop="{{scrollRightTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+        <scroll-view  scrollTop="{{scrollRightTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
             <view class="page-view  ">
                 <view class="class-item  " id="{{'item'+index}}" wx:for="{{tabbar}}" wx:key="index">
                     <view class="item-title  ">
                         <text  >{{item.cate_name}}</text>
                     </view>
                     <view class="item-container  ">
-                        <view bindtap="__e" class="thumb-box  " data-event-opts="{{[ [ 'tap',[ [ 'toShopList',['$0'],[ [ ['tabbar','',index],['child','',index1] ] ] ] ] ] ]}}" wx:for="{{item.child}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
+                        <view  wx:for="{{item.child}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
                             <image mode class="item-menu-image  " src="{{item1.pic}}"></image>
                             <view class="item-menu-name  ">{{item1.cate_name}}</view>
                         </view>

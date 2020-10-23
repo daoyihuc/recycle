@@ -54,11 +54,11 @@
 			"current": -1,
 			"list": []
 		},
-		"game": {
+		"plugin": {
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
+		"game": {
 			"current": -1,
 			"list": []
 		},
@@ -68,7 +68,28 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/goods-category/goods-category",
+					"pathName": "pages/goods-category/goods-category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/consult-details/consult-details",
+					"pathName": "pages/consult-details/consult-details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/subsidiary/subsidiary",
+					"pathName": "pages/subsidiary/subsidiary",
+					"scene": null
+				}
+			]
 		}
 	}
 }

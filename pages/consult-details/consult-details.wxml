@@ -8,7 +8,8 @@
         <!-- <jyf-parser bind:__l="__l" class="  vue-ref" data-ref="article" html="{{info.content}}" vueId="1e1a7e6b-1"></jyf-parser> -->
     </view>
     <view class="attention  ">
-        <view bindtap="__e" class="like  " data-event-opts="{{[ [ 'tap',[ [ 'attention',['$0'],['is_goods'] ] ] ] ]}}">
+        <view class="like  "
+             >
             <image mode   src="../../static/images/zan_nor@2x.png" wx:if="{{is_goods}}"></image>
             <image mode   src="../../static/images/zan_sel@2x.png" wx:else></image>
             <text  >{{goods}}</text>
@@ -22,7 +23,7 @@
                 <view class="message-item-msg-1  ">{{item.user_name}}</view>
                 <view class="message-item-msg-2  ">{{item.content}}</view>
             </view>
-            <view bindtap="__e"   data-event-opts="{{[ [ 'tap',[ [ 'commentgoods',['$0','$1'],[ [ ['conment','',index] ],[ ['conment','',index,'id'] ] ] ] ] ] ]}}">
+            <view >
                 <image mode class="message-item-img-2  " src="../../static/images/zan_nor@2x.png" wx:if="{{item.is_comment===true}}"></image>
                 <image mode class="message-item-img-2  " src="../../static/images/zan_sel@2x.png" wx:if="{{item.is_comment===false}}"></image>
             </view>

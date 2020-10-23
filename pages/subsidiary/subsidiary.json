@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "流水明细",
   "usingComponents": {
-    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+
   }
 }

@@ -6,12 +6,7 @@ Page({
    */
   data: {
     tabbarIndex: 1,
-    listout: [
-      { 'tip': 1, 'createtime': 1, 'memo': 1,'money':1},
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
-      { 'tip': 1, 'createtime': 1, 'memo': 1,'money':1}
-    ],
+    listout: '',
     listin: []
   },
 
@@ -20,26 +15,6 @@ Page({
    */
   onLoad: function () {
     this.getList(this.tabbarIndex);
-  },
-
-  getList: function (t) {
-    var n = this;
-    this.$api.basics.professional({
-      status: t
-    }).then(function (e) {
-      console.log(e), e.data.data.forEach(function (t) {
-        1 === t.money_type && (t.tip = "用户提现"), 2 === t.money_type && (t.tip = "商城消费"),
-          3 === t.money_type && (t.tip = "管理层支出"), 4 === t.money_type && (t.tip = "业务员支出"),
-          5 === t.money_type && (t.tip = "管理层收入"), 6 === t.money_type && (t.tip = "预约下单收入"),
-          7 === t.money_type && (t.tip = "邀请有礼"), 8 === t.money_type && (t.tip = "平台操作"),
-          9 === t.money_type && (t.tip = "商城退款");
-      }), 2 === t ? n.listout = e.data.data : n.listin = e.data.data;
-    }).catch(function (t) {
-      console.log(t);
-    });
-  },
-  change: function (t) {
-    this.tabbarIndex = t, this.getList(this.tabbarIndex);
   },
 
   /**
