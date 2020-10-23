@@ -169,9 +169,24 @@
 }
 .new-consult-title-left{
   display: flex;
+  align-items: center;
+  margin-left: 19rpx;
 }
 .new-consult-title-right{
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  margin-right: 19rpx;
+}
+.titleText{
+  font-size: 32rpx;
+}
+.new-consult-title-right-more{
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+.new-consult-title-right-image{
+  width: 18rpx;
+  height: 33rpx;
 }

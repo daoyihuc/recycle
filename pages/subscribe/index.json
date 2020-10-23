@@ -1,0 +1,13 @@
+{
+
+  "navigationBarBackgroundColor": "#fdca30",
+  "backgroundColorBottom": "#fdca30",
+  "backgroundColor": "#fdca30",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navbar": "/components/navbar/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-checkbox": "@vant/weapp/checkbox/index"
+  }
+}
+

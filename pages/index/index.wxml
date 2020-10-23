@@ -68,18 +68,18 @@
 </view>
 <!--information-->
 <view class="new-consult ">
-    <view  class="new-consult-title ">
+    <view  class="new-consult-title">
         <view class="new-consult-title-left ">
             <view class="vertical "></view>
-            <text class="">最新资讯</text>
+            <text class="titleText">最新资讯</text>
         </view>
         <view class="new-consult-title-right ">
             <text class="new-consult-title-right-more ">更多</text>
-            <image class="" src="../../static/images/gnegudo@2x.png"></image>
+            <image class="new-consult-title-right-image" src="../../static/images/gnegudo@2x.png"></image>
         </view>
     </view>
     <view class="new-consult-list ">
-<!--        <consult-list bind:__l="__l" class="" newList="{{newList}}" vueId="8dd740cc-1"></consult-list>-->
+        <consult-list  newList="{{listItem}}"></consult-list>
     </view>
 </view>
 
