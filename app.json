@@ -1,13 +1,16 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/consult/index",
+    "pages/subscribe/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#f8f8f8",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "onReachBottomDistance": 100
   },
   "tabBar": {
     "color": "#B0B0B0",
@@ -23,13 +26,13 @@
       {
         "iconPath": "/static/images/tabbar_icon_zixun_nor@2x.png",
         "selectedIconPath":"/static/images/tabbar_icon_zixun_sel@2x.png",
-        "pagePath":"pages/index/index",
+        "pagePath":"pages/consult/index",
         "text": "咨讯"
       },
       {
         "iconPath": "/static/images/tab_icon_yuyue.png",
         "selectedIconPath":"/static/images/tab_icon_yuyue.png",
-        "pagePath":"pages/index/index",
+        "pagePath":"pages/subscribe/index",
         "text": "预约"
       },
       {
@@ -47,6 +50,5 @@
 
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
