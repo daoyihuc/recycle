@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "资讯详情",
+  "usingComponents": {
+    "jyf-parser": "/components/jyf-parser/jyf-parser",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast",
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}

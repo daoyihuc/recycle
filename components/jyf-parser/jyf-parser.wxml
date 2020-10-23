@@ -1,0 +1,7 @@
+<view>
+    <slot wx:if="{{!nodes.length}}"></slot>
+    <view animation="{{scaleAm}}" bindtap="__e" bindtouchmove="__e" bindtouchstart="__e" data-event-opts="{{[ [ 'tap',[ [ '_tap',['$event'] ] ] ],[ 'touchstart',[ [ '_touchstart',['$event'] ] ] ],[ 'touchmove',[ [ '_touchmove',['$event'] ] ] ] ]}}" id="top" style="{{showAm+(selectable?';user-select:text;-webkit-user-select:text':'')}}">
+        <trees bind:__l="__l" lazyLoad="{{lazyLoad}}" nodes="{{nodes}}" vueId="6b79763c-1"></trees>
+        <image bindload="__e" data-event-opts="{{[ [ 'load',[ [ '_load',['$event'] ] ] ] ]}}" hidden="{{true}}" id="{{index}}" src="{{item}}" wx:for="{{imgs}}" wx:key="index"></image>
+    </view>
+</view>
