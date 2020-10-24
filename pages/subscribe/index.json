@@ -7,7 +7,12 @@
   "usingComponents": {
     "navbar": "/components/navbar/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-checkbox": "@vant/weapp/checkbox/index"
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-popup": "@vant/weapp/popup/index"
+
   }
 }
 

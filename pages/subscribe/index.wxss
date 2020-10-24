@@ -69,3 +69,21 @@
     font-size: 36rpx;
     color: #fff;
 }
+.location_image{
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    margin: 40px auto;
+    animation-name: changeSize-data-v-aaf8c6b4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes changeSize-data-v-aaf8c6b4 {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+
+    100% {
+        transform: scale3d(1.2,1.2,1.2);
+    }
+}

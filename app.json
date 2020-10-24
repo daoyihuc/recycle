@@ -51,5 +51,13 @@
       }
     ]
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    },
+    "scope.userInfo": {
+      "desc": "申请获取你的头像,姓名用作公开信息"
+    }
+  },
   "sitemapLocation": "sitemap.json"
 }
