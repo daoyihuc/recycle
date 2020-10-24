@@ -6,17 +6,31 @@ Page({
    */
   data: {
     tabbarIndex: 1,
-    listout: '',
-    listin: []
+    listout: [
+      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
+      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
+      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
+      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 }
+
+    ],
+    listin: [
+      { 'tip': 1, 'createtime': 1, 'memo': 1,'money':1}
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    this.getList(this.tabbarIndex);
+    
   },
-
+  liclick:function(e){
+    let z = e.currentTarget.dataset.index;
+    console.log(z);
+    this.setData({
+      tabbarIndex:z
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
