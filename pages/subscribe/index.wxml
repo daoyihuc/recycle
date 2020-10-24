@@ -17,10 +17,13 @@
         <text class="tips">{{'回收小于10公斤暂不保证上门回收'}}</text>
     </view>
     <view class="seleted_box">
-        <van-cell title="单元格" is-link value="内容"  />
+        <van-cell title="预约日期选择" is-link value="{{date===''?'请选择日期':date}}" bind:click="opencalendar" />
     </view>
     <view class="seleted_box">
-        <van-cell title="单元格" is-link value="内容"  />
+        <van-cell title="预约时间选择" is-link value="{{currentDate===''?'请选择时间':currentDate}}"  bind:click="openTime"/>
+    </view>
+    <view class="seleted_box">
+        <van-cell title="回收地址" is-link value="请选择地址"  />
     </view>
     <view class="seleted_box ">
         <view class="protocolbox">
@@ -32,6 +35,40 @@
     </view>
 
 
-    <view bindtap="" class="submit ">立即预约</view>
+    <view  class="submit " bindtap="">立即预约</view>
 </view>
+<van-dialog
+        use-slot
+        title="打开定位查看街区回收信息"
+        show="{{ show }}"
+        confirmButtonText="开始定位"
+        confirm-button-open-type="openLocation"
+        bind:close="onClose"
+        bindtap="openLocation"
+        confirm-button-color="#fdca30"
+>
+    <image src="../../static/images/openp.png"
+           mode="true"
+           class="location_image"
+           role="img"/>
+</van-dialog>
+
+<van-calendar show="{{ showcalendar }}"
+              bind:close="onCloseClaendar"
+              bind:confirm="onConfirm" />
+
+<van-popup
+        show="{{ showtime }}"
+        position="bottom"
+        custom-style="height: 40%;"
+>
+    <van-datetime-picker
+            type="time"
+            value="{{ currentDate }}"
+            formatter="{{ formatter }}"
+            bind:input="onInput"
+            bind:confirm="onCloseTime"
+            bind:cancel="onCloseTime"
+    ></van-datetime-picker>
+</van-popup>
 
