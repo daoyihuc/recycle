@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "trees": "/components/jyf-parser/libs/trees",
+        "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+    }
+}

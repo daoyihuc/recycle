@@ -1,0 +1,29 @@
+<view class="u-wrap  ">
+    <view class="u-search-box  ">
+        <view class="u-search-inner  ">
+
+        </view>
+    </view>
+    <view class="u-menu-wrap  ">
+        <scroll-view class="u-tab-view menu-scroll-view  " scrollIntoView="{{itemId}}" scrollTop="{{scrollTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+            <view  wx:for="{{tabbar}}" wx:key="index">
+                <text class="u-line-1  ">{{item.cate_name}}</text>
+            </view>
+        </scroll-view>
+        <scroll-view  scrollTop="{{scrollRightTop}}" scrollWithAnimation="{{true}}" scrollY="{{true}}">
+            <view class="page-view  ">
+                <view class="class-item  " id="{{'item'+index}}" wx:for="{{tabbar}}" wx:key="index">
+                    <view class="item-title  ">
+                        <text  >{{item.cate_name}}</text>
+                    </view>
+                    <view class="item-container  ">
+                        <view  wx:for="{{item.child}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">
+                            <image mode class="item-menu-image  " src="{{item1.pic}}"></image>
+                            <view class="item-menu-name  ">{{item1.cate_name}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

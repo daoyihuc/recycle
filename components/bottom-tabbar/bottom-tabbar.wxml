@@ -1,0 +1,22 @@
+<view class="bottom-tabbar  ">
+    <view bindtap="__e" class="bottom-tabbar-item  " data-event-opts="{{[ [ 'tap',[ [ 'toIndex',['$event'] ] ] ] ]}}">
+        <image   src="{{$root.m0}}"></image>
+        <text class="{{[ currentpage=='pages/index/index'?'click-color':'no-click-color']}}">首页</text>
+    </view>
+    <view bindtap="__e" class="bottom-tabbar-item  " data-event-opts="{{[ [ 'tap',[ [ 'toConsult',['$event'] ] ] ] ]}}">
+        <image   src="{{$root.m1}}"></image>
+        <text class="{{[ currentpage=='pages/consult/index'?'click-color':'no-click-color']}}">资讯</text>
+    </view>
+    <view bindtap="__e" class="bottom-tabbar-item  " data-event-opts="{{[ [ 'tap',[ [ 'toSubscribe',['$event'] ] ] ] ]}}">
+        <image class="bottom-tabbar-item-center-img  " src="../../static/images/tab_icon_yuyue.png"></image>
+        <text class="{{['bottom-tabbar-item-center-text  ',currentpage=='pages/subscribe/index'?'click-color':'no-click-color']}}">预约</text>
+    </view>
+    <view bindtap="__e" class="bottom-tabbar-item  " data-event-opts="{{[ [ 'tap',[ [ 'toShop',['$event'] ] ] ] ]}}">
+        <image  src="{{$root.m2}}"></image>
+        <text class="{{[ currentpage=='pages/shop/index'?'click-color':'no-click-color']}}">商城</text>
+    </view>
+    <view bindtap="__e" class="bottom-tabbar-item  " data-event-opts="{{[ [ 'tap',[ [ 'toMy',['$event'] ] ] ] ]}}">
+        <image   src="{{$root.m3}}"></image>
+        <text class="{{[ currentpage=='pages/my/index'?'click-color':'no-click-color']}}">我的</text>
+    </view>
+</view>
