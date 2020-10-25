@@ -1,0 +1,18 @@
+<view class="tab-top  ">
+    <view   class="layout  ">
+        <view   class="{{['tab-top-text  ',tabarIndex==1?'btn-color':'']}}" >默认</view>
+        <view class="{{['bottom-color  ',tabarIndex==1?'btn-bg':'']}}"></view>
+    </view>
+    <view   class="{{['layout  ',tabarIndex==2?'btn-color':'']}}" >
+        <view   class="{{['tab-top-text  ',tabarIndex==2?'btn-color':'']}}" >销量</view>
+        <view class="{{['bottom-color  ',tabarIndex==2?'btn-bg':'']}}"></view>
+    </view>
+    <view   class="{{['layout  ',tabarIndex==3?'btn-color':'']}}" >
+        <view class="layout-top  ">
+            <view class="{{['tab-top-text  ',tabarIndex==3?'btn-color':'']}}">价格</view>
+            <image class="banner-img  " hidden="{{!cutSort}}" src="../../static/images/shangsheng2@2x.png"></image>
+            <image class="banner-img  " hidden="{{!!cutSort}}" src="../../static/images/shangsheng1@2x.png"></image>
+        </view>
+        <view class="{{['bottom-color  ',tabarIndex==3?'btn-bg':'']}}"></view>
+    </view>
+</view>

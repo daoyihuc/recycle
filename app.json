@@ -19,7 +19,10 @@
     "pages/shop-add-ad/shop-add-ad",
     "pages/edit-address/edit-address",
     "pages/goods-details/goods-details",
-    "pages/refund/refund"
+    "pages/refund/refund",
+    "pages/chooseAdress/chooseAdress",
+    "pages/shop-list-two/shop-list-two",
+    "pages/golive/golive"
   ],
   "window": {
     "backgroundTextStyle": "light",

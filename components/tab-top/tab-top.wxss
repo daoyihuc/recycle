@@ -1,0 +1,46 @@
+.tab-top  {
+    display: flex;
+}
+
+.tab-top .btn-color  {
+    color: #fdca30;
+}
+
+.tab-top .btn-bg  {
+    background: #fdca30;
+}
+
+.tab-top .layout  {
+    width: 33.33%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 28rpx 0;
+}
+
+.tab-top .layout .tab-top-text  {
+    font-size: 32rpx;
+}
+
+.tab-top .layout .bottom-color  {
+    width: 30rpx;
+    height: 6rpx;
+    margin-top: 12rpx;
+}
+
+.tab-top .layout .layout-top  {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.tab-top .layout .layout-top image  {
+    width: 19rpx;
+    height: 18rpx;
+    margin-left: 5rpx;
+}

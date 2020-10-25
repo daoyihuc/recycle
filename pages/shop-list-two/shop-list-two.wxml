@@ -1,0 +1,4 @@
+<view>
+    <tab-top attr="{{attr}}"  value="{{goodlist}}" vueId="1279b516-1"></tab-top>
+    <goods-card  goodlist="{{goodlist}}" vueId="1279b516-2"></goods-card>
+</view>
