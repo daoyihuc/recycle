@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#fcba03",
+  "navigationBarTitleText": "浼氬憳鏅嬪崌",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index",
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}

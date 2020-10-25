@@ -1,0 +1,17 @@
+<view class="add-address  ">
+    <view class="item  ">
+        <u-field   disabled="true" label="回收地址" placeholder="点击获取定位地址" value="{{formData.ad_content}}" vueId="562876c0-1"></u-field>
+        <u-tag    class="tag  "  text="获取地址" type="info" vueId="562876c0-2"></u-tag>
+    </view>
+    <view class="item  ">
+        <u-picker   mode="region" params="{{pcaRanges}}" value="{{shows.a}}" vueId="562876c0-3"></u-picker>
+        <u-field  bind:focus="__e"     label="省市区" placeholder="点击选择" value="{{pca}}" vueId="562876c0-4"></u-field>
+        <u-tag    class="tag  " text="选择地区" type="info" vueId="562876c0-5"></u-tag>
+    </view>
+    <view class="item  ">
+        <u-picker   mode="selector" range="{{streetRanges}}" rangeKey="name" value="{{shows.b}}" vueId="562876c0-6"></u-picker>
+        <u-field   label="街道" placeholder="点击选择" value="{{formData.street}}" vueId="562876c0-7"></u-field>
+        <u-tag    class="tag  "  text="选择街区" type="info" vueId="562876c0-8"></u-tag>
+    </view>
+    <view bindtap="__e" class="submit  ">确定</view>
+</view>

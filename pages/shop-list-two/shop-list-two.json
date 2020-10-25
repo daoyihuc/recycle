@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tab-top": "/components/tab-top/tab-top",
+  
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}
