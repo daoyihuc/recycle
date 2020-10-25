@@ -6,7 +6,20 @@
     "pages/subscribe/index",
     "pages/subsidiary/subsidiary",
     "pages/consult-details/consult-details",
-    "pages/goods-category/goods-category"
+    "pages/goods-category/goods-category",
+    "pages/poster/poster",
+    "pages/rank/rank",
+    "pages/go-recycle/go-recycle",
+    "pages/subscribe-order-details/subscribe-order-details",
+    "pages/admin/admin",
+    "pages/admin-details/admin-details",
+    "pages/admin-center/admin-center",
+    "pages/admin-login/admin-login",
+    "pages/shop-ad/shop-ad",
+    "pages/shop-add-ad/shop-add-ad",
+    "pages/edit-address/edit-address",
+    "pages/goods-details/goods-details",
+    "pages/refund/refund"
   ],
   "window": {
     "backgroundTextStyle": "light",

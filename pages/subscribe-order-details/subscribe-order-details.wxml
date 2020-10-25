@@ -1,0 +1,56 @@
+<view  >
+    <view class="status  ">
+        <view class="title  ">{{info._status}}</view>
+        <view class="con  ">
+            <view  >
+                <text  >订单编号:</text>
+                <text  >{{info.order_sn}}</text>
+            </view>
+            <view  >
+                <text  >下单时间:</text>
+                <text  >{{info.createtime}}</text>
+            </view>
+            <view  >
+                <text  >联系电话:</text>
+                <text  >{{info.collector_phone}}</text>
+            </view>
+            <view class="address  ">
+                <text  >上门地址:</text>
+                <text  >{{info.address_detail}}</text>
+            </view>
+            <view  >
+                <text  >回收员:</text>
+                <text  >{{info.collector}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="describe  ">
+        <view class="title  ">
+            <text  ></text>回收物资描述</view>
+        <view class="item  " wx:for="{{attr}}" wx:key="index">
+            <text  >{{item.name}}</text>
+            <text  >{{'回收单价:'+item.atr.price+'元'}}</text>
+        </view>
+        <view class="item  ">
+            <text  ></text>
+            <text  >总计回收:<text class="color  ">{{info.all_weight+'KG'}}</text>
+            </text>
+        </view>
+        <view class="item  ">
+            <text  ></text>
+            <text  >总计费用:<text class="color  ">{{info.all_price+'元'}}</text>
+            </text>
+        </view>
+        <view class="item  ">
+            <text  ></text>
+            <text  >支付方式:<text class="color  ">{{info.payname}}</text>
+            </text>
+        </view>
+    </view>
+    <view bindtap="showPopup" class="btn  " >申请投诉</view>
+    <u-modal  show="{{ show }}" bind:close="onClose">
+        <view class="slot-content  " style="text-align:center;padding:50rpx;">
+            <textarea  class="textContent" maxlength="60" placeholder="请输入投诉原因(最多60字)" value="{{cantext}}" wx:if="{{mode}}"></textarea>
+        </view>
+    </u-modal>
+</view>

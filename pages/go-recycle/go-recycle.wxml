@@ -1,0 +1,53 @@
+<view class="mainbox ">
+    <view class="card ">
+        <u-avatar    round
+  width="4rem"
+  height="4rem"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
+        <view class="info ">
+            <text  >{{info.address_detail}}</text>
+            <text  >{{info.order_sn}}</text>
+            <text  >{{info.estimated_weight+'(预估重量)'}}</text>
+            <text  >预约时间:<text  >{{info.appointment_time}}</text>
+            </text>
+        </view>
+    </view>
+    <view class="navBar">
+        <u-tabs activeColor="rgb(252,186,3)"   current="{{current}}"  isScroll="{{false}}" list="{{tabs}}" ></u-tabs>
+    </view>
+    <view class="main " hidden="{{!(current===index)}}" wx:for="{{dems}}" wx:key="index">
+        <view class="item " wx:if="{{item.length!==0}}" wx:for="{{item}}" wx:for-index="idx" wx:for-item="it" wx:key="id">
+            <text  >{{it.name}}</text>
+            <view class="sum ">
+                <view class="num ">
+                    <text class="color underLine ">{{it.online_price==null?'0':it.online_price}}</text>/元</view>
+                <view class="num ">
+                    <text class="newW ">×</text>
+                </view>
+                <view class="num input ">
+                    <input placeholder="0" type="digit" value="{{it.num}}"></input>/公斤</view>
+                <view class="num ">
+                    <text class="newW ">=</text>
+                </view>
+                <view class="num color ">
+                    <text class="underLine ">{{it.sum}}</text>元</view>
+            </view>
+        </view>
+        <view class="none " wx:if="{{item.length===0}}">暂无...</view>
+    </view>
+    <view class="count ">
+        <view bindtap="__e" class="payType ">
+            <text  >支付方式:</text>
+            <view class="payTypeText ">{{con}}<u-icon    name="arrow-right" size="28" vueId="2d404980-3"></u-icon>
+            </view>
+        </view>
+        <view class="payType ">
+            <text  ></text>
+            <text   style="padding-right:10rpx;">{{'汇总:'+' '+_all+'元'+''}}</text>
+        </view>
+    </view>
+    <view class="btn ">
+        <u-button style="width:100%;" block type="primary" vueSlots="{{['default']}}">提交</u-button>
+    </view>
+    <u-picker  mode="selector" range="{{pay}}" value="{{show}}"></u-picker>
+</view>

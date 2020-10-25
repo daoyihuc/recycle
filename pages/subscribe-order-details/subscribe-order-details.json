@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "u-modal": "@vant/weapp/popup/index",
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}

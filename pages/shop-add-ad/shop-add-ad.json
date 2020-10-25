@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "usingComponents": {
+    "u-picker": "@vant/weapp/picker/index",
+    "u-field": "@vant/weapp/field/index",
+    "u-tag": "@vant/weapp/tag/index",
+    "u-switch": "@vant/weapp/switch/index",
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}

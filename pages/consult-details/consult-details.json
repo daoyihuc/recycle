@@ -1,8 +1,6 @@
 {
   "navigationBarTitleText": "资讯详情",
   "usingComponents": {
-    "van-toast": "@vant/weapp/toast/index"
-    "jyf-parser": "/components/jyf-parser/jyf-parser",
     "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
   }
 }

@@ -1,0 +1,14 @@
+<view class="box">
+    <view class="item intro">
+        <text>退款说明</text>
+        <u-input autoHeight="false" border="true" borderColor="#dcdfe6"  height="110" type="textarea" value="{{intru}}" vueId="79737a00-1" width="600"></u-input>
+    </view>
+    <view class="upload-img">
+        <u-upload file-list="{{ fileList }}" deletable="{{ true }}" bind:after-read="afterRead">
+            
+        </u-upload>
+    </view>
+    <view class="btn">
+        <u-button  type="warning" block>申请退款</u-button>
+    </view>
+</view>

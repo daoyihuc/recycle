@@ -1,0 +1,61 @@
+<view class="box  ">
+    <u-modal showCancelButton="true" value="{{mode}}" >
+        <view class="slot-content  " style="text-align:center;padding:50rpx;">
+            <text class=" " wx:if="{{modeType!==0}}">{{modeCon[modeType]}}</text>
+            <textarea class="textContent  " maxlength="60" placeholder="请输入取消原因(最多60字)" value="{{cantext}}" wx:if="{{modeType===0}}"></textarea>
+        </view>
+    </u-modal>
+    <view class="top  ">
+        <van-tabs class="tabs  "  active="{{ active }}"   name="cate_name" >
+        <van-tab wx:for="{{list}}" title="123">{{item.cate_name}}</van-tab>
+        </van-tabs>
+    </view>
+    <scroll-view class="admincon  " scrollY="true" style="{{'height:'+height+'px;margin-top:'+h+'px;'}}">
+        <view class="item  " wx:for="{{orderlist}}" wx:for-index="__i0__" wx:key="id">
+            <view class="con  ">
+                <u-avatar    round
+  width="4rem"
+  height="4rem"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
+                <view class="conInfo  ">
+                    <text bindtap="__e" class="address  " >{{item.address_detail}}</text>
+                    <view bindtap="__e" class=" ">
+                        <text class=" ">{{'用户电话:'+item.mobile}}</text>
+                        <image mode class=" " src="../../static/images/iphone.png"></image>
+                    </view>
+                    <text class=" ">{{'回收员:'+name}}</text>
+                    <view bindtap="__e" class="color  ">订单详情<u-icon   class=" " name="arrow-right" ></u-icon>
+                    </view>
+                </view>
+                <text bindtap="__e" class=" "  wx:if="{{item.order_status===1&&item.pay_type!==2}}">称重</text>
+                <text class="stand  " wx:else></text>
+            </view>
+            <view class="bot  ">
+                <view class=" ">
+                    <image mode class=" " src="../../static/images/time8-6.png"></image>
+                    <view class=" ">
+                        <text class=" ">{{''+item.createtime+' 下单'}}</text>
+                        <text class=" ">预约状态:<text class=" " style="color:#000000;">{{item._status}}</text>
+                        </text>
+                    </view>
+                </view>
+                <text bindtap="__e"  wx:if="{{item.order_status===1&&item.pay_type!=2}}">取消订单</text>
+                <text class="colorfrag  " wx:if="{{item.order_status===9}}">已取消</text>
+                <text bindtap="__e"  wx:if="{{item.order_status===1&&item.pay_type===2&&item.pay_status===0}}">线下支付</text>
+                <text bindtap="__e" class=" "  wx:if="{{item.order_status===0}}">接单</text>
+            </view>
+        </view>
+        <view class=" " style="height:50px;"></view>
+    </scroll-view>
+    <cancelpop   class="  vue-ref" data-ref="can" ></cancelpop>
+    <view class="_tabbar  ">
+        <view class="img  ">
+            <image mode class=" " src="../../static/images/home861.png"></image>
+            <text class=" ">全部</text>
+        </view>
+        <view bindtap="__e" class="img  ">
+            <image mode class=" " src="../../static/images/page863.png"></image>
+            <text class=" ">预约中心</text>
+        </view>
+    </view>
+</view>

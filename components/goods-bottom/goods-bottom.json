@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}

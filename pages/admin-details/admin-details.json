@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "bottom-tabbar": "/components/bottom-tabbar/bottom-tabbar"
+  }
+}
