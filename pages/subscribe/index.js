@@ -1,4 +1,4 @@
-import Dialog from '@vant/weapp/dialog/dialog';
+
 import {getLocation, getSetting} from '../../utils/macutils'
 Page({
     data: {

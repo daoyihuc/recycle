@@ -1,4 +1,5 @@
 // pages/goods-category/goods-category.js
+import Toast from '@vant/weapp/toast/toast'
 Page({
 
   /**

@@ -1,0 +1,44 @@
+<view class="maxBox">
+    <van-tabs active="{{ '1' }}" bind:change="onChange">
+        <van-tab  wx:for="{{list}}" wx:for-item="item"  title="{{item.cate_name}}" wx:key="index">
+            <view class="">
+                <view class="item " wx:for="{{orderlist}}" wx:for-index="__i0__" wx:key="order_id">
+                    <view class="header ">
+                        <view class="headerLeft ">
+                            <image mode class="" src="../../static/images/allorder-icon-shop@2x.png"></image>
+                            <text class="">{{item.name}}</text>
+                        </view>
+                        <text class="">{{item._status}}</text>
+                    </view>
+                    <view class="main " wx:for="{{item.goods_list}}"
+                          wx:for-index="__i1__"
+                          wx:for-item="good"
+                          wx:key="goods_id">
+                        <image mode class="" src="{{good.goods_pic}}"></image>
+                        <view class="des ">
+                            <text class="">{{good.goods_name}}</text>
+                            <text class="">
+                                <text class="" wx:for="{{good.attr_list}}"
+                                      wx:for-index="__i2__" wx:for-item="attr"
+                                      wx:key="attr_id">{{attr.attr_name+' '}}</text>
+                            </text>
+                        </view>
+                        <view class="price ">
+                            <text class="">{{'￥'+good.price}}</text>
+                            <text class="">{{good.num}}</text>
+                        </view>
+                    </view>
+                    <view class="footer ">
+                        <text class=""></text>
+                        <view class="sum ">
+                            <view class="btns ">
+                                <text bindtap="__e" class=""  wx:if="{{item.tk}}">申请退款</text>
+                                <text bindtap="__e" class="" >查看详情</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </van-tab>
+    </van-tabs>
+</view>

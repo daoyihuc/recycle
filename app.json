@@ -6,6 +6,14 @@
     "pages/subscribe/index",
     "pages/subsidiary/subsidiary",
     "pages/consult-details/consult-details",
+    "pages/my/my",
+    "pages/invite/invite",
+    "pages/subscribe-order/subscribe-order",
+    "pages/login/login",
+    "pages/options/options",
+    "pages/withdrawal/withdrawal",
+    "pages/my-invite/my-invite",
+    "pages/my-order/my-order",
     "pages/goods-category/goods-category",
     "pages/poster/poster",
     "pages/rank/rank",
@@ -59,7 +67,7 @@
       {
         "iconPath": "/static/images/tabbar_icon_my_nor@2x.png",
         "selectedIconPath": "/static/images/tabbar_icon_my_sel@2x.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "text": "我的"
       }
     ]

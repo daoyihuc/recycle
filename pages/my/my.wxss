@@ -1,0 +1,108 @@
+.header{
+    height: 170rpx;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+.avt{
+    position: relative;
+}
+.head-portrait{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin: 0 25rpx;
+
+}
+.nickname{
+    font-size: 32rpx;
+}
+.edit-icon{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+
+}
+.goUp{
+    display: block;
+    margin-left: 200rpx;
+    height: 35rpx;
+    width: 150rpx;
+
+}
+/*我的环保金*/
+.my-en{
+    margin: 20rpx auto 0;
+    width: 710rpx;
+    padding-bottom: 30rpx;
+    background: #fff;
+    box-shadow: 0 0 10rpx hsla(0,0%,87.1%,.8);
+
+}
+.my-en-top{
+    width: 650rpx;
+    height: 85rpx;
+    line-height: 85rpx;
+    margin: 0 auto;
+    font-size: 28rpx;
+    border-bottom: 2rpx solid #f0eef4;
+
+}
+.my-en-bottom{
+    height: 210rpx;
+    display: flex;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+.my-en-bottom-item-1{
+    text-align: center;
+
+}
+.my-en-bottom-item-2{
+    width: 2rpx;
+    height: 80rpx;
+    background: #e5e5e5;
+
+}
+.my-en-bottom-item-3{
+
+}
+.btn-1{
+    width: 120rpx;
+    height: 40rpx;
+    border: 2rpx solid #fcba03;
+    line-height: 40rpx;
+    background: #fcba03;
+    text-align: center;
+    color: #fff;
+    font-size: 22rpx;
+    border-radius: 20rpx;
+
+}
+.btn-2{
+    border: 2rpx solid #666;
+    color: #222;
+    margin-top: 20rpx;
+    background: #fff;
+
+}
+.price{
+    font-size: 36rpx;
+
+}
+.text{
+    font-size: 22rpx;
+    color: #666;
+    margin-top: 20rpx;
+}
+.image_item{
+    width: 45rpx;
+    height: 45rpx;
+}
+.text_item{
+    font-size: 26rpx;
+    margin-top: 15rpx;
+}

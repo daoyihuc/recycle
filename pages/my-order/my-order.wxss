@@ -1,0 +1,134 @@
+page {
+    background: #f8f8f8;
+}
+
+.item {
+    width: 722rpx;
+    background: #fff;
+    box-shadow: 0rpx 0rpx 6rpx 0rpx rgba(64,64,64,.1);
+    border-radius: 10rpx;
+    margin: 0 auto 20rpx;
+    padding: 15rpx 20rpx;
+    box-sizing: border-box;
+    font-size: 27rpx;
+    color: #333;
+}
+
+.item .header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.item .header .headerLeft {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.item .header .headerLeft text {
+    margin: 0 8rpx;
+}
+
+.item .header .headerLeft image:nth-of-type(1) {
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.item .header .headerLeft image:nth-of-type(2) {
+    display: block;
+    width: 12rpx;
+    height: 20rpx;
+}
+
+.item .main {
+    display: flex;
+    margin-top: 11rpx;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    height: 136rpx;
+}
+
+.item .main image {
+    display: block;
+    width: 136rpx;
+    height: 136rpx;
+}
+
+.item .main .des {
+    width: 335rpx;
+}
+
+.item .main .des>text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.item .main .des text:nth-of-type(2) {
+    font-size: 25rpx;
+    color: #999;
+    line-height: 28rpx;
+}
+
+.item .main .price {
+    height: 100%;
+    padding-top: 45rpx;
+}
+
+.item .main .price text {
+    display: block;
+}
+
+.item .main .price text:nth-of-type(2) {
+    font-size: 26rpx;
+    color: #999;
+    line-height: 54rpx;
+    text-align: right;
+}
+
+.item .footer {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.item .footer .sum>text {
+    text-align: right;
+}
+
+.item .footer .sum text {
+    display: block;
+}
+
+.item .footer .sum .btns {
+    margin-top: 5rpx;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.item .footer .sum .btns text {
+    display: block;
+    padding: 5rpx 15rpx;
+    border: 2rpx solid;
+    font-size: 22rpx;
+    margin-left: 10rpx;
+    border: 1px solid #fcbc0a;
+}
+
+.textContent {
+    width: 65vw;
+    height: 200rpx;
+    margin: 0 auto;
+    text-align: left;
+}

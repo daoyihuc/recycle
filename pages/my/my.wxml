@@ -1,0 +1,70 @@
+<view class="header ">
+    <view class="avt ">
+        <image mode class="head-portrait " src="{{userInfo.avatar}}" wx:if="{{userInfo.avatar}}"></image>
+        <image mode class="head-portrait " src="../../static/images/ywy.png" wx:else></image>
+<!--        <image mode bindtap="__e" class="avt-img edit-icon " data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" src="{{level.img}}" style="border-radius:50%;"></image>-->
+    </view>
+    <view class="nickname ">
+        <text class="">{{userInfo.nickname}}</text>
+        <text class="">{{'ID:'+(userInfo.id||'')}}</text>
+    </view>
+    <image mode bindtap="__e" class="edit-icon "  src="../../static/images/bianji@2x.png"></image>
+    <image mode bindtap="__e" class="edit-icon "  src="../../static/images/sp8-3.png" style="display:none;"></image>
+    <image mode bindtap="__e" class="goUp "  src="../../static/images/vip18-3.png"></image>
+</view>
+
+<view class="my-en ">
+    <view class="my-en-top ">我的环保金</view>
+    <view class="my-en-bottom ">
+        <view class="my-en-bottom-item-1 ">
+            <view bindtap="__e" class="btn-1 " >提现</view>
+            <view bindtap="__e" class="btn-1 btn-2 " >明细</view>
+        </view>
+        <view class="my-en-bottom-item-2 "></view>
+        <view class="my-en-bottom-item-3 ">
+            <view class="price ">{{''+recycle_money+''}}</view>
+            <view class="text ">环保金额</view>
+        </view>
+        <view class="my-en-bottom-item-3 ">
+            <view class="price ">{{""+all_order}}</view>
+            <view class="text ">投递次数</view>
+        </view>
+    </view>
+</view>
+<view class="my-en ">
+    <view class="my-en-top ">回收预约</view>
+    <van-grid column-num="4" border="{{ true }}">
+        <van-grid-item use-slot wx:for="{{ subscribeList }}" wx:for-item="item">
+            <image
+                    class="image_item"
+                    src="{{item.imgUrl}}"
+            />
+            <text class="text_item">{{item.text}}</text>
+        </van-grid-item>
+    </van-grid>
+</view>
+
+<view class="my-en ">
+    <view class="my-en-top ">商城订单</view>
+    <van-grid column-num="4" border="{{ true }}">
+        <van-grid-item use-slot wx:for="{{ orderList }}" wx:for-item="item">
+            <image
+                    class="image_item"
+                    src="{{item.imgUrl}}"
+            />
+            <text class="text_item">{{item.text}}</text>
+        </van-grid-item>
+    </van-grid>
+</view>
+<view class="my-en ">
+    <view class="my-en-top ">常用工具</view>
+    <van-grid column-num="4" border="{{ true }}">
+        <van-grid-item use-slot wx:for="{{ toolList }}" wx:for-item="item">
+            <image
+                    class="image_item"
+                    src="{{item.imgUrl}}"
+            />
+            <text class="text_item">{{item.text}}</text>
+        </van-grid-item>
+    </van-grid>
+</view>

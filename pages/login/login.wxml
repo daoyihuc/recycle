@@ -1,0 +1,9 @@
+<view class="login ">
+    <view class="btn ">
+        <button bind:getuserinfo="getUserInfo"
+                class="btn-1 "
+                openType="getUserInfo"
+                type="success">微信登录</button>
+        <button class="btn-2 " bindtap="onback">取消</button>
+    </view>
+</view>

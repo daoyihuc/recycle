@@ -1,0 +1,54 @@
+.my-invite {
+
+}.top {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #fcba02;
+    color: #fff;
+    padding: 35rpx 0 40rpx;
+}
+
+.my-invite .top .num {
+    font-size: 48rpx;
+}
+
+.my-invite .top text {
+    font-size: 26rpx;
+}
+
+.my-invite .noData {
+    margin-top: 200rpx;
+}
+
+.my-invite .noData image {
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    height: 100rpx;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 10rpx 20rpx 0;
+    box-sizing: border-box;
+    border-top: 1rpx solid silver;
+}
+
+.item .itemleft {
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.item .itemleft>text {
+    margin-left: 10rpx;
+}

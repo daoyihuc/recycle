@@ -7,14 +7,14 @@ Page({
   data: {
     tabbarIndex: 1,
     listout: [
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 },
-      { 'tip': 1, 'createtime': 1, 'memo': 1, 'money': 1 }
+      { 'tip': '平台交易', 'createtime': '2020-09-24', 'memo': "da", 'money': 10.00 },
+      { 'tip': '平台交易', 'createtime': '2020-09-24', 'memo': "da", 'money': 10.00 },
+      { 'tip': '平台交易', 'createtime': '2020-09-24', 'memo': "da", 'money': 10.00 },
+      { 'tip': '平台交易', 'createtime': '2020-09-24', 'memo': "da", 'money': 10.00 }
 
     ],
     listin: [
-      { 'tip': 1, 'createtime': 1, 'memo': 1,'money':1}
+      { 'tip': '平台交易', 'createtime': '2020-09-24', 'memo': "da",'money':10.00}
     ]
   },
 
