@@ -1,0 +1,207 @@
+.popuTop {
+    width: 540rpx;
+    height: 160rpx;
+    background: #f5c33b;
+    opacity: .9;
+    line-height: 160rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.popuCon {
+    height: 400rpx;
+    background-color: #fff;
+}
+
+.popuCon .img {
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.popuCon .img image {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    animation-name: changeSize;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.popuCon .open {
+    width: 360rpx;
+    height: 66rpx;
+    background: #f5c33b;
+    border-radius: 33rpx;
+    text-align: center;
+    line-height: 66rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin: 20rpx auto 100rpx;
+}
+
+@-webkit-keyframes changeSize {
+    0% {
+        width: 100rpx;
+        height: 100rpx;
+    }
+
+    100% {
+        width: 200rpx;
+        height: 200rpx;
+    }
+}
+
+@keyframes changeSize {
+    0% {
+        width: 100rpx;
+        height: 100rpx;
+    }
+
+    100% {
+        width: 200rpx;
+        height: 200rpx;
+    }
+}
+
+.shop .content {
+    padding: 0 20rpx 150rpx 20rpx;
+}
+
+.shop .content .search {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 30rpx;
+}
+
+.shop .content .search .search-text {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.shop .content .search .search-class {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-right: 30rpx;
+}
+
+.shop .content .search .search-class image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.shop .content .search .search-class text {
+    font-size: 22rpx;
+    margin-top: 5rpx;
+}
+
+.shop .my-banner {
+    margin-top: 20rpx;
+}
+
+.shop .notice {
+    box-shadow: 0 0 20rpx hsla(0,0%,87.1%,.5);
+}
+
+.shop .classify {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.shop .classify .classify-item {
+    width: 25%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 50rpx;
+}
+
+.shop .classify .classify-item image {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 50%;
+}
+
+.shop .classify .classify-item text {
+    font-size: 26rpx;
+    margin-top: 20rpx;
+}
+
+.shop .recommend {
+    margin-top: 40rpx;
+}
+
+.shop .recommend .recommend-title {
+    font-size: 32rpx;
+}
+
+.shop .recommend .recommend-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.shop .recommend .recommend-content .recommend-content-item {
+    width: 48%;
+    height: 520rpx;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    box-shadow: 0 0 10rpx hsla(0,0%,87.1%,.5);
+    margin-top: 20rpx;
+    border-radius: 6rpx;
+}
+
+.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 20rpx 0 10rpx 20rpx;
+}
+
+.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 image {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 text {
+    font-size: 36rpx;
+    color: #fcba03;
+    margin-left: 20rpx;
+}
+
+.shop .recommend .recommend-content .recommend-content-item>image {
+    width: 100%;
+    height: 345rpx;
+}
+
+.shop .recommend .recommend-content .recommend-content-item>text {
+    font-size: 26rpx;
+    margin-top: 15rpx;
+    margin-left: 20rpx;
+}
+
+.shop .top-img {
+    width: 100%;
+    height: 100%;
+}

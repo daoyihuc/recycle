@@ -34,7 +34,7 @@
 <view class="my-en ">
     <view class="my-en-top ">回收预约</view>
     <van-grid column-num="4" border="{{ true }}">
-        <van-grid-item use-slot wx:for="{{ subscribeList }}" wx:for-item="item">
+        <van-grid-item use-slot wx:for="{{ subscribeList }}" wx:for-item="item" bind:click="onClick" data-menuid="{{item.menuId}}">
             <image
                     class="image_item"
                     src="{{item.imgUrl}}"
@@ -47,7 +47,7 @@
 <view class="my-en ">
     <view class="my-en-top ">商城订单</view>
     <van-grid column-num="4" border="{{ true }}">
-        <van-grid-item use-slot wx:for="{{ orderList }}" wx:for-item="item">
+        <van-grid-item use-slot wx:for="{{ orderList }}" wx:for-item="item" bind:click="onClick" data-menuid="{{item.menuId}}">
             <image
                     class="image_item"
                     src="{{item.imgUrl}}"
@@ -59,7 +59,7 @@
 <view class="my-en ">
     <view class="my-en-top ">常用工具</view>
     <van-grid column-num="4" border="{{ true }}">
-        <van-grid-item use-slot wx:for="{{ toolList }}" wx:for-item="item">
+        <van-grid-item use-slot wx:for="{{ toolList }}" wx:for-item="item" bind:click="onClick" data-menuid="{{item.menuId}}">
             <image
                     class="image_item"
                     src="{{item.imgUrl}}"

@@ -19,7 +19,7 @@ page {
     align-items: center;
 }
 
-.header .info .avatar {
+ .avatar {
     margin: 0 35rpx;
 }
 

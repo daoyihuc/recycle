@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/consult/index",
+    "pages/consult/index", 
     "pages/subscribe/index",
     "pages/subsidiary/subsidiary",
     "pages/consult-details/consult-details",
@@ -30,7 +30,13 @@
     "pages/refund/refund",
     "pages/chooseAdress/chooseAdress",
     "pages/shop-list-two/shop-list-two",
-    "pages/golive/golive"
+    "pages/golive/golive",
+    "pages/my-info/index",
+    "pages/address/address",
+    "pages/add-address/add-address",
+    "pages/recycle-guide/recycle-guide",
+    "pages/recycle-classify/recycle-classify",
+    "pages/shop/shop"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -64,7 +70,7 @@
       {
         "iconPath": "/static/images/tabbar_icon_shagncheng_nor@2x.png",
         "selectedIconPath": "/static/images/tabbar_icon_shagncheng_sel@2x.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/shop/shop",
         "text": "商城"
       },
       {

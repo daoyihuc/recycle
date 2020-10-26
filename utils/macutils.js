@@ -31,5 +31,10 @@ export function getLocation() {
             }
         })
     })
-
+}
+ // 路由跳转
+export function goRouter(url) {
+     wx.navigateTo({
+        url: url
+    })
 }

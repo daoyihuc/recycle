@@ -90,15 +90,17 @@ Page({
         return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
     },
     onConfirm(event) {
+        console.log(event);
         this.setData({
             showcalendar: false,
             date: this.formatDate(event.detail),
         });
     },
     // 时间选择
-    onInput(event) {
+    onConfirm_Time(event) {
         this.setData({
             currentDate: event.detail,
+            showtime: false
         });
     },
     // 打开时间

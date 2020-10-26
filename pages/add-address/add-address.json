@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "新增地址",
+  "usingComponents": {
+    "u-picker": "@vant/weapp/picker/index",
+    "u-field": "@vant/weapp/field/index",
+    "u-tag": "@vant/weapp/tag/index",
+    "u-switch": "@vant/weapp/switch/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
+  }
+}

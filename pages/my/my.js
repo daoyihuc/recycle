@@ -1,3 +1,5 @@
+import {goRouter} from '../../utils/macutils'
+
 Page({
     data: {
         subscribeList: [
@@ -85,5 +87,30 @@ Page({
     },
     onLoad: function (options) {
 
+    },
+    onClick:function(event){
+        console.log(event.target.dataset.menuid);
+        let url;
+        switch (event.target.dataset.menuid) {
+            case 1.1: // yuyeu all
+                url="/pages/subscribe-order/subscribe-order?tabarIndex=all";
+                break;
+            case 1.2:
+                url="/pages/subscribe-order/subscribe-order?tabarIndex=0";
+                break;
+            case 2.1:
+                url="/pages/my-order/my-order?tabarIndex=0";
+                break;
+            case 2.2:
+                url="/pages/my-order/my-order?tabarIndex=0";
+                break;
+            case 2.3:
+                url="/pages/my-order/my-order?tabarIndex=0";
+                break;
+            case 3:
+                url="/pages/rank/rank";
+                break;
+        }
+        goRouter(url);
     }
 });
