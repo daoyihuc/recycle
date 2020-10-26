@@ -1,7 +1,19 @@
 <view>
-    <view class="login">
-        <u-field left-icon="contact" iconStyle="{text-align:center}" placeholder="请填写用户账号" value="{{form.account}}" ></u-field>
-        <u-field  left-icon="contact" password="true" placeholder="请填写用户密码" value="{{form.password}}"></u-field>
-        <u-button  type="primary" block vueSlots="{{['default']}}">登录</u-button>
-    </view>
+	<view class="login">
+		<u-field
+		 left-icon="contact"
+		 iconStyle="{text-align:center}"
+		 placeholder="请填写用户账号"
+		 maxlength="16"
+		 value="{{form.account}}"
+		/>
+		<u-field
+		 left-icon="lock"
+		 password="true"
+		 placeholder="请填写用户密码"
+		 value="{{form.password}}"
+		/>
+		<u-button color="#fdca30" block vueSlots="{{['default']}}">登录</u-button>
+	</view>
 </view>
+

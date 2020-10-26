@@ -66,8 +66,8 @@
             type="time"
             value="{{ currentDate }}"
             formatter="{{ formatter }}"
-            bind:input="onInput"
-            bind:confirm="onCloseTime"
+
+            bind:confirm="onConfirm_Time"
             bind:cancel="onCloseTime"
     ></van-datetime-picker>
 </van-popup>
