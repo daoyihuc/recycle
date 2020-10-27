@@ -109,6 +109,12 @@ Page({
             case 3: // 回收榜单
                 url = "/pages/rank/rank";
                 break;
+            case 4: // 回收分类
+                url = "/pages/recycle-classify/recycle-classify"
+                break
+            case 5: // 回收指南
+                url = "/pages/recycle-guide/recycle-guide"
+                break
             case 6: // 邀请有礼
                 url = "/pages/invite/invite";
                 break

@@ -37,14 +37,19 @@
 				<text class="">{{item.name}}</text>
 			</view>
 		</view>
-		<view class="recommend " wx:for="{{shopList}}" wx:key="index">
+		<view
+		 class="recommend "
+		 wx:for="{{shopList}}"
+		 wx:key="index"
+		 wx:for-item="item"
+		>
 			<view class="">
-				<text class="recommend-title">{{item}}</text>
+				<text class="recommend-title">{{item.name}}</text>
 			</view>
 			<view class="recommend-content">
 				<view
 				 class="recommend-content-item "
-				 wx:for="{{recommendList[index]}}"
+				 wx:for="{{item.recommendList}}"
 				 wx:for-index="index2"
 				 wx:for-item="item2"
 				 wx:key="index2"

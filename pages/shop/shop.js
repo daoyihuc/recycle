@@ -7,6 +7,7 @@ Page({
     onLoad: function (options) {
         this.addBanner();
         this.addClassFylist();
+        this,this.addListcommodity();
     },
     addBanner: function () {
         const banner = [];
@@ -29,15 +30,25 @@ Page({
         });
     },
     addListcommodity: function () {
-        const b = {
-            name: "生活家居",
-            recommendList: [],
-        };
-        const c = {
-                image: "",
-                price: "",
-                name: ""
-            };
+        const shop=[];
+        for(let i=0;i<3;i++){
+             const b = {
+                 name: "生活家居",
+                 recommendList: [],
+             };
+             for(let j=0;j<7;j++){
+                 const c = {
+                     image: "../../static/images/recycle3.png",
+                     price: "85.00",
+                     name: "test"
+                 };
+                 b.recommendList.push(c);
+             }
+             shop.push(b);
+        }
+        this.setData({
+            shopList: shop
+        });
             
     }
 });

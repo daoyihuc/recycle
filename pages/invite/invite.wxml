@@ -1,13 +1,14 @@
-<view class="invite" style="{{'background-image:'+'url('+bac_img+')'+';'}}">
-    <view class="invite-code-login" wx:if="{{isShow}}">
-        <image mode class="" src="../../static/images/unlogin.png"></image>
-        <view bindtap="__e" class="green-gold-login-btn" >去登录</view>
-    </view>
-    <view class="invite-code-login" wx:else>
-        <image mode class="" src="{{qrCode}}"></image>
-        <view class="poster">
-            <button class="green-gold-login-btn left" openType="share">微信分享</button>
-            <view bindtap="__e" class="green-gold-login-btn right">生成海报</view>
-        </view>
-    </view>
+<view class="invite" >
+	<view class="invite-code-login" wx:if="{{isShow}}">
+		<image mode class="" src="../../static/images/unlogin.png" />
+		<view class="green-gold-login-btn">去登录</view>
+	</view>
+	<view class="invite-code-login" wx:else>
+		<image mode class="" src="{{qrCode}}" />
+		<view class="poster">
+			<button class="green-gold-login-btn left" openType="share">微信分享</button>
+			<view class="green-gold-login-btn right">生成海报</view>
+		</view>
+	</view>
 </view>
+
