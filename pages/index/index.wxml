@@ -33,12 +33,12 @@
 		<view class="vertical" />
 		<text class="">我的环保金</text>
 	</view>
-	<view class="green-gold-login">
-		<view class="green-gold-login-btn">登录</view>
+	<view class="green-gold-login" wx:if="{{!isLogin}}">
+		<view class="green-gold-login-btn" bindtap="goLogin">登录</view>
 	</view>
-	<view class="my-vertical ">
-		<view class="my-vertical-box ">
-			<image class="my-vertical-img" src="../../static/images/home_icon_dingwei@2x.png" />
+	<view class="my-vertical" wx:else>
+		<view class="my-vertical-box" >
+			<image class="my-vertical-img" src="{{avatarUrl}}" />
 		</view>
 		<view class="my-vertical-box">
 			<view class="segmentation" />

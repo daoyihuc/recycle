@@ -1,4 +1,5 @@
 import {
+    getUserinfo,
     goRouter
 } from '../../utils/macutils'
 
@@ -82,10 +83,16 @@ Page({
             imgUrl: "../../static/images/ywy.png",
             text: "管理员端",
             menuId: 14
-        }]
+        }],
+        avatar: "",
+        isLogin: false,
+        nickname: ""
     },
     onLoad: function (options) {
 
+    },
+    onShow() {
+        this.isLogin();
     },
     onClick: function (event) {
         console.log(event.target.dataset.menuid);
@@ -146,5 +153,31 @@ Page({
 
         }
         goRouter(url);
+    },
+    // 判断当前是否已经登录
+    isLogin:function () {
+        let storageSync = wx.getStorageSync('islogin');
+        console.log("是否登录",storageSync===null);
+        if(storageSync){
+            this.getUserinfo();
+            this.setData({
+                isLogin:storageSync
+            })
+        }
+    },
+    // 获取用户信息
+    getUserinfo(){
+        getUserinfo().then(res =>{
+            console.log("userinfo",res);
+            let pic=res.avatarUrl;
+            let name=res.nickName;
+            wx.setStorageSync("pic",pic);
+            wx.setStorageSync("name",name);
+            this.setData({
+                avatar: pic,
+                nickname: name
+            });
+
+        });
     }
 });

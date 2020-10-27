@@ -1,5 +1,5 @@
 
-import {getLocation, getSetting} from '../../utils/macutils'
+import {getLocation, getSetting,goRouter} from '../../utils/macutils'
 Page({
     data: {
         currentSel: "",
@@ -108,6 +108,10 @@ Page({
         this.setData({
             showtime: true,
         });
+    },
+    //  选择地址
+    selectAddress:function(){
+        goRouter('/pages/address/address')
     }
 
 });

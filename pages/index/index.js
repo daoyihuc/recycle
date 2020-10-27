@@ -1,69 +1,113 @@
 //index.js
 //获取应用实例
+import {getUserinfo, goRouter, toast} from "../../utils/macutils";
 
 const app = getApp()
 
 Page({
-  data: {
+    data: {
         bannerList: [],// banner
         menuList: [],//菜单
-        listItem:[]
-  },
-  onLoad: function () {
-    this.addBanner();
-    this.addMenu();
-    this.listItem();
-  },
-  addBanner: function () {
-    const banner = [];
-    banner.push("../../static/images/testbanner.png");
-    this.setData({
-      bannerList: banner
-    });
-  },
-  addMenu: function () {
-    const menuLists = [];
-    const a=[
-        "../../static/images/yaoqing_daoyi.png",
-        "../../static/images/dingdanyuyue_daoyi.png",
-        "../../static/images/huanbaodaoyi.png",
-        "../../static/images/huishoudaoyi.png"
-    ];
-    const b=[
-        "邀请有礼",
-        "预约订单",
-        "环保商城",
-        "回收指南"
-    ];
-    for(let i=0;i<a.length;i++){
-      const menu = {
-      }
-      menu.logo=a[i];
-      menu.name=b[i];
-      menuLists.push(menu);
-    }
+        listItem: [],
+        isLogin: false,
+        avatarUrl: "",
+
+    },
+    onLoad: function () {
+        this.addBanner();
+        this.addMenu();
+        this.listItem();
+        this.isLogin();
+        console.log('daoyi',"onload")
+    },
+    onReady() {
+        console.log('daoyi',"onready")
+        this.isLogin();
+    },
+    onShow() {
+        this.isLogin();
+        console.log('daoyi',"onshow")
+    },
+    addBanner: function () {
+        const banner = [];
+        banner.push("../../static/images/testbanner.png");
+        this.setData({
+            bannerList: banner
+        });
+    },
+    addMenu: function () {
+        const menuLists = [];
+        const a = [
+            "../../static/images/yaoqing_daoyi.png",
+            "../../static/images/dingdanyuyue_daoyi.png",
+            "../../static/images/huanbaodaoyi.png",
+            "../../static/images/huishoudaoyi.png"
+        ];
+        const b = [
+            "邀请有礼",
+            "预约订单",
+            "环保商城",
+            "回收指南"
+        ];
+        for (let i = 0; i < a.length; i++) {
+            const menu = {}
+            menu.logo = a[i];
+            menu.name = b[i];
+            menuLists.push(menu);
+        }
 
 
-    this.setData({
-      menuList: menuLists
-    })
-  },
+        this.setData({
+            menuList: menuLists
+        })
+    },
     // 测试
-    listItem:function (){
-      const test = {
-          image:"https://cs17.appios.cn/uploads/20200731/3d5cf83e0deee46995454e0976d845df.jpg",
-          name:"端午节|“粽”于等到你",
-          desc:"端午安康！来康康粽叶垃圾分类小科普吧",
-          read:"222",
-          comment:"54",
-          createtime:"2020/07/14"
-      }
-      const  list=[];
-      list.push(test);
-      this.setData({
-          listItem: list
-      })
+    listItem: function () {
+        const test = {
+            image: "https://cs17.appios.cn/uploads/20200731/3d5cf83e0deee46995454e0976d845df.jpg",
+            name: "端午节|“粽”于等到你",
+            desc: "端午安康！来康康粽叶垃圾分类小科普吧",
+            read: "222",
+            comment: "54",
+            createtime: "2020/07/14"
+        }
+        const list = [];
+        list.push(test);
+        this.setData({
+            listItem: list
+        })
         console.log(list);
+    },
+
+    // 登录
+    goLogin: function () {
+        goRouter("/pages/login/login")
+    },
+    // 判断当前是否已经登录
+    isLogin:function () {
+        let storageSync = wx.getStorageSync('islogin');
+        console.log("是否登录",storageSync===null);
+        if(storageSync){
+            this.getUserinfo();
+         this.setData({
+             isLogin:storageSync
+         })
+        }
+    },
+    // 获取用户信息
+    getUserinfo(){
+        getUserinfo().then(res =>{
+            console.log("userinfo",res);
+            let pic=res.avatarUrl;
+            let name=res.nickName;
+            wx.setStorageSync("pic",pic);
+            wx.setStorageSync("name",name);
+            this.setData({
+                avatarUrl: pic,
+
+            });
+
+        });
     }
 
 

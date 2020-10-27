@@ -1,9 +1,8 @@
 <view class="login ">
 	<view class="btn ">
 		<button
-		 bind:getuserinfo="getUserInfo"
+		 bind:tap="login"
 		 class="btn-1 "
-		 openType="getUserInfo"
 		 type="success"
 		>微信登录
 		</button>

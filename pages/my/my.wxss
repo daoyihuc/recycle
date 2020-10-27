@@ -17,6 +17,11 @@
 }
 .nickname{
     font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin-bottom: 15rpx;
 }
 .edit-icon{
     width: 40rpx;

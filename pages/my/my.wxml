@@ -3,8 +3,8 @@
 		<image
 		 mode
 		 class="head-portrait "
-		 src="{{userInfo.avatar}}"
-		 wx:if="{{userInfo.avatar}}"
+		 src="{{avatar}}"
+		 wx:if="{{avatar}}"
 		/>
 		<image
 		 mode
@@ -15,7 +15,7 @@
 		<!--        <image mode bindtap="__e" class="avt-img edit-icon " data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" src="{{level.img}}" style="border-radius:50%;"></image>-->
 	</view>
 	<view class="nickname ">
-		<text class="">{{userInfo.nickname}}</text>
+		<text class="title">{{nickname}}</text>
 		<text class="">{{'ID:'+(userInfo.id||'')}}</text>
 	</view>
 	<image mode class="edit-icon " src="../../static/images/bianji@2x.png" />

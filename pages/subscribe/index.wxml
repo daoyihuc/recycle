@@ -23,7 +23,7 @@
         <van-cell title="预约时间选择" is-link value="{{currentDate===''?'请选择时间':currentDate}}"  bind:click="openTime"/>
     </view>
     <view class="seleted_box">
-        <van-cell title="回收地址" is-link value="请选择地址"  />
+        <van-cell title="回收地址" is-link value="请选择地址"  bindtap="selectAddress"/>
     </view>
     <view class="seleted_box ">
         <view class="protocolbox">

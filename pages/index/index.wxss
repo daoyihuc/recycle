@@ -89,6 +89,7 @@
 }
 .my-vertical{
   display: flex;
+  margin-top: 30rpx;
 }
 .my-vertical-box{
   width: 25%;
