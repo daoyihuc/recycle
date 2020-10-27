@@ -3,7 +3,7 @@
     height: 100vh;
     background-size: cover;
     position: relative;
-    background-image: url(data:image/png;base64,VCdweSsd98iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAYAAABgrToAAAAAAXNSR0IArs4c6QAAAHlJREFUWAnt2LEJwDAMRFE5c2ShLOKhsp69h3ISeAI1CnyBiJvA8dwcHu7+mNmrvbWdZivMHAq4dOgW7kDt65y6fiPg1AZnt8kr7haKPAgggAACfxOIskCbKdwabaaAlw0rmhaDAAIIIIBAQYA2U8CLX2kzFcB8m);
+
 }
 .invite-code-login{
     display: flex;

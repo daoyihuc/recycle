@@ -16,7 +16,7 @@ Page({
   },
   addBanner: function () {
     const banner = [];
-    banner.push("http://ptadmin.ccshpt.com///uploads/20200827/9dca86afc214a6d2aa5859252300a826.png");
+    banner.push("../../static/images/testbanner.png");
     this.setData({
       bannerList: banner
     });

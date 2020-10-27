@@ -1,4 +1,4 @@
-<view class="invite" >
+<view class="invite" style="{{'background-image:'+'url('+bac_img+')'+';'}}">
 	<view class="invite-code-login" wx:if="{{isShow}}">
 		<image mode class="" src="../../static/images/unlogin.png" />
 		<view class="green-gold-login-btn">去登录</view>
