@@ -61,9 +61,7 @@ Page({
                     title: "网络请求失败"
                 })
             }
-            // console.log(res.code);4164564646456
-
-
+            // console.log(res.code);4164564646456dadadda
 
         })
     }
