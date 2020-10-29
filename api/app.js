@@ -38,5 +38,43 @@ export function Index(params) {
         'content-type':'application/json'
     });
 }
+// 资讯详情
+export function NewDetail(params) {
+    return request({
+        url: API.NewDetail,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+// 预约界面信息展示接口
+export function AppointmentShow(params) {
+    return request({
+        url: API.AppointmentShow,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+// 添加地址接口
+export function AddAddress(params) {
+    return request({
+        url: API.AddAddress,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+
+// 地址列表
+export function AddressList(params) {
+    return request({
+        url: API.AddressList,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+
 
 

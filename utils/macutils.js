@@ -97,8 +97,18 @@ export function back(number) {
     })
 }
 // toast 提示
-export function toast(value) {
+export function toast(value,number) {
+    let icons='success';
+    switch (number) {
+        case 0:
+            icons="success";
+            break
+        case 1:
+            icons="none";
+            break
+    }
     wx.showToast({
-        title: value
+        title: value,
+        icon: icons
     });
 }

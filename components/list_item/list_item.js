@@ -12,7 +12,7 @@ Component({
             // });
             let name = envent.currentTarget.dataset.name;
             wx.navigateTo({
-                url: "/pages/consult-details/consult-details?id"+name
+                url: "/pages/consult-details/consult-details?id="+name
             })
             console.log(envent)
         }

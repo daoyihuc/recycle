@@ -12,7 +12,7 @@
                   data-count="{{index}}"
                   wx:for="{{weightList}}"
                   wx:for-item="_val"
-                  wx:key="index">{{_val}}</text>
+                  wx:key="index">{{_val.weight}}</text>
         </view>
         <text class="tips">{{'回收小于10公斤暂不保证上门回收'}}</text>
     </view>

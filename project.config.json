@@ -304,6 +304,48 @@
           "id": -1,
           "name": "pages/member/admin/admin",
           "pathName": "pages/member/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consult-details/consult-details",
+          "pathName": "pages/consult-details/consult-details",
+          "query": "id=1",
+          "scene": 1155
+        },
+        {
+          "id": 35,
+          "name": "pages/consult-details/consult-details",
+          "pathName": "pages/consult-details/consult-details",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/subscribe/index",
+          "pathName": "pages/subscribe/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/add-address/add-address",
+          "pathName": "pages/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/add-address/add-address",
+          "pathName": "pages/member/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/address/address",
+          "pathName": "pages/member/address/address",
           "scene": null
         }
       ]

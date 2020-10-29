@@ -229,7 +229,42 @@ Page({
     },
     httpIndex:function (params) {
         Index(params).then(res=>{
-            console.log(res);
+            console.log('daoyi',res);
+            const banners=[];
+            const bann=res.data.SlideList;
+            // banner 数据清洗
+            for(let i=0;i<bann.length;i++){
+                banners.push(bann[i].img);
+            }
+            console.log(banners);
+            // 资讯数据清洗
+            const newL=[]; // 容器
+            const newLists=res.data.NewsList;
+            for(let i=0;i<newLists.length;i++){
+                const test = {
+                    image: "https://cs17.appios.cn/uploads/20200731/3d5cf83e0deee46995454e0976d845df.jpg",
+                    name: "端午节|“粽”于等到你",
+                    desc: "端午安康！来康康粽叶垃圾分类小科普吧",
+                    read: "222",
+                    comment: "54",
+                    createtime: "2020/07/14",
+                    id: 1
+                };
+                test.id=newLists[i].id;
+                test.name=newLists[i].title;
+                test.read=newLists[i].read_num;
+                test.desc=newLists[i].desc;
+                test.image=newLists[i].logo;
+                test.createtime=newLists[i].dateline;
+                // id: 1
+                // title: "1"
+                // logo: "https://fg.996sh.com/1"
+                // desc: "打完大无大无大无大无大无打完大无大无大无..."
+                // read_num: 1
+                // dateline: "2009/01/06"
+                newL.push(test);
+            }
+            console.log("daoyi",newL);
         })
     }
 
