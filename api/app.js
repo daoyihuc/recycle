@@ -65,6 +65,24 @@ export function AddAddress(params) {
         'content-type':'application/json'
     });
 }
+// 地址详情
+export function AddressInfo(params) {
+    return request({
+        url: API.AddressInfo,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+// 地址编辑
+export function EditAddress(params) {
+    return request({
+        url: API.EditAddress,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
 
 // 地址列表
 export function AddressList(params) {
@@ -75,6 +93,26 @@ export function AddressList(params) {
         'content-type':'application/json'
     });
 }
+// 地址删除
+export function AddressDelete(params) {
+    return request({
+        url: API.AddressDelete,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+// 立即预约接口
+export function MakeAnAppointmentNow(params) {
+    return request({
+        url: API.MakeAnAppointmentNow,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    });
+}
+
+
 
 
 

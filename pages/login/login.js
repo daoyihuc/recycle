@@ -52,6 +52,8 @@ Page({
                 wx.setStorageSync("islogin",true);
                 wx.setStorageSync("pic",res.data.UserInfo.avatar);
                 wx.setStorageSync("name",res.data.UserInfo.nickname);
+                wx.setStorageSync("money",res.data.UserInfo.money);
+                wx.setStorageSync("appointments_num",res.data.UserInfo.appointments_num);
                 toast("登录成功");
                 setTimeout(()=>{
                     back(1);

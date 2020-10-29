@@ -45,11 +45,11 @@
 			<view class="segmentation" />
 		</view>
 		<view class="my-vertical-item ">
-			<view class="my-vertical-item-num ">10</view>
+			<view class="my-vertical-item-num ">{{money}}</view>
 			<view class="my-vertical-item-text ">环保金额</view>
 		</view>
 		<view class="my-vertical-item ">
-			<view class="my-vertical-item-num ">20</view>
+			<view class="my-vertical-item-num ">{{appointments_num}}</view>
 			<view class="my-vertical-item-text ">投递次数</view>
 		</view>
 	</view>

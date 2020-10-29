@@ -3,19 +3,25 @@
         <image mode class="" src="../../../static/images/none-add.png"></image>
         <text class="">暂时没有添加地址哦</text>
     </view>
-    <view bindtap="__e" class="addList " wx:for="{{address}}" wx:for-index="index" wx:key="id">
+    <view class="addList "
+          wx:for="{{address}}"
+          wx:for-index="index"
+          wx:key="id" bindtap="GoBack" data-index="{{index}}">
         <view class="info ">
             <view class="user ">
-                <text class="">{{item.user_name}}</text>
+                <text class="">{{item.contacts}}</text>
                 <text class="defaultActive " wx:if="{{item.is_default==1}}">默认</text>
                 <text class="default " wx:else></text>
                 <text class="">{{item.mobile}}</text>
             </view>
-            <view class="">{{''+(item.area||'')+(item.street||'')+(item.detail||'')+''}}</view>
+            <view class="">
+                {{''+(item.province||'')+(item.city||'')}}
+                {{(item.district||'')+(item.street||'')+(item.address||'')+''}}
+            </view>
         </view>
         <view class="controls ">
-            <image mode catchtap="__e" class=""  src="../../../static/images/edit.png"></image>
-            <image mode catchtap="__e" class=""  src="../../../static/images/del.png"></image>
+            <image mode bind:tap="GoEditer" data-id="{{item.address_id}}" class=""  src="../../../static/images/edit.png"></image>
+            <image mode bind:tap="GoDelete" data-id="{{item.address_id}}" class=""  src="../../../static/images/del.png"></image>
         </view>
     </view>
     <view  class="address-add" bind:tap="addAddress">添加地址</view>

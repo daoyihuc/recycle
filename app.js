@@ -3,7 +3,8 @@ App({
 
   
   globalData: {
-    
+    address: "",
+    address_id:"",
   },
   onLaunch: function () {
     // 展示本地存储能力

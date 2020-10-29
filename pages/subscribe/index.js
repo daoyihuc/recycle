@@ -1,18 +1,27 @@
 
-import {getLocation, getSetting,goRouter} from '../../utils/macutils'
-import {AppointmentShow} from "../../api/app";
+import {getLocation, getSetting, goRouter, toast} from '../../utils/macutils'
+import {AppointmentShow, MakeAnAppointmentNow} from "../../api/app";
 
-
+var app=getApp();
 var that;
+var aData={
+    token:"",
+    Weight: "", // 重量选择
+    NowTime: "",// 时间
+    NowDate:"", // 日期
+    AddressId:"", // 地址id
+}
 Page({
     data: {
-        currentSel: "",
-        weightList:[],
-        checked: true,
+        currentSel: -1,// 重量index
+        weightList:[], // 重量数组
+        checked: true, // 免责协议 勾选
         show: true,
         showcalendar: false,
         showtime: false,
         date: '' , // 日期
+        address: "", // 地址显示
+        address_id:"", // 地址id
         formatter(type, value) {
             if (type === 'hour') {
                 return `${value}点`;
@@ -23,10 +32,9 @@ Page({
         },
         currentDate: '12:00',// 当前时间
         Weight: '',// 体重选择
-
-
     },
     onLoad: function (options) {
+        console.log("subscribe",options);
         that=this;//上下文对象
         this.addWeightList();
         getSetting(false).then(res => {
@@ -44,6 +52,16 @@ Page({
 
         this.Httpinfo();
 
+    },
+    onShow() {
+        const address=app.globalData.address;
+        const address_id=app.globalData.address_id;
+        this.setData({
+            address: address,
+            address_id:address_id,
+        });
+        app.globalData.address="";
+        app.globalData.address_id="";
     },
     sel: function(t) {
         console.log("weight",t.target.dataset.count);
@@ -139,6 +157,52 @@ Page({
                 weightList: datas1,
                 Disclaimer: dataContent
             });
+        });
+    },
+    // 立即预约
+    HttpSubscriber:function (params) {
+        MakeAnAppointmentNow(params).then(res=>{
+            if(res.code==1){
+                console.log("开始清除数据");
+                toast(res.msg,0);
+                that.clearData();
+            }else{
+                toast(res.msg,1);
+            }
+        })
+    },
+    sumbitEvent:function () {
+        console.log(this.data.currentSel);
+        aData.token=wx.getStorageSync("token");
+        aData.NowDate=this.data.date;
+        aData.NowTime=this.data.currentDate;
+        aData.AddressId=this.data.address_id;
+        if(aData.token===""){
+            toast("请前往登录",1);
+        }else if(this.data.currentSel===-1){
+            toast("请选择重量",1);
+        }else if(aData.NowDate===""){
+            toast("请选择日期",1);
+        }
+        else if(aData.NowTime===""){
+            toast("请选择时间",1);
+        }else if(aData.AddressId===""){
+            toast("请选择地址",1);
+        }else{
+            aData.Weight=this.data.weightList[this.data.currentSel].id;
+            this.HttpSubscriber(aData);
+        }
+
+    },
+    clearData:function () {
+        that.setData({
+            currentSel: -1,// 重量index
+            checked: true, // 免责协议 勾选
+            date: '' , // 日期
+            address: "", // 地址显示
+            address_id:"", // 地址id
+            currentDate: '12:00',// 当前时间
+            Weight: '',// 体重选择
         });
     }
 

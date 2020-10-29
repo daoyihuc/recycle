@@ -42,7 +42,8 @@
         "admin-center/admin-center",
         "admin-login/admin-login",
         "address/address",
-        "add-address/add-address"
+        "add-address/add-address",
+        "edit-address/edit-address"
       ]
     }
   ],

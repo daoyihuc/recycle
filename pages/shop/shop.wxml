@@ -32,7 +32,7 @@
 			/>
 		</view>
 		<view class="classify ">
-			<view class="classify-item " wx:for="{{classifyList}}" wx:key="index">
+			<view class="classify-item " wx:for="{{classifyList}}" wx:key="index" bind:tap="goShopList" data-id="{{1}}">
 				<image class="" src="{{item.image}}" />
 				<text class="">{{item.name}}</text>
 			</view>
@@ -42,6 +42,8 @@
 		 wx:for="{{shopList}}"
 		 wx:key="index"
 		 wx:for-item="item"
+		 bind:tap="goDetails"
+		 data-id="{{1}}"
 		>
 			<view class="">
 				<text class="recommend-title">{{item.name}}</text>

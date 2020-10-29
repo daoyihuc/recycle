@@ -12,5 +12,6 @@ export const API={
     AddressInfo: BASE_URL+"AddressInfo", // 地址详情接口
     EditAddress: BASE_URL+"EditAddress", // 编辑地址接口
     AddressList: BASE_URL+"AddressList", // 地址列表接口
+    AddressDelete: BASE_URL+"AddressDelete", // 地址删除
 
 }

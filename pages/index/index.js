@@ -24,7 +24,9 @@ Page({
         listItem: [],
         isLogin: false,
         avatarUrl: "",
-        address: ''
+        address: '',
+        money: "",
+        appointments_num: ""
 
     },
     onLoad: function () {
@@ -122,11 +124,14 @@ Page({
     // 获取用户信息
     getUserinfos(){
 
-        let pic=wx.getStorageSync("pic",pic);
-        let name=wx.getStorageSync("name",name);
+        let pic=wx.getStorageSync("pic");
+        let name=wx.getStorageSync("name");
+        let money=wx.getStorageSync("money");
+        let appointments_num=wx.getStorageSync("appointments_num");
         this.setData({
             avatarUrl: pic,
-
+            appointments_num: appointments_num,
+            money: money
         });
     },
     // click

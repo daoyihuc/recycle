@@ -1,5 +1,5 @@
 import {authorize, back, toast} from "../../../utils/macutils";
-import {AddAddress, getAddress} from "../../../api/app";
+import {AddAddress, AddressInfo, EditAddress, getAddress} from "../../../api/app";
 import Toast from '@vant/weapp/toast/toast';
 
 var that="";
@@ -7,6 +7,7 @@ var columnW=[];
 var columns=[];
 var adata={
     token: "",
+    address_id: "",
     province: "",
     city: "",
     district: "",
@@ -30,8 +31,8 @@ Page({
         checked: false
     },
     onLoad: function (options) {
-
-         columns=[
+        console.log(options);
+        columns=[
             {
                 key: "name",
                 values: "",
@@ -49,8 +50,14 @@ Page({
                 className: 'column3',
             }
         ];
-         that=this;
-         this.getAddr();
+        that=this;
+        this.getAddr();
+        adata.address_id=options.id;
+        const adatas={
+            token: wx.getStorageSync("token"),
+            id: options.id
+        };
+        this.HttpAddressinfo(adatas);
 
     },
     // 地图选择位置
@@ -192,12 +199,41 @@ Page({
             });
         })
     },
-    // 地址添加
-    HttpAddress:function (params) {
-        AddAddress(params).then(res=>{
+    // 地址详情
+    HttpAddressinfo:function (params) {
+        AddressInfo(params).then(res=>{
             console.log(res);
-            if(res.code){
+            const a={
+                address: "dhakdh ",
+                address_id: 4,
+                city: "长沙市",
+                contacts: "daoyi",
+                district: "岳麓区",
+                is_default: 0,
+                mobile: "17673850004",
+                province: "湖南省",
+                street: "岳麓大道",
+            };
+            that.setData({
+                Province: res.data.province,
+                City: res.data.city,
+                Country: res.data.district,
+                street: res.data.street,
+                details: res.data.address,
+                user: res.data.contacts,
+                mobile: res.data.mobile,
+                checked: res.data.is_default==1?true:false
+            });
+        });
+    },
+    // 地址编辑
+    HttpEdit:function(params){
+        EditAddress(params).then(res=>{
+            if(res.code===1){
+                toast(res.msg,0);
                 back(1);
+            }else{
+                toast(res.msg,1);
             }
         });
     },
@@ -226,7 +262,7 @@ Page({
         }else if(this.checkPhone(adata.mobile)){
             toast("手机号码有误，请重填",1);
         }else{
-           this.HttpAddress(adata);
+            this.HttpEdit(adata);
         }
         console.log("请求数据",adata);
 

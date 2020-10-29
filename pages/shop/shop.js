@@ -1,3 +1,5 @@
+import {goRouter} from "../../utils/macutils";
+
 Page({
     data: {
         bannerList: [], // banner
@@ -50,5 +52,17 @@ Page({
             shopList: shop
         });
             
+    },
+    // 前往详情
+    goDetails:function (e) {
+        let id=e.currentTarget.dataset.id;
+        console.log(id);
+        goRouter("/pages/goods-details/goods-details?id="+id);
+    },
+    // 前往分类列表
+    goShopList:function (e) {
+        let id=e.currentTarget.dataset.id;
+        console.log(id);
+        goRouter("/pages/shop-list-two/shop-list-two?id="+id);
     }
 });
