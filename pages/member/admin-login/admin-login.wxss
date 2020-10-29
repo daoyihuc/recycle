@@ -1,0 +1,4 @@
+.login {
+    width: 70vw;
+    margin: 100rpx auto;
+}

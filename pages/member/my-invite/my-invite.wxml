@@ -1,0 +1,17 @@
+<view class="my-invite ">
+    <view class="top ">
+        <view class="num ">{{total}}</view>
+        <view class="text ">邀请人数</view>
+    </view>
+    <view class="">
+        <view class="item " wx:for="{{mans}}" wx:key="index">
+            <view class="itemleft ">
+                <van-image width="80rpx" round height="80rpx" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+                <text class="">{{item.nickname}}</text>
+            </view>
+            <view class="itemright ">
+                <text class="">{{item.createtime}}</text>
+            </view>
+        </view>
+    </view>
+</view>

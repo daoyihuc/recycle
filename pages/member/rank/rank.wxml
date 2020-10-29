@@ -1,0 +1,45 @@
+<view  >
+    <u-popup  borderRadius="{{30}}" mode="center" value="{{show}}">
+        <view class="popBox  ">
+            <view class="popuTop  ">打开定位查看街区排行榜</view>
+            <view class="popuCon  ">
+                <view class="img  ">
+                    <image mode   src="../../../static/images/openp.png"></image>
+                </view>
+                <view  class="open  ">开启定位</view>
+            </view>
+        </view>
+    </u-popup>
+    <u-picker   mode="selector" range="{{streetRanges}}" rangeKey="name" columns="{{ columns }}" ></u-picker>
+    <view class="title  ">
+        <text  >{{street+'排行总榜'}}</text>
+        <image mode   src="../../../static/images/gnegudo@2x.png"></image>
+    </view>
+    <view class="mineInfo  " hidden="{{!!show}}">
+        <view class="info  ">
+            <text  >排名</text>
+            <text  >{{myran||'0'}}</text>
+        </view>
+        <view class="avatar  ">
+            <u-avatar    round
+  width="4rem"
+  height="4rem"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
+            <text  >{{mine.nickname}}</text>
+        </view>
+        <view class="info  ">
+            <text  >回收币</text>
+            <text  >{{mymoeny}}</text>
+        </view>
+    </view>
+    <view class="rankcon  " hidden="{{!!show}}">
+        <view class="li  " wx:for="{{list}}" wx:key="index">
+            <view class="li-info  ">
+                <view class="num  ">{{''+index+1+''}}</view>
+                <u-avatar src  class="avatar  " mode="square" size="68"></u-avatar>
+                <text  >{{item.nickname}}</text>
+            </view>
+            <text  >{{item.recycle_money}}</text>
+        </view>
+    </view>
+</view>

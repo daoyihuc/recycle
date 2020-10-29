@@ -1,0 +1,43 @@
+<view class="subsidiary">
+    <view class="tabbar">
+        <view  class="left border" >
+            <image mode   hidden="{{!(tabbarIndex!=1)}}" src="../../static/images/cz-icon-chuzhi_nor@2x.png"></image>
+            <image mode   hidden="{{!(tabbarIndex==1)}}" src="../../static/images/cz-icon-chuzh@2x.png"></image>
+            <view class="{{[' ',tabbarIndex==1?'orange':'']}}" data-index="1" bindtap="liclick">收入</view>
+        </view>
+        <view  class="right  ">
+            <image mode   hidden="{{!(tabbarIndex!=2)}}" src="../../static/images/icon_tixian@2x.png"></image>
+            <image mode   hidden="{{!(tabbarIndex==2)}}" src="../../static/images/cz_icon_tixian_sel@2x.png"></image>
+            <view class="{{[' ',tabbarIndex==2?'orange':'']}}" data-index="2" bindtap="liclick">支出</view>
+        </view>
+    </view>
+    <view class="segmentation  ">
+        <image mode   src="../../static/images/hengtiao@2x.png"></image>
+    </view>
+    <view class="con  " hidden="{{!(tabbarIndex==1)}}">
+        <view class="item  " wx:for="{{listin}}" wx:key="id">
+            <view  >
+                <text  >{{item.tip}}</text>
+                <text  >{{item.createtime}}</text>
+                <text class="description  ">{{item.memo}}</text>
+            </view>
+            <text  >{{'+ '+item.money}}</text>
+        </view>
+        <view class="noData  " wx:if="{{listin.length===0}}">
+            <image mode   src="../../static/images/none.png"></image>
+        </view>
+    </view>
+    <view class="con  " hidden="{{!(tabbarIndex==2)}}">
+        <view class="item  " wx:for="{{listout}}" wx:for-index="__i0__" wx:key="id">
+            <view  >
+                <text >{{item.tip}}</text>
+                <text  >{{item.createtime}}</text>
+                <text class="description  ">{{item.memo}}</text>
+            </view>
+            <text  >{{'- '+item.money}}</text>
+        </view>
+        <view class="noData  " wx:if="{{listout.length===0}}">
+            <image mode   src="../../static/images/none.png"></image>
+        </view>
+    </view>
+</view>

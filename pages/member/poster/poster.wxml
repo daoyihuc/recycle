@@ -1,0 +1,4 @@
+<view class="poster  ">
+    <canvas canvas-id="my-poster" class="my-canvas "></canvas>
+    <view bindtap="save" class="green-gold-login-btn ">保存到手机</view>
+</view>

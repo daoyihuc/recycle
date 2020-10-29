@@ -1,0 +1,109 @@
+.withdrawal{
+
+}
+.top {
+    padding: 40rpx;
+}
+
+.top-text {
+    font-size: 28rpx;
+}
+
+ .top-number {
+    color: #fcba03;
+    font-size: 50rpx;
+    margin-left: 44rpx;
+}
+ .tip {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.price {
+    color: #666;
+    font-size: 76rpx;
+}
+
+.price-contain {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: flex-end;
+}
+
+.top1 {
+    margin-top: 50rpx;
+}
+
+.top2 {
+    margin-top: 20rpx;
+}
+.center {
+    padding: 20rpx 40rpx;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.withdrawal .center .left {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.withdrawal .center .left image {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.withdrawal .center .left text {
+    font-size: 28rpx;
+    margin-left: 20rpx;
+}
+
+.withdrawal .center .right image {
+    width: 42rpx;
+    height: 42rpx;
+}
+
+.withdrawal .bottom {
+    padding: 0 40rpx;
+    position: relative;
+}
+
+.withdrawal .bottom .xing {
+    width: 13rpx;
+    height: 13rpx;
+    position: absolute;
+    right: 120rpx;
+    top: 50rpx;
+}
+
+.withdrawal .withdrawal-btn {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 30rpx;
+    background: #fcba03;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+}
+
+.withdrawal .top-box {
+    display: flex;
+    -webkit-box-align: end;
+    align-items: flex-end;
+}
+
+.inp {
+    display: block;
+    width: 50vw;
+    height: 100rpx;
+    font-size: 60rpx;
+    border-bottom: 1rpx solid grey;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "退款",
+  "usingComponents": {
+    "u-upload": "@vant/weapp/uploader/index",
+    "u-button": "@vant/weapp/button/index"
+  }
+}

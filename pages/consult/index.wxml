@@ -1,0 +1,22 @@
+<view>
+    <van-tabs active="{{ active }}"
+              sticky
+              color="#fdca30"
+              ellipsis="{{true}}"
+              bind:change="onChange">
+        <van-tab title="新闻" >
+            <scroll-view>
+                <consult-list newList="{{listItem}}"></consult-list>
+            </scroll-view>
+
+        </van-tab>
+        <van-tab title="资讯" >
+            <scroll-view>
+                <consult-list newList="{{listItem}}"></consult-list>
+            </scroll-view>
+
+        </van-tab>
+    </van-tabs>
+
+</view>
+

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "回收员端",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index",
+    "u-modal": "@vant/weapp/popup/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "u-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab/index"
+  }
+}

@@ -1,0 +1,70 @@
+<view>
+    <view class="item">
+        <u-avatar    round
+  width="3rem"
+  height="3rem"
+  src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
+        <view class="info">
+            <text>姓名:<text>{{''+info.nickname+''}}</text>
+            </text>
+            <text>{{'电话: '+info.username}}</text>
+            <text>{{'区域: '+info.address}}</text>
+            <text>{{'环保金: '+moeny}}</text>
+        </view>
+        <view bindtap="__e" class="order">
+            <text>发起</text>
+            <text>订单</text>
+        </view>
+    </view>
+    <view class="tabbar">
+        <view bindtap="__e" class="left border">
+            <image mode hidden="{{!(tabbarIndex!=1)}}" src="/static/images/cz-icon-chuzhi_nor@2x.png"></image>
+            <image mode hidden="{{!(tabbarIndex==1)}}" src="/static/images/cz-icon-chuzh@2x.png"></image>
+            <view class="{{[tabbarIndex==1?'orange':'']}}">收入</view>
+        </view>
+        <view bindtap="__e" class="right">
+            <image mode hidden="{{!(tabbarIndex!=2)}}" src="/static/images/icon_tixian@2x.png"></image>
+            <image mode hidden="{{!(tabbarIndex==2)}}" src="/static/images/cz_icon_tixian_sel@2x.png"></image>
+            <view class="{{[tabbarIndex==2?'orange':'']}}">支出</view>
+        </view>
+    </view>
+    <view class="segmentation">
+        <image mode src="../../../static/images/hengtiao@2x.png"></image>
+    </view>
+    <view class="con" hidden="{{!(tabbarIndex==1)}}">
+        <view class="item" wx:for="{{listin}}" wx:key="id">
+            <view>
+                <text>{{item.tip}}</text>
+                <text>{{item.createtime}}</text>
+                <text class="description">{{item.memo}}</text>
+            </view>
+            <text class="orange">{{'+ '+item.money}}</text>
+        </view>
+        <view class="noData" wx:if="{{showin}}">
+            <image mode src="/static/images/none.png"></image>
+        </view>
+    </view>
+    <view class="con" hidden="{{!(tabbarIndex==2)}}">
+        <view class="item" wx:for="{{listout}}" wx:for-index="__i0__" wx:key="id">
+            <view>
+                <text>{{item.tip}}</text>
+                <text>{{item.createtime}}</text>
+                <text class="description">{{item.memo}}</text>
+            </view>
+            <text class="orange">{{'- '+item.money}}</text>
+        </view>
+        <view class="noData" wx:if="{{showout}}">
+            <image mode src="/static/images/none.png"></image>
+        </view>
+    </view>
+    <view class="_tabbar">
+        <view class="img" bind:tap="onclick" data-number="{{0}}">
+            <image mode src="../../../static/images/home863.png"></image>
+            <text>全部</text>
+        </view>
+        <view class="img" bind:tap="onclick" data-number="{{1}}">
+            <image mode src="../../../static/images/page861.png"></image>
+            <text>预约中心</text>
+        </view>
+    </view>
+</view>

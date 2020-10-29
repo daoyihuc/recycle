@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "资讯",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "consult-list": "/components/list_item/list_item"
+  }
+}

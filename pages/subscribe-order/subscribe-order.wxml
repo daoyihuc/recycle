@@ -1,0 +1,36 @@
+<view class="maxBox">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab  wx:for="{{list}}" wx:for-item="item"  title="{{item.cate_name}}" wx:key="index">
+
+            <view class="box" >
+                <view class="scroll-view-item " wx:for="{{orderlist}}" wx:key="index">
+                    <view class="title ">
+                        <text class="">{{item._status}}</text>
+                        <text bindtap="__e" class="cancelTitle" wx:if="{{item.order_status===0}}">取消订单</text>
+                    </view>
+                    <view class="content ">
+                        <view class="content-time ">
+                            <text class="">预约时间：</text>
+                            <text class="">{{item.appointment_time}}</text>
+                        </view>
+                        <view class="content-text">
+                            <text class="">下单时间：</text>
+                            <text class="">{{item.createtime}}</text>
+                        </view>
+                        <view class="content-text">
+                            <text class="">联系电话：</text>
+                            <text class="">{{item.mobile}}</text>
+                        </view>
+                        <view class="content-text">
+                            <text class="">上门地址：</text>
+                            <text class="">{{item.address_detail}}</text>
+                        </view>
+                    </view>
+                    <view bindtap="__e" class="foot ">
+                        <text class="">查看详情>></text>
+                    </view>
+                </view>
+            </view>
+        </van-tab>
+    </van-tabs>
+</view>

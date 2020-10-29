@@ -1,0 +1,20 @@
+<view>
+    <view class="header">
+        <view class="info">
+            <u-avatar  class="avatar" round width="3rem" height="3rem" src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
+            <view class="informations">
+                <view class="live">
+                    <text wx:if="{{level.name!==undefined}}">{{level.name+'会员'}}</text>
+                    <image mode src="{{level.img}}"></image>
+                </view>
+                <view class="money">
+                    <text>{{'环保金余额: '+level.moeny}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <scroll-view class="content" scrollY="true">
+        <!-- "u-parse": "/node-modules/uview-ui/components/u-parse/u-parse", -->
+        <u-parse bind:__l="__l" html="{{content}}" vueId="1d949b00-2"></u-parse>
+    </scroll-view>
+</view>

@@ -1,0 +1,98 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/consult/index", 
+    "pages/subscribe/index",
+    "pages/subsidiary/subsidiary",
+    "pages/consult-details/consult-details",
+    "pages/my/my",
+    "pages/subscribe-order/subscribe-order",
+    "pages/login/login",
+    "pages/withdrawal/withdrawal",
+    "pages/goods-category/goods-category",
+    "pages/go-recycle/go-recycle",
+    "pages/subscribe-order-details/subscribe-order-details",
+    "pages/shop-ad/shop-ad",
+    "pages/shop-add-ad/shop-add-ad",
+    "pages/edit-address/edit-address",
+    "pages/goods-details/goods-details",
+    "pages/chooseAdress/chooseAdress",
+    "pages/shop-list-two/shop-list-two",
+    "pages/golive/golive",
+    "pages/shop/shop",
+    "pages/confirm-order/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/member",
+      "name": "member",
+      "pages": [
+        "options/options",
+        "my-invite/my-invite",
+        "my-order/my-order",
+        "poster/poster",
+        "rank/rank",
+        "refund/refund",
+        "my-info/index",
+        "recycle-guide/recycle-guide",
+        "recycle-classify/recycle-classify",
+        "invite/invite",
+        "admin/admin",
+        "admin-details/admin-details",
+        "admin-center/admin-center",
+        "admin-login/admin-login",
+        "address/address",
+        "add-address/add-address"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "color": "#B0B0B0",
+    "selectedColor": "#fdca30",
+    "list": [
+      {
+        "iconPath": "/static/images/tabbar_icon_home_nor@2x.png",
+        "selectedIconPath": "/static/images/tabbar_icon_home_sel@2x.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/static/images/tabbar_icon_zixun_nor@2x.png",
+        "selectedIconPath": "/static/images/tabbar_icon_zixun_sel@2x.png",
+        "pagePath": "pages/consult/index",
+        "text": "咨讯"
+      },
+      {
+        "iconPath": "/static/images/tab_icon_yuyue.png",
+        "selectedIconPath": "/static/images/tab_icon_yuyue.png",
+        "pagePath": "pages/subscribe/index",
+        "text": "预约"
+      },
+      {
+        "iconPath": "/static/images/tabbar_icon_shagncheng_nor@2x.png",
+        "selectedIconPath": "/static/images/tabbar_icon_shagncheng_sel@2x.png",
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      },
+      {
+        "iconPath": "/static/images/tabbar_icon_my_nor@2x.png",
+        "selectedIconPath": "/static/images/tabbar_icon_my_sel@2x.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

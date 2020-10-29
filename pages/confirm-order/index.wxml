@@ -1,0 +1,48 @@
+<view class="confirm-order ">
+	<view bindtap="__e" class="confirm-order-address ">
+		<view class="confirm-order-address-text " wx:if="{{adr===''}}">请选择收货地址</view>
+		<view class="confirm-order-address-text " wx:else>
+			<view class="">{{''+adr.name+' '+adr.mobile+''}}</view>
+			<view class="">{{''+(adr.city||'')+(adr.area||'')+(adr.street||'')+(adr.detail||'')+''}}</view>
+		</view>
+		<image mode class="confirm-order-address-img " src="../../static/images/gnegudo@2x.png" />
+	</view>
+	<view class="confirm-order-segmentation ">
+		<image mode class="" src="../../static/images/heng.png" />
+	</view>
+	<view class="confirm-order-detail ">
+		<view class="confirm-order-detail-top ">
+			<image mode class="" src="../../static/images/allorder-icon-shop@2x.png" />
+			<text class="">{{goodList.name}}</text>
+		</view>
+		<view class="confirm-order-detail-bottom " wx:for="{{goodList.goods_list}}" wx:key="index">
+			<image mode class="confirm-order-detail-bottom-img " src="{{item.image}}" />
+			<view class="confirm-order-detail-bottom-text ">
+				<view class="confirm-order-detail-bottom-text-1 ">{{item.goods_name}}</view>
+				<view class="confirm-order-detail-bottom-text-2 ">规格：
+					<text class="" wx:for="{{item.attr_list}}" wx:for-index="__i0__" wx:for-item="i" wx:key="goods_id">{{i.attr_name}}</text>
+				</view>
+				<view class="confirm-order-detail-bottom-text-3 ">
+					<view class="dot1 ">
+						<image mode class="" src="../../static/images/spxq_icon_36@2x.png" />
+						<text class="">{{item.price}}</text>
+					</view>
+					<view class="dot2 ">
+						<text class="">{{item.num===undefined?'':' '+item.num}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="distribution ">
+		<view class="distribution-text ">配送方式</view>
+		<view class="distribution-text ">送货上门</view>
+	</view>
+	<view class="confirm-order-amount ">
+		<view class="confirm-order-amount-text-1 ">共1件商品 合计：</view>
+		<view class="confirm-order-amount-text-2 ">{{goodList.total_price+'环保币'}}</view>
+	</view>
+	<view bindtap="__e" class="submit " data-event-opts="{{[ [ 'tap',[ [ 'sub',['$event'] ] ] ] ]}}">提交订单</view>
+
+</view>
+

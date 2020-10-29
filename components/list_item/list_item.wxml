@@ -1,0 +1,22 @@
+<view bindtap="onTap" class="new-consult-list-item "  wx:for="{{newList}}" wx:for-item="item" data-name="{{item.id}}">
+    <view class="new-consult-list-item-left ">
+        <image class="images" src="{{item.image}}"></image>
+    </view>
+    <view class="new-consult-list-item-right ">
+        <view class="new-consult-list-item-right-box ">
+            <view class="new-consult-list-item-right-text-1 ">{{item.name}}</view>
+            <view class="new-consult-list-item-right-text-2 ">{{item.desc}}</view>
+        </view>
+        <view class="new-consult-list-item-right-text-3 ">
+            <view class="new-consult-list-item-right-text-3-data ">
+                <view class="new-consult-list-item-right-text-3-data-left ">
+                    <image mode class="" src="../../static/images/home_icon_liulanliang@2x.png"></image>
+                    <text class="">{{item.read}}</text>
+<!--                    <image mode class="" src="../../static/images/home_icon_pinglun@2x.png"></image>-->
+<!--                    <text class="">{{item.comment}}</text>-->
+                </view>
+            </view>
+            <view class="new-consult-list-item-right-text-3-time ">{{item.createtime}}</view>
+        </view>
+    </view>
+</view>

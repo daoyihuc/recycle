@@ -1,0 +1,30 @@
+.poster  {
+    padding: 50rpx 50rpx 10rpx 50rpx;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.poster .green-gold-login-btn  {
+    padding: 10rpx 30rpx;
+    background: linear-gradient(90deg,#fdca30,#fcba03);
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 35rpx;
+    margin-top: 95rpx;
+}
+
+.poster .qrCode  {
+    width: 250rpx;
+    height: 250rpx;
+    position: absolute;
+    top: 444rpx;
+}
+
+.poster .my-canvas  {
+    height: 900rpx;
+}

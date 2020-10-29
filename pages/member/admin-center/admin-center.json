@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "预约中心",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index"
+  }
+}

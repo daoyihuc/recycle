@@ -1,0 +1,74 @@
+
+<view class="maxBox">
+    <view>
+        <navbar showNav="{{true}}"
+                bgColor="#fdca30"
+                pageName="预约"></navbar>
+    </view>
+    <view class="weight ">
+        <text class="title ">预约重量选择</text>
+        <view class="choose ">
+            <text bindtap="sel" class="{{['textStyle',currentSel===index?'sel-we':'']}}"
+                  data-count="{{index}}"
+                  wx:for="{{weightList}}"
+                  wx:for-item="_val"
+                  wx:key="index">{{_val}}</text>
+        </view>
+        <text class="tips">{{'回收小于10公斤暂不保证上门回收'}}</text>
+    </view>
+    <view class="seleted_box">
+        <van-cell title="预约日期选择" is-link value="{{date===''?'请选择日期':date}}" bind:click="opencalendar" />
+    </view>
+    <view class="seleted_box">
+        <van-cell title="预约时间选择" is-link value="{{currentDate===''?'请选择时间':currentDate}}"  bind:click="openTime"/>
+    </view>
+    <view class="seleted_box">
+        <van-cell title="回收地址" is-link value="请选择地址"  bindtap="selectAddress"/>
+    </view>
+    <view class="seleted_box ">
+        <view class="protocolbox">
+            <van-checkbox value="{{ checked }}"
+                          shape="square"
+                          checked-color="#fdca30"
+                          bind:change="onChange">预约下单即代表您已同意<text>《免责条款》</text></van-checkbox>
+        </view>
+    </view>
+
+
+    <view  class="submit " bindtap="">立即预约</view>
+</view>
+<van-dialog
+        use-slot
+        title="打开定位查看街区回收信息"
+        show="{{ show }}"
+        confirmButtonText="开始定位"
+        confirm-button-open-type="openLocation"
+        bind:close="onClose"
+        bindtap="openLocation"
+        confirm-button-color="#fdca30"
+>
+    <image src="../../static/images/openp.png"
+           mode="true"
+           class="location_image"
+           role="img"/>
+</van-dialog>
+
+<van-calendar show="{{ showcalendar }}"
+              bind:close="onCloseClaendar"
+              bind:confirm="onConfirm" />
+
+<van-popup
+        show="{{ showtime }}"
+        position="bottom"
+        custom-style="height: 40%;"
+>
+    <van-datetime-picker
+            type="time"
+            value="{{ currentDate }}"
+            formatter="{{ formatter }}"
+
+            bind:confirm="onConfirm_Time"
+            bind:cancel="onCloseTime"
+    ></van-datetime-picker>
+</van-popup>
+

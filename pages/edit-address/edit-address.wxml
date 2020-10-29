@@ -1,0 +1,28 @@
+<view class="add-address  ">
+    <view class="item  ">
+        <u-field       label="回收地址" placeholder="点击选择" value="{{showData.adName}}" vueId="0ab7d3c0-1"></u-field>
+        <u-tag     class="tag  "  text="获取地址" type="info" vueId="0ab7d3c0-2"></u-tag>
+    </view>
+    <view class="item  ">
+        <u-picker          mode="region" params="{{pcaRanges}}" value="{{shows.a}}" vueId="0ab7d3c0-3"></u-picker>
+        <u-field   bind:focus="__e"     label="省市区" placeholder="点击选择" value="{{showData.pca}}" vueId="0ab7d3c0-4"></u-field>
+        <u-tag     class="tag  "   text="选择地区" type="info" vueId="0ab7d3c0-5"></u-tag>
+    </view>
+    <view class="item  ">
+        <u-picker   mode="selector" range="{{streetRanges}}" rangeKey="name" value="{{shows.b}}" vueId="0ab7d3c0-6"></u-picker>
+        <u-field       label="街道" placeholder="点击选择" value="{{showData.street}}" vueId="0ab7d3c0-7"></u-field>
+        <u-tag     class="tag  "  text="选择街区" type="info" vueId="0ab7d3c0-8"></u-tag>
+    </view>
+    <view class="item  ">
+        <u-picker         mode="selector" range="{{commityRanges}}" rangeKey="name" value="{{shows.c}}" vueId="0ab7d3c0-9"></u-picker>
+        <u-field     label="小区" placeholder="点击选择" value="{{showData.commity}}" vueId="0ab7d3c0-10"></u-field>
+        <u-tag     class="tag  "  text="选择小区" type="info" vueId="0ab7d3c0-11"></u-tag>
+    </view>
+    <u-field     label="详细地址" placeholder="请填写详细地址" value="{{showData.details}}" vueId="0ab7d3c0-12"></u-field>
+    <u-field     label="联系人" placeholder="请填写联系人" value="{{showData.user}}" vueId="0ab7d3c0-13"></u-field>
+    <u-field     label="手机号" placeholder="请填写手机号" value="{{showData.mobile}}" vueId="0ab7d3c0-14"></u-field>
+    <u-field     disabled="{{true}}" label="设为默认地址" labelWidth="100rpx" vueId="0ab7d3c0-15" vueSlots="{{['right']}}">
+        <u-switch activeColor="rgba(246, 186, 71, 1)"   slot="right" value="{{showData.is_default}}" ></u-switch>
+    </u-field>
+    <view bindtap="__e" class="submit  ">保存地址</view>
+</view>

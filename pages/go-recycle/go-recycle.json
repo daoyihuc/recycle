@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "上门回收",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index",
+    "u-tabs": "@vant/weapp/tabs/index",
+    "u-icon": "@vant/weapp/icon/index",
+    "u-button": "@vant/weapp/button/index",
+    "u-picker": "@vant/weapp/picker/index"
+  }
+}

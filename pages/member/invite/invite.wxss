@@ -1,0 +1,47 @@
+.invite{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+
+}
+.invite-code-login{
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.sharedimga{
+    width: 300rpx;
+    height: 300rpx;
+
+}
+.green-gold-login-btn{
+    width: 260rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    background: linear-gradient(90deg,#fdca30,#fcba03);
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 35rpx;
+
+}
+.left{
+    margin-right: 30rpx;
+}
+.poster{
+    display: flex;
+    margin-top: 30rpx;
+}
+.right{
+    background: #fff;
+    color: #fcba03;
+    border: 2rpx solid #fcba03;
+}

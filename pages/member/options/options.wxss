@@ -1,0 +1,46 @@
+.top {
+    padding: 40rpx 20rpx;
+}
+.top-title {
+    font-size: 32rpx;
+}
+
+.top-select {
+    margin-top: 30rpx;
+}
+.radiu_box{
+    display: flex;
+    margin-top: 30rpx;
+}
+
+.bottom {
+    padding: 40rpx 20rpx 20rpx;
+    margin-top: 20rpx;
+}
+
+.count {
+    text-align: right;
+    font-size: 24rpx;
+    color: grey;
+}
+
+.upload-img {
+    padding: 65rpx 20rpx 20rpx 20rpx;
+}
+
+.slot-btn {
+    width: 138rpx;
+    height: 138rpx;
+}
+
+.submit {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background: #fcba03;
+    font-size: 32rpx;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}

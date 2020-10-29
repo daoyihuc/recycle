@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "u-swiper": "@vant/weapp/swipe-cell/index",
+    "u-popup": "@vant/weapp/popup/index",
+    "u-toast": "@vant/weapp/toast/index",
+    "goods-bottom": "/components/goods-bottom/goods-bottom"
+  }
+}

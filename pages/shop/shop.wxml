@@ -1,0 +1,68 @@
+<view class="shop ">
+	<view class="content ">
+		<view class="search ">
+			<view  class="search-class ">
+				<image mode class="" src="../../static/images/icon_fenlei@2x.png" />
+				<text class="">分类</text>
+			</view>
+			<view class="search-text ">
+				<van-search
+				 class=""
+				 inputAlign="center"
+				 placeholder="搜索你想要的商品"
+				 value="{{keyword}}"
+				/>
+			</view>
+		</view>
+		<view class="my-banner ">
+			<swipers
+			 imgs="{{bannerList}}"
+			 height="350rpx"
+			 radius="20rpx"
+			 width="700rpx"
+			/>
+		</view>
+		<view class="notice ">
+			<van-notice-bar
+			 bgColor="#ffffff"
+			 class=""
+			 left-icon="volume-o"
+			 scrollable="{{ true }}"
+			 text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。"
+			/>
+		</view>
+		<view class="classify ">
+			<view class="classify-item " wx:for="{{classifyList}}" wx:key="index">
+				<image class="" src="{{item.image}}" />
+				<text class="">{{item.name}}</text>
+			</view>
+		</view>
+		<view
+		 class="recommend "
+		 wx:for="{{shopList}}"
+		 wx:key="index"
+		 wx:for-item="item"
+		>
+			<view class="">
+				<text class="recommend-title">{{item.name}}</text>
+			</view>
+			<view class="recommend-content">
+				<view
+				 class="recommend-content-item "
+				 wx:for="{{item.recommendList}}"
+				 wx:for-index="index2"
+				 wx:for-item="item2"
+				 wx:key="index2"
+				>
+					<image mode class="" src="{{item2.image}}" />
+					<view class="recommend-content-item-text-1 ">
+						<image mode class="" src="../../static/images/icon_huanbaobi@2x.png" />
+						<text class="">{{item2.price}}</text>
+					</view>
+					<text class="recommend-content-item-text-2 ">{{item2.name}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+

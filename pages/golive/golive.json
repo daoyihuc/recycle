@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#fcba03",
+  "navigationBarTitleText": "会员晋升",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index"
+  }
+}

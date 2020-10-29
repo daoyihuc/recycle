@@ -1,0 +1,41 @@
+<view class="opinion ">
+    <view class="top ">
+        <view class="top-title ">请选择反馈类型</view>
+        <van-radio-group value="{{ '1' }}" bind:change="onChange" class="radiu_box">
+            <van-radio name="1">建议</van-radio>
+            <van-radio name="2">bug</van-radio>
+        </van-radio-group>
+    </view>
+    <van-cell-group>
+        <van-field
+                label="手机号:"
+                value="{{ value }}"
+                placeholder="请输入联系方式"
+                border="{{ false }}"
+                bind:change="onChange"
+        />
+    </van-cell-group>
+    <view class="bottom ">
+        <van-field
+                clearable
+                type="textarea"
+                height="200"
+                autosize
+                value="{{ value }}"
+                placeholder="请填写您的宝贵意见，如果意见被我们采纳，将获得10个环保金"
+                border="{{ false }}"
+                maxlengt="500"
+                bind:change="onChange"
+        />
+
+        <view class="count ">{{''+1+'/500'}}</view>
+        <view class="upload-img ">
+            <van-uploader file-list="{{ fileList }}"
+                          preview-image="{{true}}"
+                          accept="image"
+                          max-count="5"
+                          bind:after-read="afterRead" />
+        </view>
+    </view>
+    <view bindtap="__e" class="submit ">提交</view>
+</view>

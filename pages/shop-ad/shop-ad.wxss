@@ -1,0 +1,89 @@
+.addList  {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 115rpx;
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 20rpx;
+    color: #878787;
+    border-top: 2rpx solid #f0f0f6;
+}
+
+.addList .controls  {
+    display: flex;
+    width: 120rpx;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.addList .controls image  {
+    display: block;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.addList .user  {
+    display: flex;
+}
+
+.addList .user text  {
+    display: block;
+}
+
+.addList .user text :nth-of-type(1) {
+    width: 150rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.addList :nth-of-type(1) {
+    border-top: none;
+}
+
+.noneLi  {
+    position: fixed;
+    top: 350rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230rpx;
+}
+
+.noneLi image  {
+    display: block;
+    width: 200rpx;
+    height: 172rpx;
+    margin: 30rpx auto;
+}
+
+.noneLi text  {
+    display: block;
+    font-size: 24rpx;
+    font-weight: 500;
+    margin: 0 auto;
+    color: #878787;
+    text-align: center;
+}
+
+.address-add  {
+    width: 676rpx;
+    height: 94rpx;
+    background: #f2b53f;
+    border-radius: 12rpx;
+    color: #fff;
+    position: fixed;
+    bottom: 70rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 94rpx;
+    font-size: 36rpx;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: .2em;
+}

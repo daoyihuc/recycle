@@ -1,0 +1,21 @@
+<view class="address  ">
+    <view class="noneLi  " wx:if="{{!address.length}}">
+        <image mode class=" " src="../../static/images/none-add.png"></image>
+        <text class=" ">暂时没有添加地址哦</text>
+    </view>
+    <u-modal  content="{{content}}"  showCancelButton="true" title="操作提示" value="{{show}}"></u-modal>
+    <view bindtap="__e" class="addList  "  wx:for="{{address}}" wx:for-index="__i0__" wx:key="id">
+        <view class="info  ">
+            <view class="user  ">
+                <text class=" ">{{item.name}}</text>
+                <text class=" ">{{item.mobile}}</text>
+            </view>
+            <view class=" ">{{''+(item.city||'')+(item.area||'')+(item.street||'')+(item.detail||'')+''}}</view>
+        </view>
+        <view class="controls  ">
+            <image mode bindtap="__e" class=" "  src="../../static/images/edit.png"></image>
+            <image mode bindtap="__e" class=" "  src="../../static/images/del.png"></image>
+        </view>
+    </view>
+    <view bindtap="__e" class="address-add  ">添加地址</view>
+</view>

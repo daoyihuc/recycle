@@ -1,0 +1,53 @@
+<view class="goods-details ">
+    <view class="goods-details-top  ">
+        <u-swiper    height="750" indicatorPos="bottomRight" list="{{imgList}}" mode="number" vueId="79979b01-1"></u-swiper>
+        <view class="goods-details-top-bottom  ">
+            <view class="goods-details-top-bottom-price  ">
+                <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
+                <view class="goods-details-top-bottom-price-text  ">{{info.price}}</view>
+            </view>
+            <view class="goods-details-top-bottom-describe  ">{{info.name}}</view>
+        </view>
+    </view>
+    <view class="goods-details-bottom  ">
+        <view class="goods-details-bottom-title  ">
+            <view class="vertical  "></view>
+            <view class="goods-details-bottom-title-text  ">商品详情</view>
+        </view>
+        <image mode   class="goods-details-bottom-img  " src="{{info.image}}"></image>
+    </view>
+    <u-popup  mode="bottom" value="{{show}}" vueId="79979b01-2" vueSlots="{{['default']}}">
+        <view class="shopping  ">
+            <view class="shopping-top  ">
+                <image mode class="shopping-img  " src="{{sizeInfo.pic||info.image}}"></image>
+                <view class="shopping-text  ">
+                    <view class="shopping-text-1  ">{{''+info.name+''}}</view>
+                    <view class="shopping-text-2  ">
+                        <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
+                        <text  >{{sizeInfo.price}}</text>
+                        <text   wx:if="{{!sizeInfo.price}}">请选择商品规格</text>
+                    </view>
+                </view>
+            </view>
+            <view class="shopping-center  ">
+                <view class="shopping-center-text1-1  ">选择规格</view>
+                <view class="goodSize  ">
+                    <view class="sizeBox  " wx:for="{{_size}}" wx:key="index">
+                        <text  >{{item.attr_group_name}}</text>
+                        <view class="s-box  ">
+                            <view   class="{{['s-item shopping-center-text1-2  ',isSelect[index]==index2?'select-color':'']}}"  wx:for="{{item.attr_list}}" wx:for-index="index2" wx:for-item="item2" wx:key="attr_id">{{''+item2.attr_name+''}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="shopping-center-counter  ">
+                    <view  >
+                        <u-number-box  bind:change="__e"  min="1" value="{{value}}" vueId="{{'79979b01-3'+','+'79979b01-2'}}"></u-number-box>
+                    </view>
+                </view>
+            </view>
+            <view   class="shopping-bottom  " >确定</view>
+        </view>
+    </u-popup>
+    <goods-bottom  bind:buy="__e" bind:joinShopping="__e" bind:shopping="__e"  vueId="79979b01-4"></goods-bottom>
+    <u-toast  id="van-toast" ></u-toast>
+</view>

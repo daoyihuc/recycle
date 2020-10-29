@@ -1,0 +1,257 @@
+/**index.wxss**/
+
+.banner{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.index_menu_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.index_menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icon_menu{
+  width: 100rpx;
+  height: 100rpx;
+}
+.text_menu{
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+.recycle_image{
+  width: 346rpx;
+  height: 174rpx;
+}
+.recycle_image2{
+  width: 96%;
+  height: 175rpx;
+  margin-left: 19rpx;
+  margin-right: 10rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.green-gold-title{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-left: 19rpx;
+  margin-top: 20rpx;
+}
+.green-gold-login{
+  height: 220rpx;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.green-gold-login-btn{
+  width: 308rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background: linear-gradient(90deg,#fdca30,#fcba03);
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 35rpx;
+}
+.vertical{
+  width: 7rpx;
+  height: 30rpx;
+  background: #fcba03;
+  margin-right: 20rpx;
+}
+.my-vertical{
+  display: flex;
+  margin-top: 30rpx;
+}
+.my-vertical-box{
+  width: 25%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.my-vertical-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.segmentation{
+  width: 2rpx;
+  height: 80rpx;
+  background: #e5e5e5;
+}
+.my-vertical-item{
+  width: 25%;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.my-vertical-item-num{
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.my-vertical-item-text{
+  font-size: 22rpx;
+  margin-top: 20rpx;
+  color: #666;
+}
+.green-gold-location{
+  height: 290rpx;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.green-gold-location-title{
+  font-size: 26rpx;
+}
+.green-gold-location-content{
+  display: flex;
+  margin-top: 35rpx;
+}
+.green-gold-location-content-position{
+  display: block;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  background: linear-gradient(90deg,#fdca30,#fcba03);
+  color: #fff;
+  border-radius: 35rpx;
+  outline: none;
+  border: none;
+}
+.new-consult{
+  padding-bottom: 300rpx;
+}
+.new-consult-title{
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.new-consult-title-left{
+  display: flex;
+  align-items: center;
+  margin-left: 19rpx;
+}
+.new-consult-title-right{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 19rpx;
+}
+.titleText{
+  font-size: 32rpx;
+}
+.new-consult-title-right-more{
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+.new-consult-title-right-image{
+  width: 18rpx;
+  height: 33rpx;
+}
+.ready-green-gold-location {
+  padding: 80rpx 0;
+}
+
+ .ready-green-gold-location-top {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.ready-green-gold-location-top-left {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.ready-green-gold-location-top-left>image {
+  width: 32rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.adress-text {
+  margin-left: 40rpx;
+}
+
+.adress-text-1 {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.adress-text-2 {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+
+.ready-green-gold-location-top-right>image {
+  width: 18rpx;
+  height: 33rpx;
+  display: none;
+}
+
+.ready-green-gold-location-bottom {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.ready-green-gold-location-bottom>button {
+  width: 308rpx;
+  height: 70rpx;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background: linear-gradient(90deg,#fdca30,#fcba03);
+  color: #fff;
+  border-radius: 35rpx;
+  margin-top: 35rpx;
+}
+

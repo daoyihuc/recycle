@@ -1,0 +1,27 @@
+<view>
+    <van-tabs active="{{ active }}"
+              sticky
+              color="#fdca30"
+              ellipsis="{{true}}"
+              bind:change="onChange">
+        <van-tab title="默认" >
+            <scroll-view>
+                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+            </scroll-view>
+
+        </van-tab>
+        <van-tab title="销量" >
+            <scroll-view>
+                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+            </scroll-view>
+
+        </van-tab>
+        <van-tab title="价格" >
+            <scroll-view>
+                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+            </scroll-view>
+
+        </van-tab>
+    </van-tabs>
+
+</view>

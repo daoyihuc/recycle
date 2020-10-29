@@ -1,0 +1,21 @@
+<view class="swiper-wrap" style="height:{{height}};width: {{width}}">
+	<swiper
+	 indicator-dots="{{dots}}"
+	 autoplay="{{autoplay}}"
+	 interval="{{interval}}"
+	 duration="{{duration}}"
+	 bindchange="onChange"
+	>
+		<block wx:for="{{imgs}}" wx:key="item">
+			<swiper-item style="border-radius:{{radius}}">
+				<image mode="aspectFill" src="{{item}}" style="border-radius:{{radius}}" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="swiper-dots" wx:if="{{!dots}}">
+		<text class="num">{{ current + 1 }}</text>
+		<text class="sign">/</text>
+		<text class="num">{{ imgs.length }}</text>
+	</view>
+</view>
+

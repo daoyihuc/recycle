@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "编辑地址",
+  "usingComponents": {
+    "u-picker": "@vant/weapp/picker/index",
+    "u-field": "@vant/weapp/field/index",
+    "u-tag": "@vant/weapp/tag/index",
+    "u-switch": "@vant/weapp/switch/index"
+  }
+}

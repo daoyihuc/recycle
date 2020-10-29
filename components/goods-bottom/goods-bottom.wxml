@@ -1,0 +1,14 @@
+<view class="goods-bottom ">
+    <view class="layout-width  ">
+        <view bindtap="__e" class="img  " >
+            <image mode class=" " src="../../static/images/spxq_img_gouwuche@2x.png"></image>
+            <view class="img-text  ">购物车</view>
+        </view>
+    </view>
+    <view bindtap="__e" class="layout text-1  " >
+        <view class="text   ">加入购物车</view>
+    </view>
+    <view bindtap="__e" class="layout text-2  " >
+        <view class="text   ">立即购买</view>
+    </view>
+</view>

@@ -1,0 +1,65 @@
+.goods-bottom  {
+    height: 100rpx;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+}
+
+.goods-bottom .layout  {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.goods-bottom .layout .text  {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.goods-bottom .text-1  {
+    background: #fcba03;
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.goods-bottom .text-2  {
+    background: #fc8403;
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.goods-bottom .layout-width {
+    width: 150rpx;
+}
+
+.goods-bottom .layout-width .img  {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.goods-bottom .layout-width .img image  {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.goods-bottom .layout-width .img .img-text  {
+    font-size: 22rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "回收员登录",
+  "usingComponents": {
+    "u-field": "@vant/weapp/field/index",
+    "u-button": "@vant/weapp/button/index"
+  }
+}

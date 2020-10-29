@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "选择地址",
+  "usingComponents": {
+    "u-field": "@vant/weapp/field/index",
+    "u-tag": "@vant/weapp/tag/index",
+    "u-picker": "@vant/weapp/picker/index"
+  }
+}

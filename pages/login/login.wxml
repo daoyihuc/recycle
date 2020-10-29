@@ -1,0 +1,7 @@
+<view class="login ">
+	<view class="btn ">
+		<button class="btn-1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+		<button class="btn-2 " bindtap="onback">取消</button>
+	</view>
+</view>
+

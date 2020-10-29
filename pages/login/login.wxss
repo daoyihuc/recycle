@@ -1,0 +1,32 @@
+.login {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 260rpx;
+}
+
+.btn  {
+    width: 149px;
+    height: 41px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.btn-1{
+    background-color: #1aad19;
+    color: #fff;
+}
+
+.btn-2 {
+    background-color: #fff;
+    color: silver;
+    margin-top: 50rpx;
+}
+
+.btn-2::after {
+    border: none;
+}

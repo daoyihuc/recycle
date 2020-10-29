@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的邀请",
+  "navigationBarBackgroundColor": "#fcba03",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-image": "@vant/weapp/image/index"
+  }
+}

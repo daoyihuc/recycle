@@ -1,0 +1,56 @@
+var parsePrice = function (num, n) {
+  if (!num) {
+    return 0
+  }
+  if (n) {
+    return parseFloat(num).toFixed(parseInt(n))
+  } else {
+    return parseFloat(num);
+  }
+};
+//时间戳转日期
+var parseTime = function (timestamp, type, chart) {
+  if (!timestamp) return '';
+  timestamp.toString().length!=13 && (timestamp *= 1000)
+  var date = getDate(timestamp);
+  var Y = date.getFullYear();
+  var M = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+  var D = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+  var h = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+  var m = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+  var s = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+  chart = chart || '-';
+  if (type == 'time') {
+    return h + ":" + m;
+  } else if (type == 'date') {
+    return Y + chart + M + chart + D
+  } else if (type == 'year') {
+    return Y + '年' + M + '月' + D + "日"
+  } else {
+    return Y + chart + M + chart + D + " " + h + ":" + m;
+  }
+};
+//截取字符串
+var substr = function (string, num, suffix = '...') {
+  if (string) {
+    if (string.length > num) {
+      return string.slice(0, num) + suffix;
+    } else {
+      return string;
+    }
+  } else {
+    return " ";
+  }
+}
+var orderStatus = function(status){
+  var _arr = ['待支付','待发货','待收货',"已完成"];
+  console.log(status)
+  return _arr[parseInt(status) - 1]
+}
+
+module.exports = {
+  parsePrice:parsePrice,
+  parseTime:parseTime,
+  substr:substr,
+  orderStatus:orderStatus
+}

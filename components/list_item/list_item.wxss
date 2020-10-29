@@ -1,0 +1,64 @@
+.new-consult-list-item {
+    display: flex;
+    margin-top: 40rpx;
+    padding: 0 20rpx;
+}
+
+.images {
+    width: 225rpx;
+    height: 225rpx;
+}
+
+.new-consult-list-item-right {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-left: 30rpx;
+}
+
+ .new-consult-list-item-right-text-1 {
+    font-size: 32rpx;
+}
+
+.new-consult-list-item-right-text-2 {
+    margin-top: 15rpx;
+    font-size: 26rpx;
+    color: #4b4b4b;
+}
+
+.new-consult-list-item-right-text-3 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 60rpx;
+}
+
+.new-consult-list-item-right-text-3-data .new-consult-list-item-right-text-3-data-left {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.new-consult-list-item .new-consult-list-item-right-text-3 .new-consult-list-item-right-text-3-data .new-consult-list-item-right-text-3-data-left image {
+    width: 25rpx;
+    height: 25rpx;
+    margin-right: 10rpx;
+}
+
+.new-consult-list-item .new-consult-list-item-right-text-3 .new-consult-list-item-right-text-3-data .new-consult-list-item-right-text-3-data-left text {
+    font-size: 24rpx;
+    margin-right: 30rpx;
+    color: #4b4b4b;
+}
+
+.new-consult-list-item .new-consult-list-item-right-text-3 .new-consult-list-item-right-text-3-time {
+    font-size: 24rpx;
+    color: #4b4b4b;
+}

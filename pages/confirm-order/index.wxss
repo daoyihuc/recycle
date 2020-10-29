@@ -1,0 +1,225 @@
+.popuTop  {
+    width: 540rpx;
+    height: 160rpx;
+    background: #f5c33b;
+    opacity: .9;
+    line-height: 160rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.popuCon {
+    background-color: #fff;
+}
+
+.popuCon .img {
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.popuCon .img image {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx auto;
+    animation-name: changeSize-data-v-0e13d244;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.popuCon .open {
+    width: 360rpx;
+    height: 66rpx;
+    background: #f5c33b;
+    border-radius: 33rpx;
+    text-align: center;
+    line-height: 66rpx;
+    color: #fff;
+    font-size: 30rpx;
+    margin: 20rpx auto 100rpx;
+}
+
+@-webkit-keyframes changeSize-data-v-0e13d244 {
+    0% {
+        width: 100rpx;
+        height: 100rpx;
+    }
+
+    100% {
+        width: 200rpx;
+        height: 200rpx;
+    }
+}
+
+@keyframes changeSize-data-v-0e13d244 {
+    0% {
+        width: 100rpx;
+        height: 100rpx;
+    }
+
+    100% {
+        width: 200rpx;
+        height: 200rpx;
+    }
+}
+
+.confirm-order{
+
+} 
+.confirm-order-address {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 35rpx 20rpx;
+}
+
+.confirm-order .confirm-order-address .confirm-order-address-text {
+    height: 60rpx;
+    font-size: 26rpx;
+    color: grey;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.confirm-order .confirm-order-address .confirm-order-address-img {
+    width: 18rpx;
+    height: 33rpx;
+}
+
+.confirm-order .confirm-order-segmentation {
+    height: 10rpx;
+}
+
+.confirm-order .confirm-order-segmentation image {
+    display: block;
+    width: 100%;
+    height: 10rpx;
+}
+
+.confirm-order .confirm-order-detail {
+    padding: 20rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-top {
+    padding: 30rpx 20rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-top image {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-top text {
+    font-size: 26rpx;
+    margin-left: 10rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom {
+    padding-left: 30rpx;
+    display: flex;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-img {
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 20rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-1 {
+    font-size: 28rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-2 {
+    color: #999;
+    font-size: 26rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot1 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot1 image {
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot1 text {
+    color: #fcba03;
+    font-size: 36rpx;
+    margin-left: 10rpx;
+}
+
+.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot2 text {
+    font-size: 28rpx;
+}
+
+.confirm-order .distribution {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 40rpx 20rpx;
+    border-bottom: 2rpx solid #f2f2f2;
+}
+
+.confirm-order .distribution .distribution-text {
+    font-size: 28rpx;
+}
+
+.confirm-order .confirm-order-amount {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 40rpx 20rpx;
+}
+
+.confirm-order .confirm-order-amount .confirm-order-amount-text-1 {
+    font-size: 32rpx;
+}
+
+.confirm-order .confirm-order-amount .confirm-order-amount-text-2 {
+    color: #fcba03;
+    font-size: 32rpx;
+}
+
+.confirm-order .submit {
+    width: 100%;
+    height: 100rpx;
+    background: #fcba03;
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 100rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}

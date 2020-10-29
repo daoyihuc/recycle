@@ -1,0 +1,56 @@
+.intro {
+    padding: 23rpx;
+    font-size: 30rpx;
+    box-sizing: border-box;
+}
+
+.intro text {
+    display: block;
+    margin: 10rpx 23rpx 0 0;
+}
+
+.btn {
+    width: 90vw;
+    margin: 100rpx auto 0;
+}
+
+.imgs {
+    padding: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.imgs image {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #d4d4d4;
+    text-align: center;
+}
+
+.imgs .img {
+    position: relative;
+}
+
+.imgs .img text {
+    display: block;
+    font-size: 50rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #ccc;
+    transform: translate(-50%,-50%);
+}
+
+.upload-img {
+    padding: 65rpx 20rpx 20rpx 20rpx;
+}
+
+.upload-img .slot-btn {
+    width: 138rpx;
+    height: 138rpx;
+}
