@@ -84,6 +84,7 @@ page  {
     line-height: 70rpx;
     background-color: #999;
     color: #fff;
+    display: none;
 }
 
 .textContent  {

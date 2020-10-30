@@ -99,10 +99,16 @@ Page({
         let url;
         switch (event.target.dataset.menuid) {
             case 1.1: // yuyeu all
-                url = "/pages/subscribe-order/subscribe-order?tabarIndex=all";
+                url = "/pages/subscribe-order/subscribe-order?id=0"; // 全部
                 break;
             case 1.2:
-                url = "/pages/subscribe-order/subscribe-order?tabarIndex=0";
+                url = "/pages/subscribe-order/subscribe-order?id=1";// 待服務
+                break;
+            case 1.3:
+                url = "/pages/subscribe-order/subscribe-order?id=3";// 已完成
+                break;
+            case 1.4:
+                url = "/pages/subscribe-order/subscribe-order?id=4";// 已取消
                 break;
             case 2.1: // 我的订单
                 url = "/pages/member/my-order/my-order?tabarIndex=0";

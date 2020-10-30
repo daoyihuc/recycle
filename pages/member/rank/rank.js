@@ -1,4 +1,13 @@
 // pages/rank/rank.
+import {RankingList} from "../../../api/order";
+
+var aData={
+  token: "",
+  Page: 1,
+  PageSize: 10
+};
+var ListDatas=[];
+var that;
 Page({
 
   /**
@@ -28,36 +37,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    aData.token=wx.getStorageSync("token");
+    that=this;
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.HttpRank(aData);
+  },
+  onHide:function(){
+    ListDatas=[];
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -70,13 +64,34 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.HttpRank(aData);
   },
+  HttpRank:function (params) {
+    RankingList(params).then(res=>{
+      console.log(res);
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+      if(res.code===1){
+        for(let i=0;i<res.data.length;i++){
+          const a={
+            id: 1,
+            avatar: "https://thirdwx.qlogo.cn/mmopen/vi_32/OMFdLnWEMRuIvibEcVJib1wjuYAAibdhogBomh5atRQZc3gCxKY7MF3yibhkf8n4xfMswFjhwVAkH6IX8g4hoKia0iaQ/132",
+            nickname: "admin",
+            total_money: "0.00",
+            level: 1
+          }
+          a.id=res.data[i].id;
+          a.avatar=res.data[i].avatar;
+          a.nickname=res.data[i].nickname;
+          a.total_money=res.data[i].total_money;
+          a.level=res.data[i].level;
+          ListDatas.push(a);
+        }
 
+        that.setData({
+          list: ListDatas,
+        });
+      }
+      aData.Page+=1;
+    });
   }
 })

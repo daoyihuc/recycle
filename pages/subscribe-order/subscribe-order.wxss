@@ -13,29 +13,35 @@
 }
 .content-time{
     font-size: 32rpx;
-    font-weight: 700;
-    color: #000;
+    font-weight: 400;
+    color: #1d1c1c;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 0.2rpx;
 }
 .content-text{
     font-size: 28rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
 }
 .scroll-view-item{
     background: #ffffff;
     border: 1rpx solid #eeeeee;
-    box-shadow: 1rpx 1rpx 1rpx 1rpx #999999;
+    box-shadow: 3px 1px 7px 3px #b9b4b4a1;
     border-radius: 30rpx;
     margin: 30rpx;
 }
 .foot{
     height: 63rpx;
     display: flex;
-    padding: 0 36rpx;
+    padding: 9px 37rpx;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: end;
     justify-content: flex-end;
     color: #fcbc0a;
     border-top: 2rpx solid #f8f8f8;
+    letter-spacing: 0.2rpx;
 
 }
 .title{
@@ -48,7 +54,7 @@
     padding: 0 36rpx;
     color: #f95050;
     border-bottom: 2rpx solid #f8f8f8;
-    font-size: 30rpx;
+    font-size: 28rpx;
 
 }
 .cancelTitle{

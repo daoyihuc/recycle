@@ -1,4 +1,12 @@
 // pages/subscribe-order-details/subscribe-order-details.js
+import {AppintmentDetail} from "../../api/order";
+
+
+var aData={
+  token:"",
+  id: ""
+}
+
 Page({
 
   /**
@@ -25,35 +33,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    let id=options.id;
+    aData.id=id;
+    aData.token=wx.getStorageSync("token");
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+    this.HttpDetails(aData);
   },
 
   /**
@@ -69,11 +58,11 @@ Page({
   onReachBottom: function () {
 
   },
+  HttpDetails:function (params) {
+    AppintmentDetail(params).then(res=>{
+      console.log(res)
+    });
+  },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
 
-  }
 })

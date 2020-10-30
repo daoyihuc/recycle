@@ -15,7 +15,8 @@
 }
 
 .my-invite .top .num {
-    font-size: 48rpx;
+    font-weight: bold;
+    font-size: 89rpx;
 }
 
 .my-invite .top text {
@@ -32,23 +33,35 @@
 
 .item {
     display: flex;
-    height: 100rpx;
+    /*height: 100rpx;*/
+    /*line-height: 100rpx;*/
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 10rpx 20rpx 0;
+    padding: 10rpx 10rpx 10rpx 10rpx;
+    margin-top: 10rpx;
+    margin-right: 10px;
+    margin-left: 10px;
     box-sizing: border-box;
-    border-top: 1rpx solid silver;
+    /*border-top: 1rpx solid silver;*/
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 1px #c7c2c2;
+    border-radius: 20px;
 }
 
-.item .itemleft {
+.itemleft {
     height: 100%;
     display: flex;
     -webkit-box-align: center;
+
     align-items: center;
 }
 
-.item .itemleft>text {
+.itemleft>text {
     margin-left: 10rpx;
+}
+.itemright{
+    font-size: 23rpx;
+    color: #8a8181bd;
 }
