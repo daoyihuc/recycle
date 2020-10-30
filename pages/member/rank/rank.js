@@ -1,12 +1,13 @@
 // pages/rank/rank.
 import {RankingList} from "../../../api/order";
+import {toast} from "../../../utils/macutils";
 
 var aData={
   token: "",
   Page: 1,
   PageSize: 10
 };
-var ListDatas=[];
+var ListData=[];
 var that;
 Page({
 
@@ -14,16 +15,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: !1,
-    showstr: !1,
-    mine: {},
     list: [],
-    page: 1,
-    streetRanges: 1,
-    street: 1,
-    myran: "",
-    mymoeny: "",
-    columns: '',
   },
   onClose() {
     this.setData({ show: false });
@@ -39,25 +31,22 @@ Page({
   onLoad: function (options) {
     aData.token=wx.getStorageSync("token");
     that=this;
+    this.HttpRank(aData);
+    console.log("onLoad加载");
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.HttpRank(aData);
   },
   onHide:function(){
-    ListDatas=[];
+
+    console.log("Hide请求");
   },
-
-
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  onUnload:function(){
+    ListData=[];
+    console.log("onUnload加载");
   },
 
   /**
@@ -69,12 +58,12 @@ Page({
   HttpRank:function (params) {
     RankingList(params).then(res=>{
       console.log(res);
-
+      // toast("请求开始");
       if(res.code===1){
         for(let i=0;i<res.data.length;i++){
           const a={
             id: 1,
-            avatar: "https://thirdwx.qlogo.cn/mmopen/vi_32/OMFdLnWEMRuIvibEcVJib1wjuYAAibdhogBomh5atRQZc3gCxKY7MF3yibhkf8n4xfMswFjhwVAkH6IX8g4hoKia0iaQ/132",
+            avatar: "",
             nickname: "admin",
             total_money: "0.00",
             level: 1
@@ -84,14 +73,16 @@ Page({
           a.nickname=res.data[i].nickname;
           a.total_money=res.data[i].total_money;
           a.level=res.data[i].level;
-          ListDatas.push(a);
+          ListData.push(a);
         }
 
         that.setData({
-          list: ListDatas,
+          list: ListData,
         });
+        aData.Page+=1;
+        // toast("加载成功");
       }
-      aData.Page+=1;
+
     });
   }
 })

@@ -1,7 +1,8 @@
 import {MyInvitation} from "../../../api/order";
+import {toast} from "../../../utils/macutils";
 
 var aData={
-    token: wx.getStorageSync("token"),
+    token: "",
     Page: 1,
     PageSize: 10
 };
@@ -13,6 +14,7 @@ Page({
     },
     onLoad: function (options) {
         that=this;
+        aData.token=wx.getStorageSync("token");
         this.HttpMyInvitation(aData);
     },
     onHide:function(){
@@ -20,7 +22,7 @@ Page({
     },
     HttpMyInvitation:function (params) {
         MyInvitation(params).then(res=>{
-
+            // toast("请求开始");
             if(res.code===1){
                 for(let i=0;i<res.data.List.length;i++){
                     const a={
@@ -37,8 +39,10 @@ Page({
                 that.setData({
                     mans: ListData,
                 });
+                aData.Page+=1;
+                // toast("加载成功");
             }
-            aData.Page+=1;
+
 
         });
     }
