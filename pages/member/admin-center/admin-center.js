@@ -13,7 +13,8 @@ Page({
     listout: [],
     listin: [],
     showout: !1,
-    showin: !1
+    showin: !1,
+    activeB: 1,
   },
 
   /**
@@ -61,11 +62,11 @@ Page({
   },
   // 界面跳转
   onclick:function (e) {
-    let number = e.currentTarget.dataset.number;
+    let number = e.detail;
     let url="";
     switch (number) {
       case 0:
-        url="/pages/member/admin/admin";
+        url="/pages/member/admins/admins";
         break;
       case 1:
         url="/pages/member/admin-center/admin-center";

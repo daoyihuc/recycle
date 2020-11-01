@@ -62,7 +62,7 @@ Page({
         h: "",
         active: 1,
         activeB: 0,
-        toggle: !0
+        toggle: !0,
     },
 
 
@@ -130,7 +130,7 @@ Page({
     },
     // 界面跳转
     onclick:function (e) {
-        let number = e.currentTarget.dataset.number;
+        let number = e.detail;
         let url="";
         switch (number) {
             case 0:

@@ -53,7 +53,7 @@
     </van-tabs>
 
     <van-tabbar active="{{ activeB }}"
-                bind:change="onChange"
+                bind:change="onclick"
                 active-color="#07c160"
                 inactive-color="#000"
                 fixed>

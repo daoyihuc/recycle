@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "预约中心",
   "usingComponents": {
-    "u-avatar": "@vant/weapp/image/index"
+    "u-avatar": "@vant/weapp/image/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   }
 }

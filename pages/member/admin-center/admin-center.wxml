@@ -57,14 +57,12 @@
             <image mode src="/static/images/none.png"></image>
         </view>
     </view>
-    <view class="_tabbar">
-        <view class="img" bind:tap="onclick" data-number="{{0}}">
-            <image mode src="../../../static/images/home863.png"></image>
-            <text>全部</text>
-        </view>
-        <view class="img" bind:tap="onclick" data-number="{{1}}">
-            <image mode src="../../../static/images/page861.png"></image>
-            <text>预约中心</text>
-        </view>
-    </view>
+    <van-tabbar active="{{ activeB }}"
+                bind:change="onclick"
+                active-color="#07c160"
+                inactive-color="#000"
+                fixed>
+        <van-tabbar-item icon="home-o">回收大厅</van-tabbar-item>
+        <van-tabbar-item icon="user-o">管理中心</van-tabbar-item>
+    </van-tabbar>
 </view>
