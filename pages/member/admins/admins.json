@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "回收中心",
+  "usingComponents": {
+    "u-avatar": "@vant/weapp/image/index",
+    "u-modal": "@vant/weapp/popup/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "u-icon": "@vant/weapp/icon/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

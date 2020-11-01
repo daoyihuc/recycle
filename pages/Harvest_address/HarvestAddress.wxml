@@ -20,8 +20,8 @@
             </view>
         </view>
         <view class="controls ">
-            <image mode catchtap="GoEditer" data-id="{{item.address_id}}" class=""  src="../../../static/images/edit.png"></image>
-            <image mode catchtap="GoDelete" data-id="{{item.address_id}}" class=""  src="../../../static/images/del.png"></image>
+            <image mode catchtap="GoEditer" data-id="{{item.address_id}}" class=""  src="../../static/images/edit.png"></image>
+            <image mode catchtap="GoDelete" data-id="{{item.address_id}}" class=""  src="../../static/images/del.png"></image>
         </view>
     </view>
     <view  class="address-add" bind:tap="addAddress">添加地址</view>

@@ -1,16 +1,19 @@
+<import src="../../wxParse/wxParse.wxml"></import>
+
 <view class="goods-details ">
     <view class="goods-details-top  ">
         <u-swiper
                 imgs="{{bannerList}}"
                 height="400rpx"
                 radius="20rpx"
-                width="800rpx"
+                width="750rpx"
         />
         <view class="goods-details-top-bottom  ">
-            <view class="goods-details-top-bottom-describe  ">{{info.name}}</view>
+            <view class="goods-details-top-bottom-describe  ">{{info.goods_name}}</view>
+            <view class="desc">{{info.desc}}</view>
             <view class="goods-details-top-bottom-price  ">
                 <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
-                <view class="goods-details-top-bottom-price-text  ">{{info.price}}</view>
+                <view class="goods-details-top-bottom-price-text  ">{{info.goods_price}}</view>
             </view>
 
         </view>
@@ -20,18 +23,19 @@
             <view class="vertical  "></view>
             <view class="goods-details-bottom-title-text  ">商品详情</view>
         </view>
-        <image mode   class="goods-details-bottom-img  " src="{{info.image}}"></image>
+
     </view>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
     <u-popup position="bottom" show="{{show}}">
         <view class="shopping  ">
             <view class="shopping-top  ">
-                <image mode class="shopping-img  " src="{{sizeInfo.pic||info.image}}"></image>
+                <image mode class="shopping-img  " src="{{sizeInfo.pic||info.img}}"></image>
                 <view class="shopping-text  ">
-                    <view class="shopping-text-1  ">{{''+info.name+''}}</view>
+                    <view class="shopping-text-1  ">{{''+info.goods_name+''}}</view>
                     <view class="shopping-text-2  ">
                         <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
-                        <text  >{{info.price}}</text>
-                        <text   wx:if="{{!info.price}}">请添加商品数量</text>
+                        <text  >{{info.goods_price}}</text>
+                        <text   wx:if="{{!info.goods_price}}">请添加商品数量</text>
                     </view>
                 </view>
             </view>
@@ -55,13 +59,13 @@
         </view>
     </u-popup>
     <van-goods-action>
-        <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onShopList" />
-        <van-goods-action-button
-                text="加入购物车"
-                type="warning"
-                bind:click="onJoinShop"
-        />
-        <van-goods-action-button text="立即购买" bind:click="onbuy" />
+<!--        <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onShopList" />-->
+<!--        <van-goods-action-button-->
+<!--                text="加入购物车"-->
+<!--                type="warning"-->
+<!--                bind:click="onJoinShop"-->
+<!--        />-->
+        <van-goods-action-button text="立即兑换" bind:click="onbuy" />
     </van-goods-action>
     <u-toast  id="van-toast" ></u-toast>
 </view>

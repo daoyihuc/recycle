@@ -8,6 +8,24 @@
 .avt{
     position: relative;
 }
+.header_box{
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 120rpx;
+}
+.header_box_text1{
+    font-weight: bold;
+    margin-left: 10px;
+}
+.header_box_text{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fcba03;
+    margin-left: 10px;
+}
 .head-portrait{
     width: 120rpx;
     height: 120rpx;
@@ -21,7 +39,12 @@
     flex-direction: column;
 }
 .title{
-    margin-bottom: 15xxrpx;
+    margin-bottom: 15rpx;
+}
+.user_id{
+    font-size: 25rpx;
+    color: #999999;
+
 }
 .edit-icon{
     width: 40rpx;

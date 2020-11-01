@@ -3,9 +3,9 @@
     "pages/index/index",
     "pages/consult/index", 
     "pages/subscribe/index",
+    "pages/my/my",
     "pages/subsidiary/subsidiary",
     "pages/consult-details/consult-details",
-    "pages/my/my",
     "pages/subscribe-order/subscribe-order",
     "pages/login/login",
     "pages/withdrawal/withdrawal",
@@ -20,7 +20,9 @@
     "pages/shop-list-two/shop-list-two",
     "pages/golive/golive",
     "pages/shop/shop",
-    "pages/confirm-order/index"
+    "pages/confirm-order/index",
+    "pages/Harvest_address/HarvestAddress",
+    "pages/gooddetails/gooddetails"
   ],
   "subPackages": [
     {
@@ -37,13 +39,15 @@
         "recycle-guide/recycle-guide",
         "recycle-classify/recycle-classify",
         "invite/invite",
+        "admin-login/admin-login",
         "admin/admin",
         "admin-details/admin-details",
         "admin-center/admin-center",
-        "admin-login/admin-login",
         "address/address",
         "add-address/add-address",
-        "edit-address/edit-address"
+        "edit-address/edit-address",
+        "admins/admins",
+        "pay/pay"
       ]
     }
   ],

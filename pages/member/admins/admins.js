@@ -1,6 +1,6 @@
 // pages/admin/admin.js
 import {goRouter, toast} from "../../../utils/macutils";
-import {AdminAppointmentList, ReceivingOrders, UpdateOrderStatus} from "../../../api/order";
+import {AdminAppointmentList, AdminCategoryList, ReceivingOrders, UpdateOrderStatus} from "../../../api/order";
 
 var that;
 var aData={
@@ -9,7 +9,12 @@ var aData={
     Page: 1,
     PageSize: 10
 };
+var count;
 var listData=[];
+var aData2={
+    token: "",
+    id: ''
+};
 Page({
 
     /**
@@ -29,21 +34,21 @@ Page({
         }],
         list: [
             {
-            cate_name: "全部",
-            name: "all"
-        }, {
-            cate_name: "待服务",
-            name: "0"
-        }, {
-            cate_name: "服务中",
-            name: "1"
-        }, {
-            cate_name: "已完成",
-            name: "2"
-        }, {
-            cate_name: "已取消",
-            name: "3"
-        }],
+                cate_name: "全部",
+                name: "all"
+            }, {
+                cate_name: "待服务",
+                name: "0"
+            }, {
+                cate_name: "服务中",
+                name: "1"
+            }, {
+                cate_name: "已完成",
+                name: "2"
+            }, {
+                cate_name: "已取消",
+                name: "3"
+            }],
         currOrder: {},
         current: 0,
         orderlist: [],
@@ -56,6 +61,7 @@ Page({
         height: "",
         h: "",
         active: 1,
+        activeB: 0,
         toggle: !0
     },
 
@@ -66,6 +72,7 @@ Page({
     onLoad: function (options) {
         that=this;
         aData.token=wx.getStorageSync("atoken");
+        aData2.token=wx.getStorageSync("atoken");
         // this.initData();
         this.HttpAdminAppointmentList(aData);
     },
@@ -88,53 +95,58 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        aData.Page=1;
-        this.HttpAdminAppointmentList(aData);
-    },
+        if (aData.Page <= count) {
+            this.HttpAdminAppointmentList(aData);
+        } else {
+            toast("没有更多数据了",1);
+        }
+    }
+    ,
     //
     initData:function () {
-      const a= {
-        address_detail: "湖南省长沙市天心区湘府路马王堆万家丽路光明小区c6栋7单元",
-        mobile: "17673850003",
-        name: 'daoyi',
-        createtime: '2020-10-09',
-        order_status: '1',
-        _status: "test"
-      };
-      const b=[];
-      for(let i=0;i<3;i++){
-        b.push(a);
-      }
-      this.setData({
-        orderlist: b
-      });
+        const a= {
+            address_detail: "湖南省长沙市天心区湘府路马王堆万家丽路光明小区c6栋7单元",
+            mobile: "17673850003",
+            name: 'daoyi',
+            createtime: '2020-10-09',
+            order_status: '1',
+            _status: "test"
+        };
+        const b=[];
+        for(let i=0;i<3;i++){
+            b.push(a);
+        }
+        this.setData({
+            orderlist: b
+        });
     },
-  // 拨打手机号
+    // 拨打手机号
     callPhone:function (e) {
-      console.log(e);
-      let number = e.currentTarget.dataset.number;
-      wx.makePhoneCall({
-        phoneNumber: number
-      })
+        console.log(e);
+        let number = e.currentTarget.dataset.number;
+        wx.makePhoneCall({
+            phoneNumber: number
+        })
     },
-  // 界面跳转
-  onclick:function (e) {
-    let number = e.currentTarget.dataset.number;
-    let url="";
-    switch (number) {
-      case 0:
-        url="/pages/member/admin/admin";
-        break;
-      case 1:
-        url="/pages/member/admin-center/admin-center";
-        break;
-    }
-    goRouter(url);
-  },
+    // 界面跳转
+    onclick:function (e) {
+        let number = e.currentTarget.dataset.number;
+        let url="";
+        switch (number) {
+            case 0:
+                url="/pages/member/admins/admins";
+                break;
+            case 1:
+                url="/pages/member/admin-center/admin-center";
+                break;
+        }
+        goRouter(url);
+    },
     onTabChange(event) {
         let a=event.detail.name;
         aData.type=a;
         aData.Page=1;
+        listData=[];
         this.HttpAdminAppointmentList(aData);
     },
     // 列表
@@ -169,6 +181,7 @@ Page({
                     orderlist: listData
                 });
                 aData.Page+=1;
+                count=res.data.Pageinate.Pages;
             }
 
         });
@@ -177,18 +190,50 @@ Page({
         aData.Page=1;
         listData=[];
     },
+    // 接单事件
+    ReceveEvent:function(e){
+        let id=e.currentTarget.dataset.id;
+        aData2.id=id;
+        this.HttpRecivingOrder(aData2);
+    },
     // 接单
     HttpRecivingOrder:function (params) {
         ReceivingOrders(params).then(res=>{
-
+            console.log(res);
+            if(res.code===1){
+                toast(res.msg,1);
+                aData.Page=1;
+                listData=[];
+                this.HttpAdminAppointmentList(aData);
+            }
         });
+    },
+    // 前往回收
+    goEvent:function(e){
+        let id=e.currentTarget.dataset.id;
+        aData2.id=id;
+        this.HttpUpdateOrderStatus(aData2);
     },
     // 更改预约订单状态
     HttpUpdateOrderStatus:function (params) {
         UpdateOrderStatus(params).then(res=>{
-
+            if(res.code===1){
+                toast(res.msg,1);
+                aData.Page=1;
+                listData=[];
+                this.HttpAdminAppointmentList(aData);
+            }
         });
     },
-
+    // 查看详情
+    goDetails:function (e) {
+        let id=e.currentTarget.dataset.id;
+        goRouter("/pages/member/admin-details/admin-details?id="+id);
+    },
+    // 称重
+    WeighingEvent:function (e) {
+        let id=e.currentTarget.dataset.id;
+        goRouter("/pages/member/pay/pay?id="+id);
+    }
 
 })

@@ -4,21 +4,25 @@
               color="#fdca30"
               ellipsis="{{true}}"
               bind:change="onChange">
-        <van-tab title="默认" >
+        <van-tab title="默认" name="default">
             <scroll-view>
-                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+                <van-empty description="还没有商品哦" wx:if="{{!goodlist.length}}" />
+                <goods-card  goodlist="{{goodlist}}" wx:else></goods-card>
+
             </scroll-view>
 
         </van-tab>
-        <van-tab title="销量" >
+        <van-tab title="销量" name="sales">
             <scroll-view>
-                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+                <van-empty description="还没有商品哦" wx:if="{{!goodlist.length}}" />
+                <goods-card  goodlist="{{goodlist}}" wx:else></goods-card>
             </scroll-view>
 
         </van-tab>
-        <van-tab title="价格" >
+        <van-tab title="价格" name="price">
             <scroll-view>
-                <goods-card  goodlist="{{goodlist}}" ></goods-card>
+                <van-empty description="还没有商品哦" wx:if="{{!goodlist.length}}" />
+                <goods-card  goodlist="{{goodlist}}" wx:else></goods-card>
             </scroll-view>
 
         </van-tab>

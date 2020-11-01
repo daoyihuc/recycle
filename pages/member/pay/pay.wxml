@@ -1,0 +1,45 @@
+<view>
+    <view style="color: red;font-size: 28rpx;text-align: center">!重量按kg来输入哦</view>
+    <view wx:for="{{classList}}" class="itemBox" wx:for-index="index">
+        <van-field
+                label="{{item.label}}"
+                value="{{ value }}"
+                type="digit"
+                placeholder="请输入重量"
+                border="{{ false }}"
+                data-index="{{index}}"
+                bind:blur="onWeight"
+        />
+    </view>
+
+    <van-radio-group value="{{ radio }}" bind:change="onPayChange">
+        <van-radio name="0" checked-color="#fcba30" class="margin">环保金支付</van-radio>
+        <van-radio name="1" checked-color="#fcba30" class="margin">现金支付</van-radio>
+    </van-radio-group>
+
+    <view></view>
+    <view class="button_box">
+        <button
+                bind:tap="addItem"
+                class="addItem">添加分类</button>
+        <button
+                class="payItem"
+                bind:tap="onPays">立即结算</button>
+    </view>
+
+</view>
+
+<van-popup show="{{ show }}"
+           position="bottom"
+           custom-style="height: 55%;"
+           close-on-click-overlay
+           bind:close="onClose">
+    <van-picker columns="{{ columns }}"
+                show-toolbar
+                title="分类选择"
+                value-key="name"
+                bind:change="onChange"
+                bind:cancel="onCancel"
+                bind:confirm="onConfirm"
+    />
+</van-popup>

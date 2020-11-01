@@ -145,7 +145,7 @@ Page({
                 goRouter(url);
                 break;
             case 1: // 我的预约订单
-                url="/pages/subscribe-order/subscribe-order?tabarIndex=all";
+                url="/pages/subscribe-order/subscribe-order?id=0";
                 goRouter(url);
                 break;
             case 2: // 商城

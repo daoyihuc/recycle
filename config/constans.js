@@ -22,6 +22,28 @@ export const API={
     MyInvitation: BASE_URL+"MyInvitation", // 我的邀请列表接口
     RankingList: BASE_URL+"RankingList", // 回收排行榜接口
     FeedBack: BASE_URL+"FeedBack", // 意见反馈接口
-    GoodsIndex: BASE_URL+"GoodsIndex", // 回收排行榜接口
+    GoodsIndex: BASE_URL+"GoodsIndex", // 商城首页
+    GoodsList: BASE_URL+"GoodsList", // 商品列表 //start
+    GoodsDetail: BASE_URL+"GoodsDetail", // 商品详情
+    CheckOrder: BASE_URL+"CheckOrder", // 商品购买确认订单接口
+    Done: BASE_URL+"Done", // 商城商品兑换提交接口
+    OrderList: BASE_URL+"OrderList", // 商城订单列表接口
+    OrderDetail: BASE_URL+"OrderDetail", // 商城订单详情
+    CancelGoodsOrder: BASE_URL+"CancelGoodsOrder", // 商城订单取消
+    ComfirmGoodsOrder: BASE_URL+"ComfirmGoodsOrder", // 商城确认收货
+    Mine: BASE_URL+"Mine", // 我的
+    AmountDetails: BASE_URL+"AmountDetails", // 明细列表接口
+    Withdrawal: BASE_URL+"Withdrawal", // 体现
+    AdminLogin: BASE_URL+"AdminLogin", // 回首员登录
+    AdminAppointmentList: BASE_URL+"AdminAppointmentList", // 回收员预约订单列表接口
+    ReceivingOrders: BASE_URL+"ReceivingOrders", // 回收员接单
+    UpdateOrderStatus: BASE_URL+"UpdateOrderStatus", //  更改状态为服务中
+    AdminAppointmentDetail: BASE_URL+"AdminAppointmentDetail", //  回收订单详情
+    AdminCategoryList: BASE_URL+"AdminCategoryList", //  管理员回首分类
+    OrderWeightPrice: BASE_URL+"OrderWeightPrice", //  回收员称重获取单品价格接口
+    OrderWeight: BASE_URL+"OrderWeight", //  回收员称重提交接口
+    BookingCenter: BASE_URL+"BookingCenter", //  预约中心接口
+    PoliteInvitation: BASE_URL+"PoliteInvitation", //  邀请有礼
+
 
 }

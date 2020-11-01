@@ -1,9 +1,9 @@
 <view class="confirm-order ">
-	<view bindtap="__e" class="confirm-order-address ">
-		<view class="confirm-order-address-text " wx:if="{{adr===''}}">请选择收货地址</view>
+	<view bind:tap="selectedAddress" class="confirm-order-address ">
+		<view class="confirm-order-address-text"  wx:if="{{contacts===''}}">请选择收货地址</view>
 		<view class="confirm-order-address-text " wx:else>
-			<view class="">{{''+adr.name+' '+adr.mobile+''}}</view>
-			<view class="">{{''+(adr.city||'')+(adr.area||'')+(adr.street||'')+(adr.detail||'')+''}}</view>
+			<view class="">{{''+contacts+' '+mobile+''}}</view>
+			<view class="">{{''+(province||'')+(city||'')+(district||'')+(street||'')+''+(address||'')+''}}</view>
 		</view>
 		<image mode class="confirm-order-address-img " src="../../static/images/gnegudo@2x.png" />
 	</view>
@@ -15,20 +15,20 @@
 			<image mode class="" src="../../static/images/allorder-icon-shop@2x.png" />
 			<text class="">{{goodList.name}}</text>
 		</view>
-		<view class="confirm-order-detail-bottom " wx:for="{{goodList.goods_list}}" wx:key="index">
-			<image mode class="confirm-order-detail-bottom-img " src="{{item.image}}" />
+		<view class="confirm-order-detail-bottom " >
+			<image mode class="confirm-order-detail-bottom-img " src="{{GoodsInfo.img}}" />
 			<view class="confirm-order-detail-bottom-text ">
-				<view class="confirm-order-detail-bottom-text-1 ">{{item.goods_name}}</view>
-				<view class="confirm-order-detail-bottom-text-2 ">规格：
-					<text class="" wx:for="{{item.attr_list}}" wx:for-index="__i0__" wx:for-item="i" wx:key="goods_id">{{i.attr_name}}</text>
+				<view class="confirm-order-detail-bottom-text-1 ">{{GoodsInfo.goods_name}}</view>
+				<view class="confirm-order-detail-bottom-text-2 ">说明：
+					<text class="">{{"此商品由一起环保提供"}}</text>
 				</view>
 				<view class="confirm-order-detail-bottom-text-3 ">
 					<view class="dot1 ">
 						<image mode class="" src="../../static/images/spxq_icon_36@2x.png" />
-						<text class="">{{item.price}}</text>
+						<text class="">{{GoodsInfo.goods_price}}</text>
 					</view>
 					<view class="dot2 ">
-						<text class="">{{item.num===undefined?'':' '+item.num}}</text>
+						<text class="">{{GoodsInfo.sale_number===undefined?'':' '+GoodsInfo.sale_number}}</text>
 					</view>
 				</view>
 			</view>
@@ -40,9 +40,9 @@
 	</view>
 	<view class="confirm-order-amount ">
 		<view class="confirm-order-amount-text-1 ">共1件商品 合计：</view>
-		<view class="confirm-order-amount-text-2 ">{{goodList.total_price+'环保币'}}</view>
+		<view class="confirm-order-amount-text-2 ">{{OrderPrice||0+'环保币'}}</view>
 	</view>
-	<view bindtap="__e" class="submit " data-event-opts="{{[ [ 'tap',[ [ 'sub',['$event'] ] ] ] ]}}">提交订单</view>
+	<view bindtap="sumbitEvent" class="submit ">提交订单</view>
 
 </view>
 

@@ -15,26 +15,26 @@
         <image mode   src="../../static/images/hengtiao@2x.png"></image>
     </view>
     <view class="con  " hidden="{{!(tabbarIndex==1)}}">
-        <view class="item  " wx:for="{{listin}}" wx:key="id">
+        <view class="item " wx:for="{{income}}" wx:key="id">
             <view  >
-                <text  >{{item.tip}}</text>
-                <text  >{{item.createtime}}</text>
-                <text class="description  ">{{item.memo}}</text>
+                <text class="title">{{item.title}}</text>
+                <text class="time">{{item.dateline}}</text>
+                <text class="description  ">{{item.remark}}</text>
             </view>
-            <text  >{{'+ '+item.money}}</text>
+            <text class="money">{{'+ '+item.change_money}}</text>
         </view>
         <view class="noData  " wx:if="{{listin.length===0}}">
             <image mode   src="../../static/images/none.png"></image>
         </view>
     </view>
     <view class="con  " hidden="{{!(tabbarIndex==2)}}">
-        <view class="item  " wx:for="{{listout}}" wx:for-index="__i0__" wx:key="id">
+        <view class="item  " wx:for="{{income}}" >
             <view  >
-                <text >{{item.tip}}</text>
-                <text  >{{item.createtime}}</text>
-                <text class="description  ">{{item.memo}}</text>
+                <text class="title">{{item.title}}</text>
+                <text class="time" >{{item.dateline}}</text>
+                <text class="description  ">{{item.remark}}</text>
             </view>
-            <text  >{{'- '+item.money}}</text>
+            <text  class="money" >{{'- '+item.change_money}}</text>
         </view>
         <view class="noData  " wx:if="{{listout.length===0}}">
             <image mode   src="../../static/images/none.png"></image>

@@ -201,6 +201,8 @@
     -webkit-box-pack: end;
     justify-content: flex-end;
     padding: 40rpx 20rpx;
+    margin-bottom: 100rpx;
+    align-items: center;
 }
 
 .confirm-order .confirm-order-amount .confirm-order-amount-text-1 {

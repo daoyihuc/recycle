@@ -1,13 +1,11 @@
 <view class="box  ">
-	<view class="top  ">
-		<van-tabs class="tabs  " active="{{ active }}" name="cate_name">
-			<van-tab wx:for="{{list}}" title="{{item.cate_name}}">
-				<scroll-view class="admincon  " scrollY="true" style="{{'height:'+height+'px;margin-top:'+h+'px;'}}">
+	<view class="top ">
+		<van-tabs class="tabs  " active="{{ active }}" name="cate_name" bind:change="onTabChange">
+			<van-tab wx:for="{{list}}" title="{{item.cate_name}}" name="{{item.name}}">
+
 					<view
 							class="item  "
 							wx:for="{{orderlist}}"
-							wx:for-index="__i0__"
-							wx:key="id"
 					>
 						<view class="con  ">
 							<u-avatar
@@ -22,13 +20,13 @@
 									<text class=" ">{{'用户电话:'+item.mobile}}</text>
 									<image mode class=" " src="../../../static/images/iphone.png" />
 								</view>
-								<text class=" ">{{'回收员:'+name}}</text>
+								<text class=" ">{{'回收员:'+(admin_name|| "待接单")}}</text>
 								<view bindtap="__e" class="color  ">
 									订单详情
 									<u-icon class=" " name="arrow-right" />
 								</view>
 							</view>
-							<text bindtap="__e" class=" " wx:if="{{item.order_status===1&&item.pay_type!==2}}">
+							<text bindtap="__e" class=" " wx:if="{{item.status===1&&item.pay_type!==2}}">
 								称重
 							</text>
 							<text class="stand  " wx:else></text>
@@ -37,23 +35,22 @@
 							<view class=" ">
 								<image mode class=" " src="../../../static/images/time8-6.png" />
 								<view class=" ">
-									<text class=" ">{{''+item.createtime+' 下单'}}</text>
+									<text class=" ">{{'预约回收时间'+item.now_time}}</text>
 									<view class="stutusBox">
 										预约状态:
 										<text class=" " style="color:#000000;">{{item._status}}</text>
 									</view>
 								</view>
 							</view>
-							<text bindtap="__e" wx:if="{{item.order_status===1&&item.pay_type!=2}}">取消订单</text>
-							<text class="colorfrag  " wx:if="{{item.order_status===9}}">已取消</text>
-							<text bindtap="__e" wx:if="{{item.order_status===1&&item.pay_type===2&&item.pay_status===0}}">
+							<text bindtap="__e" wx:if="{{item.status===9&&item.pay_type!=2}}">取消订单</text>
+							<text class="colorfrag  " wx:if="{{item.status===9}}">已取消</text>
+							<text bindtap="__e" wx:if="{{item.status===1&&item.pay_type===2&&item.pay_status===0}}">
 								线下支付
 							</text>
-							<text bindtap="__e" class=" " wx:if="{{item.order_status===0}}">接单</text>
+							<text bindtap="__e" class=" " wx:if="{{item.admin_status===1}}">接单</text>
 						</view>
 					</view>
 					<view class=" " style="height:50px;" />
-				</scroll-view>
 			</van-tab>
 		</van-tabs>
 	</view>

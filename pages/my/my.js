@@ -2,7 +2,12 @@ import {
     getUserinfo,
     goRouter
 } from '../../utils/macutils'
+import {Mine} from "../../api/order";
 
+var that;
+var aData={
+  token: ""
+};
 Page({
     data: {
         subscribeList: [{
@@ -22,13 +27,14 @@ Page({
             text: "已取消",
             menuId: 1.4
         }],
-        orderList: [{
+        orderList: [
+            {
             imgUrl: "../../static/images/my_icon_quanbu@2x.png",
             text: "全部订单",
             menuId: 2.1
         }, {
             imgUrl: "../../static/images/fukuan@2x.png",
-            text: "已付款",
+            text: "已发货",
             menuId: 2.2
         }, {
             imgUrl: "../../static/images/my_icon_daishouhuo@2x.png",
@@ -36,10 +42,11 @@ Page({
             menuId: 2.3
         }, {
             imgUrl: "../../static/images/shouhoufuwu-zidongpingjia@2x.png",
-            text: "售后",
+            text: "已取消",
             menuId: 2.4
         }],
-        toolList: [{
+        toolList: [
+            {
             imgUrl: "../../static/images/my_icon_bangdan.png",
             text: "回收榜单",
             menuId: 3
@@ -67,11 +74,12 @@ Page({
             imgUrl: "../../static/images/my_icon_saoyisao@2x.png",
             text: "扫一扫",
             menuId: 9
-        }, {
-            imgUrl: "../../static/images/my_icon_gouwuche@2x.png",
-            text: "购物车",
-            menuId: 10
-        }, {
+        }, //, {
+        //     imgUrl: "../../static/images/my_icon_gouwuche@2x.png",
+        //     text: "购物车",
+        //     menuId: 10
+        // },
+            {
             imgUrl: "../../static/images/my_icon_kefu@2x.png",
             text: "客服",
             menuId: 11
@@ -84,12 +92,18 @@ Page({
             text: "管理员端",
             menuId: 14
         }],
-        avatar: "",
         isLogin: false,
-        nickname: ""
+        avatar: "",
+        nickname: "",
+        id: "",
+        money: "", //环保金额
+        appointments_num: "", // 回收次数
+        integral: ''// 积分
     },
     onLoad: function (options) {
-
+        aData.token=wx.getStorageSync("token");
+        that=this;
+        this.HttpMine(aData);
     },
     onShow() {
         this.isLogin();
@@ -111,14 +125,17 @@ Page({
                 url = "/pages/subscribe-order/subscribe-order?id=4";// 已取消
                 break;
             case 2.1: // 我的订单
-                url = "/pages/member/my-order/my-order?tabarIndex=0";
+                url = "/pages/member/my-order/my-order?type=all"; //全部
                 break;
             case 2.2:
-                url = "/pages/member/my-order/my-order?tabarIndex=0";
+                url = "/pages/member/my-order/my-order?type=1"; // 发唆
                 break;
             case 2.3:
-                url = "/pages/member/my-order/my-order?tabarIndex=0";
+                url = "/pages/member/my-order/my-order?type=2"; //完层
                 break;
+            case 2.4:
+                url = "/pages/member/my-order/my-order?type=3"; // 取消
+                break
             case 3: // 回收榜单
                 url = "/pages/member/rank/rank";
                 break;
@@ -148,7 +165,12 @@ Page({
                 url = "/pages/member/address/address";
                 break
             case 14: // 管理员端
-                url = "/pages/member/admin-login/admin-login"
+                if(!wx.getStorageSync("atoken")){
+                    url = "/pages/member/admin-login/admin-login";
+                }else{
+                    url= "/pages/member/admins/admins";
+                }
+
                 break
             case 15: // 提现
                 url = "/pages/withdrawal/withdrawal";
@@ -178,6 +200,34 @@ Page({
         this.setData({
             avatar: pic,
             nickname: name
+        });
+    },
+    // 我的
+    HttpMine:function (params) {
+        Mine(params).then(res=>{
+            console.log(res);
+            if(res.code===1){
+                let a={
+                    id: "",
+                    nickname: "",
+                    avatar: "",
+                    money: "",
+                    appointments_num: "",
+                };
+                a=res.data;
+                wx.setStorageSync("pic",a.avatar);
+                wx.setStorageSync("name",a.nickname);
+                wx.setStorageSync("money",a.money);
+                wx.setStorageSync("appointments_num",a.appointments_num);
+
+                that.setData({
+                    avatar: a.avatar,
+                    nickname: a.nickname,
+                    id: a.id,
+                    money: a.money,
+                    appointments_num: a.appointments_num,
+                });
+            }
         });
     }
 });

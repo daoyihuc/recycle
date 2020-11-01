@@ -1,17 +1,22 @@
 <view>
 	<view class="login">
-		<u-field
-		 left-icon="contact"
-		 iconStyle="{text-align:center}"
-		 placeholder="请填写用户账号"
-		 maxlength="16"
-		 value="{{form.account}}"
-		/>
-		<u-field
+		<van-cell-group>
+			<van-field
+					left-icon="contact"
+					type="text"
+					model:value="{{ account }}"
+					placeholder="请输入用户名"
+					bind:change="usernames1"
+					bind:blur="usernames2"
+			/>
+		</van-cell-group>
+
+		<van-field
 		 left-icon="lock"
 		 password="true"
 		 placeholder="请填写用户密码"
-		 value="{{form.password}}"
+		 bind:change="passwords"
+		 bind:blur="passwords1"
 		/>
 		<u-button color="#fdca30" block bind:tap="login">登录</u-button>
 	</view>

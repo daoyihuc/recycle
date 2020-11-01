@@ -1,3 +1,4 @@
+@import "../../wxParse/wxParse.wxss";
 .sizeBox  {
     font-size: 28rpx;
 }
@@ -43,12 +44,18 @@
 
 .goods-details-top-bottom-describe  {
     font-size: 40rpx;
+    letter-spacing: 0.2rpx;
     margin-top: 10rpx;
     margin-bottom: 10rpx;
 }
+.desc{
+    color: #999999;
+
+}
 
 .goods-details .goods-details-bottom  {
-    margin-top: 60rpx;
+    margin-top: 30rpx;
+    margin-bottom: 10rpx;
 }
 
 .goods-details .goods-details-bottom .goods-details-bottom-title  {

@@ -1,75 +1,88 @@
 // pages/admin-login/admin-login.js
-import {goRouter} from "../../../utils/macutils";
+import {goRouter, toast} from "../../../utils/macutils";
+import {AdminLogin} from "../../../api/order";
 
+var that;
+var aDatas={
+  username: "",
+  password: ""
+};
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    form: {
       account: "",
       password: "",
-      user_id: wx.getStorageSync("userInfo").id
-    }
-  },
-  login: function () {
-    goRouter("/pages/member/admin/admin")
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    that=this;
+  },
+  usernames1:function(e){
+    console.log(e);
+    that.setData({
+      account: e.detail
+    });
+    aDatas.username=e.detail;
+  },
+  usernames2:function(e){
+    console.log(e);
+    that.setData({
+      account: e.detail.value
+    });
+    aDatas.username=e.detail.value;
+  },
+  passwords:function(e){
+    console.log(e.detail);
+    this.setData({
+      password: e.detail
+    });
+    aDatas.password=e.detail;
+  },
+  passwords1:function(e){
+    console.log(e.detail);
+    this.setData({
+      password: e.detail.value
+    });
+    aDatas.password=e.detail.value;
+  },
+  login: function () {
+    if(!this.data.account){
+      toast("帐号不能为空",1);
+    }else if(!this.data.password){
+      toast("密码不能为空",1);
+    }else{
+      aDatas.username=this.data.account;
+      this.HttpAdminLogin(aDatas);
+    }
+    console.log(aDatas);
+    // goRouter("/pages/member/admin/admin")
+  },
+  HttpAdminLogin:function(params){
+    AdminLogin(params).then(res=>{
+      toast(res.msg,1);
+      console.log(res);
+      if(res.code===1){
+        let a={
+          id: "",
+          token: "", // 回收员token
+          username: ""
+        }
+        a=res.data;
+        wx.setStorageSync("atoken",a.token);
+        wx.setStorageSync("auname",a.username);
+        wx.setStorageSync("aid",a.id);
+        setTimeout(()=>{
+          goRouter("/pages/member/admins/admins");
+        },1000);
 
+      }
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

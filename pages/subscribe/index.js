@@ -174,8 +174,8 @@ Page({
     sumbitEvent:function () {
         console.log(this.data.currentSel);
         aData.token=wx.getStorageSync("token");
-        aData.NowDate=this.data.date;
-        aData.NowTime=this.data.currentDate;
+        aData.NowTime=this.data.date; //NowDate NowTime
+        aData.NowDate=this.data.currentDate;
         aData.AddressId=this.data.address_id;
         if(aData.token===""){
             toast("请前往登录",1);

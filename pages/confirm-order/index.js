@@ -1,6 +1,17 @@
-/**
- * index.js
- */
+import {CheckOrder, Done} from "../../api/order";
+import {back, goRouter, toast} from "../../utils/macutils";
+
+var that;
+var aData={
+  token: "",
+  Id:"",
+};
+var aData2={
+  token: "",
+  Id:"",
+  AddressId: "",
+  Remark: ""
+}
 Page({
 
   /**
@@ -9,34 +20,56 @@ Page({
   data: {
     adr: '',
     goodList: [],
+    province: "", // 省
+    city:'', // 市
+    district: "", // 区
+    street: "", // 街道
+    address: "",// 详细地址
+    address_id: "", // 地址id
+    contacts: "", // 联系人
+    mobile: "", // 手机号
+    GoodsInfo: "", // 商品详情
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.initData();
-  },
+    console.log(options)
+    if(options.type==="1"){
+      let id=options.id;
+      aData.Id=id;
+      aData2.Id=id;
+    }else if(options.type==="2"){
+      // const a="/pages/confirm-order/index?type=2&province=" + province+
+      //     "&city="+city+"&district="+district+"&street="+street+"&address="+address+
+      //     "&address_id="+address_id+"&contacts="+contacts+"&mobile="+mobile;
+      let province=options.province;
+      let city=options.city;
+      let district=options.district;
+      let street=options.street;
+      let address=options.address;
+      let address_id=options.address_id;
+      let contacts=options.contacts;
+      let mobile=options.mobile;
+      this.setData({
+        province: province,
+        city: city,
+        district: district,
+        street: street,
+        address: address,
+        address_id: address_id,
+        contacts: contacts,
+        mobile: mobile,
+      });
+      aData2.token=wx.getStorageSync("token");
+     aData2.AddressId=address_id;
+    }
+    aData.token=wx.getStorageSync("token");
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+    that=this;
+    // this.initData();
+    this.HttpCofirmOrder(aData);
   },
 
   /**
@@ -59,19 +92,12 @@ Page({
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   // 数据模拟
   initData: function () {
 
     const a = {
       name: '',
-      goods_list: []
+      goods_list: [],
     };
     for (let i = 0; i < 3; i++) {
       a.name="生活家居";
@@ -102,4 +128,46 @@ Page({
       goodList: a
     });
   },
+  // 确认下单信息
+  HttpCofirmOrder:function (params) {
+    CheckOrder(params).then(res=>{
+      let a={
+        "Address": [],
+        "GoodsInfo": {
+          "goods_name": "231231",
+          "img": "https://fg.996sh.com/2312312",
+          "goods_price": "12.30",
+          "sale_number": 0
+        },
+        "GoodsPrice": "12.30",
+        "OrderPrice": "12.30"
+      };
+      a=res.data;
+      that.setData({
+        OrderPrice: a.OrderPrice,
+        GoodsInfo: a.GoodsInfo
+      });
+      console.log(res);
+    });
+  },
+  // 选择地址
+  selectedAddress:function () {
+    // goRouter("/pages/confirm-order/index?type=1&id=" + id);
+    goRouter("/pages/Harvest_address/HarvestAddress");
+  },
+  // 订单提交
+  HttpDone:function (params) {
+    Done(params).then(res=>{
+      toast(res.msg,1);
+      if(res.code===1){
+        back(2);
+      }
+    })
+  },
+  // 提交事件
+  sumbitEvent:function () {
+    this.HttpDone(aData2);
+  }
+
+
 })

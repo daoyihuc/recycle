@@ -16,7 +16,11 @@
 	</view>
 	<view class="nickname ">
 		<text class="title">{{nickname}}</text>
-		<text class="">{{'ID:'+(userInfo.id||'')}}</text>
+		<text class="user_id">{{'ID:'+(id||'')}}</text>
+	</view>
+	<view class="header_box">
+		<view class="header_box_text1">积分:</view>
+		<text class="header_box_text">{{integral||0}}</text>
 	</view>
 	<image
 	 mode
@@ -30,7 +34,7 @@
 	 src="../../static/images/sp8-3.png"
 	 style="display:none;"
 	/>
-	<image mode class="goUp " src="../../static/images/vip18-3.png" />
+	<image mode class="goUp " src="../../static/images/vip18-3.png" style="display: none"/>
 </view>
 
 <view class="my-en ">
@@ -43,11 +47,11 @@
 		</view>
 		<view class="my-en-bottom-item-2 " />
 		<view class="my-en-bottom-item-3 ">
-			<view class="price ">{{''+recycle_money+''}}</view>
+			<view class="price ">{{''+money+''}}</view>
 			<view class="text ">环保金额</view>
 		</view>
 		<view class="my-en-bottom-item-3 ">
-			<view class="price ">{{""+all_order}}</view>
+			<view class="price ">{{""+appointments_num}}</view>
 			<view class="text ">投递次数</view>
 		</view>
 	</view>

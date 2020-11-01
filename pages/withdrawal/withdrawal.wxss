@@ -29,7 +29,7 @@
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: end;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .top1 {
@@ -100,10 +100,15 @@
     align-items: flex-end;
 }
 
-.inp {
-    display: block;
-    width: 50vw;
-    height: 100rpx;
-    font-size: 60rpx;
-    border-bottom: 1rpx solid grey;
+.inp{
+    /*display: block;*/
+    /*width: 50vw;*/
+    /*height: 100rpx;*/
+    /*font-size: 60rpx;*/
+    /*border-bottom: 1rpx solid grey;*/
+    color: #fcba30;
+    -webkit-text-fill-color: #fcba30;/*输入文字、placeholder颜色*/
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1rpx solid  #000000;
 }

@@ -1,0 +1,63 @@
+<view class="maxBox">
+    <van-tabs class="tabs  " active="{{ active }}" bind:change="onTabChange" sticky>
+        <van-tab wx:for="{{list}}" title="{{item.cate_name}}" name="{{item.name}}">
+
+            <van-empty description="还没有订单信息" wx:if="{{!orderlist.length}}"/>
+            <view wx:else>
+                <view wx:for="{{orderlist}}" class="itemMax"  >
+                    <view class="itemBox">
+                        <u-avatar round
+                                  width="80rpx"
+                                  height="80rpx"
+                                  class="img"
+                                  src="{{item.avatar}}"/>
+                        <view>
+                            <view class="item address">{{item.province+item.city+item.district+item.street+item.address}}</view>
+                            <view class="item">{{item.contacts}}</view>
+                            <view class="item phone_box">
+                                <text>{{item.mobile}}</text>
+                                <image mode class="phone_icon"
+                                       bind:tap="callPhone"
+                                       data-number="{{item.mobile}}"
+                                       src="../../../static/images/iphone.png"></image>
+                            </view>
+                            <view class="item">
+                                <text>回收预约时间:</text>
+                                <text>{{item.now_time+' '+item.now_date}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="buttonBox">
+                        <van-button round type="primary"
+                                    bind:tap="ReceveEvent"
+                                    data-id="{{item.id}}"
+                                    wx:if="{{item.admin_status===1}}">接单</van-button>
+                        <van-button round type="info"
+                                    bind:tap="goEvent"
+                                    data-id="{{item.id}}"
+                                    wx:if="{{item.admin_status===0&&item.status===0}}">前往回收</van-button>
+                        <van-button round type="danger"
+                                    bind:tap="WeighingEvent"
+                                    data-id="{{item.id}}"
+                                    wx:if="{{item.status===1}}">承重</van-button>
+                        <van-button round type="info"
+                                    bind:tap="goDetails"
+                                    data-id="{{item.id}}"
+                                    color="#fcba30">查看详情</van-button>
+                    </view>
+                </view>
+            </view>
+
+
+        </van-tab>
+    </van-tabs>
+
+    <van-tabbar active="{{ activeB }}"
+                bind:change="onChange"
+                active-color="#07c160"
+                inactive-color="#000"
+                fixed>
+        <van-tabbar-item icon="home-o">回收大厅</van-tabbar-item>
+        <van-tabbar-item icon="user-o">管理中心</van-tabbar-item>
+    </van-tabbar>
+</view>
