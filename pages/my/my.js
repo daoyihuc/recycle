@@ -98,6 +98,7 @@ Page({
         id: "",
         money: "", //环保金额
         appointments_num: "", // 回收次数
+        ranking:"",
         integral: ''// 积分
     },
     onLoad: function (options) {
@@ -107,6 +108,7 @@ Page({
     },
     onShow() {
         this.isLogin();
+        this.HttpMine(aData);
     },
     onClick: function (event) {
         console.log(event.target.dataset.menuid);
@@ -157,7 +159,7 @@ Page({
             case 9: // 扫一扫
                 wx.scanCode({
                     success(res) {
-                        console.log(res)
+                        console.log("scancode:"+JSON.stringify(res));
                     }
                 });
                 break
@@ -195,11 +197,15 @@ Page({
     },
     // 获取用户信息
     getUserinfo(){
-        let pic=wx.getStorageSync("pic",pic);
-        let name=wx.getStorageSync("name",name);
+        let pic=wx.getStorageSync("pic");
+        let name=wx.getStorageSync("name");
+        let ranking=wx.getStorageSync("ranking");
+        let integral=wx.getStorageSync("integral"); // 积分
         this.setData({
             avatar: pic,
-            nickname: name
+            nickname: name,
+            ranking:ranking,
+            integral:integral
         });
     },
     // 我的
@@ -213,12 +219,17 @@ Page({
                     avatar: "",
                     money: "",
                     appointments_num: "",
+                    ranking:"",
+                    integral:""
                 };
                 a=res.data;
+                wx.setStorageSync("id",a.id);
                 wx.setStorageSync("pic",a.avatar);
                 wx.setStorageSync("name",a.nickname);
                 wx.setStorageSync("money",a.money);
                 wx.setStorageSync("appointments_num",a.appointments_num);
+                wx.setStorageSync("ranking",a.ranking);
+                wx.setStorageSync("integral",a.integral); // 积分
 
                 that.setData({
                     avatar: a.avatar,
@@ -226,6 +237,8 @@ Page({
                     id: a.id,
                     money: a.money,
                     appointments_num: a.appointments_num,
+                    ranking:a.ranking,
+                    integral:a.integral
                 });
             }
         });

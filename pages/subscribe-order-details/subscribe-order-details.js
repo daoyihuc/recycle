@@ -6,7 +6,7 @@ var aData={
   token:"",
   id: ""
 }
-
+var that;
 Page({
 
   /**
@@ -34,6 +34,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    that=this;
     let id=options.id;
     aData.id=id;
     aData.token=wx.getStorageSync("token");
@@ -60,7 +61,29 @@ Page({
   },
   HttpDetails:function (params) {
     AppintmentDetail(params).then(res=>{
-      console.log(res)
+      console.log(res);
+      let a={
+        AdminInfo: "yanwen",
+        Detail: [{
+          goods_weight: "2.00",
+          name: "微信公众号",
+          price: "1.00",
+          total_price: "2.00",
+        }],
+        address: "湖南省长沙市芙蓉区远大一路721号58",
+        dateline: "2020-11-01 11:24:44",
+        mobile: "18673497779",
+        order_amount: "0.00",
+        order_sn: "JB010108441002382",
+        pay_id: 0,
+        total_weight: "0.00",
+      };
+      if(res.code===1){
+        a=res.data;
+        that.setData({
+          info: a
+        })
+      }
     });
   },
 

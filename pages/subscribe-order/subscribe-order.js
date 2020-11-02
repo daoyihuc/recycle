@@ -1,5 +1,5 @@
 import {AppintmentList, CancelOrder} from "../../api/order";
-import {toast} from "../../utils/macutils";
+import {goRouter, toast} from "../../utils/macutils";
 
 var aData={
     token:"",
@@ -129,5 +129,10 @@ Page({
             id: id
         };
         this.HttpCancleOrder(a);
+    },
+    goDetails:function (e) {
+        console.log(e.currentTarget.dataset.id);
+        let id=e.currentTarget.dataset.id;
+        goRouter("/pages/subscribe-order-details/subscribe-order-details?id="+id);
     }
 });

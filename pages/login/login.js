@@ -36,6 +36,7 @@ Page({
         a.avatar=pic;
         a.nickname=name;
         a.gender=gender;
+        a.inviteuid=wx.getStorageSync("scene");
         this.login();
 
     },

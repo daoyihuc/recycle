@@ -18,19 +18,19 @@
     <view class="mineInfo  " hidden="{{!!show}}">
         <view class="info  ">
             <text>排名</text>
-            <text>{{myran||'0'}}</text>
+            <text>{{ranking||'0'}}</text>
         </view>
         <view class="avatar  ">
             <u-avatar
                     round
                     width="4rem"
                     height="4rem"
-                    src="https://img.yzcdn.cn/vant/cat.jpeg"></u-avatar>
+                    src="{{avatar}}"></u-avatar>
             <text>{{mine.nickname}}</text>
         </view>
         <view class="info  ">
             <text>回收币</text>
-            <text>{{mymoeny}}</text>
+            <text>{{money}}</text>
         </view>
     </view>
     <view class="rankcon" wx:if="{{list.length}}">

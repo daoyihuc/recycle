@@ -27,7 +27,7 @@
                             <text class="">{{item.address}}</text>
                         </view>
                     </view>
-                    <view bindtap="__e" class="foot ">
+                    <view bindtap="goDetails" class="foot " data-id="{{item.id}}">
                         <text class="">查看详情>></text>
                     </view>
                 </view>

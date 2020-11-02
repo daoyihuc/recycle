@@ -20,13 +20,21 @@ page  {
 }
 
 .status .con  {
-    padding: 20rpx 30rpx;
+    padding: 10rpx 25rpx;
     box-sizing: border-box;
     background: #fff;
     font-size: 26rpx;
     line-height: 40rpx;
 }
-
+.item{
+    padding: 10rpx 0;
+}
+.item_title{
+    font-weight: bolder;
+    font-size: 28rpx;
+    margin-right: 10rpx;
+    color: #fcba30;
+}
 .describe  {
     background: #fff;
     padding: 10rpx 30rpx;
@@ -39,14 +47,14 @@ page  {
     align-items: center;
     font-size: 32rpx;
     font-weight: 700;
-    color: #000;
+    color: #fcba30;
 }
 
 .describe .title text  {
     display: block;
     width: 7rpx;
     height: 29rpx;
-    background: #000;
+    background: #fcba30;
     margin-right: 20rpx;
 }
 
@@ -73,23 +81,4 @@ page  {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-}
-
-.btn  {
-    margin: 300rpx auto 0;
-    height: 70rpx;
-    border-radius: 20rpx;
-    width: 70vw;
-    text-align: center;
-    line-height: 70rpx;
-    background-color: #999;
-    color: #fff;
-    display: none;
-}
-
-.textContent  {
-    width: 65vw;
-    height: 200rpx;
-    margin: 0 auto;
-    text-align: left;
 }

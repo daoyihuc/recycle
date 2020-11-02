@@ -1,62 +1,39 @@
 <view>
-    <view class="item">
-        <u-avatar    round
-  width="3rem"
-  height="3rem"
-  src="https://img.yzcdn.cn/vant/cat.jpeg" ></u-avatar>
-        <view class="info">
-            <text>姓名:<text>{{''+info.nickname+''}}</text>
-            </text>
-            <text>{{'电话: '+info.username}}</text>
-            <text>{{'区域: '+info.address}}</text>
-            <text>{{'环保金: '+moeny}}</text>
+
+    <view>
+        <view class="headerItem">
+            <text class="headerItemTitle">姓名:</text>
+            <text class="headerItemContent">{{AdminInfo.username}}</text>
         </view>
-        <view bindtap="__e" class="order">
-            <text>发起</text>
-            <text>订单</text>
+        <view class="headerItem">
+            <text class="headerItemTitle">手机号:</text>
+            <text class="headerItemContent">{{AdminInfo.mobile}}</text>
         </view>
+        <view  class="headerItem">
+            <text class="headerItemTitle">所属区域:</text>
+            <text class="headerItemContent">{{AdminInfo.district}}</text>
+        </view>
+        <view class="headerItem">
+            <text class="headerItemTitle">回收金余额:</text>
+            <text class="headerItemContent">{{AdminInfo.money}}</text>
+        </view>
+        <van-tabs active="{{ active }}" bind:change="onTabChange" sticky>
+            <van-tab title="{{item.cate_name}}" wx:for="{{list}}" name="{{item.name}}">
+                <view wx:for="{{MoneyList}}" wx:for-item="item1" class="itemMax">
+                    <view class="itemBox">
+                        <text class="item itemTitle">{{item1.title}}</text>
+                        <text class="item itemRank">{{item1.remark}}</text>
+                        <text class="item itemTime">{{item1.dateline}}</text>
+                    </view>
+                    <view class="money">
+                        <text wx:if="{{active===0}}">{{"+"+item1.change_money}}</text>
+                        <text wx:if="{{active===1}}">{{"-"+item1.change_money}}</text>
+                    </view>
+                </view>
+            </van-tab>
+        </van-tabs>
     </view>
-    <view class="tabbar">
-        <view bindtap="__e" class="left border">
-            <image mode hidden="{{!(tabbarIndex!=1)}}" src="/static/images/cz-icon-chuzhi_nor@2x.png"></image>
-            <image mode hidden="{{!(tabbarIndex==1)}}" src="/static/images/cz-icon-chuzh@2x.png"></image>
-            <view class="{{[tabbarIndex==1?'orange':'']}}">收入</view>
-        </view>
-        <view bindtap="__e" class="right">
-            <image mode hidden="{{!(tabbarIndex!=2)}}" src="/static/images/icon_tixian@2x.png"></image>
-            <image mode hidden="{{!(tabbarIndex==2)}}" src="/static/images/cz_icon_tixian_sel@2x.png"></image>
-            <view class="{{[tabbarIndex==2?'orange':'']}}">支出</view>
-        </view>
-    </view>
-    <view class="segmentation">
-        <image mode src="../../../static/images/hengtiao@2x.png"></image>
-    </view>
-    <view class="con" hidden="{{!(tabbarIndex==1)}}">
-        <view class="item" wx:for="{{listin}}" wx:key="id">
-            <view>
-                <text>{{item.tip}}</text>
-                <text>{{item.createtime}}</text>
-                <text class="description">{{item.memo}}</text>
-            </view>
-            <text class="orange">{{'+ '+item.money}}</text>
-        </view>
-        <view class="noData" wx:if="{{showin}}">
-            <image mode src="/static/images/none.png"></image>
-        </view>
-    </view>
-    <view class="con" hidden="{{!(tabbarIndex==2)}}">
-        <view class="item" wx:for="{{listout}}" wx:for-index="__i0__" wx:key="id">
-            <view>
-                <text>{{item.tip}}</text>
-                <text>{{item.createtime}}</text>
-                <text class="description">{{item.memo}}</text>
-            </view>
-            <text class="orange">{{'- '+item.money}}</text>
-        </view>
-        <view class="noData" wx:if="{{showout}}">
-            <image mode src="/static/images/none.png"></image>
-        </view>
-    </view>
+
     <van-tabbar active="{{ activeB }}"
                 bind:change="onclick"
                 active-color="#07c160"

@@ -7,7 +7,7 @@ import {Index, NewList} from "../../api/app";
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
 var qqmapsdk;
 const app = getApp()
-var that='';
+var that;
 var aNew={
     Page: 1,
     PageSize: 5,
@@ -29,11 +29,24 @@ Page({
         appointments_num: ""
 
     },
-    onLoad: function () {
+    onLoad: function (options) {
+        console.log(options);
+
+        if(options.scene){
+            let scene1= options.scene;
+            let scene = decodeURIComponent(options.scene);
+            wx.setStorageSync("scene",scene);
+            setTimeout(()=>{
+                toast("daoyi"+scene);
+            },2000);
+        }else{
+            toast("无参数捕捉")
+        }
+
         that=this;
         this.addBanner();
         this.addMenu();
-        this.listItem();
+        // this.listItem();
         this.isLogin();
         console.log('daoyi',"onload")
         qqmapsdk = new QQMapWX({
@@ -46,9 +59,10 @@ Page({
         console.log('daoyi',"onready")
         this.isLogin();
     },
-    onShow() {
+    onShow(options) {
         this.isLogin();
-        console.log('daoyi',"onshow")
+        console.log('daoyi',"onshow");
+
     },
     addBanner: function () {
         let banner = [];
@@ -192,11 +206,11 @@ Page({
                         console.log(res.result.address);
                         that.setData({
                             address: res.result.address
-                        })
+                        });
                     },
                     fail: function (res) {
                         console.log(res);
-                        toast("地址获取成功");
+                        // toast("地址获取成功");
                     }
                 });
             },
@@ -268,6 +282,9 @@ Page({
                 // read_num: 1
                 // dateline: "2009/01/06"
                 newL.push(test);
+                that.setData({
+                    listItem: newL,
+                })
             }
             console.log("daoyi",newL);
         })

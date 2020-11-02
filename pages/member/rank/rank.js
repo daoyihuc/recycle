@@ -16,6 +16,10 @@ Page({
    */
   data: {
     list: [],
+    avatar: "",
+    nickname: "",
+    ranking: "",
+    money: ""
   },
   onClose() {
     this.setData({ show: false });
@@ -39,6 +43,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let pic=wx.getStorageSync("pic");
+    let name=wx.getStorageSync("name");
+    let ranking=wx.getStorageSync("ranking");
+    let money= wx.getStorageSync("money"); // 金额
+    this.setData({
+      avatar: pic,
+      nickname: name,
+      ranking:ranking,
+      money:money
+    });
   },
   onHide:function(){
 
