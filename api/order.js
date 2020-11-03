@@ -146,7 +146,7 @@ export function OrderDetail(params) {
         'content-type':'application/json'
     })
 }
-// 订单取消
+// 商城订单取消
 export function CancelGoodsOrder(params) {
     return request({
         url: API.CancelGoodsOrder,

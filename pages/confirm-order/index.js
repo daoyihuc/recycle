@@ -1,5 +1,5 @@
 import {CheckOrder, Done} from "../../api/order";
-import {back, goRouter, toast} from "../../utils/macutils";
+import {back, goRouter, goRouterR, toast} from "../../utils/macutils";
 
 var that;
 var aData={
@@ -166,7 +166,14 @@ Page({
   },
   // 提交事件
   sumbitEvent:function () {
-    this.HttpDone(aData2);
+    if(!aData2.AddressId){
+      toast("地址不能为空",1)
+    }else if(!aData2.token){
+      toast("请先登录",1)
+    }else{
+      this.HttpDone(aData2);
+    }
+
   }
 
 

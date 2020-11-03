@@ -1,5 +1,5 @@
-import {CancelOrder, OrderList} from "../../../api/order";
-import {toast} from "../../../utils/macutils";
+import {OrderList,CancelGoodsOrder,ComfirmGoodsOrder} from "../../../api/order";
+import {goRouter, toast} from "../../../utils/macutils";
 
 var that;
 var aData={
@@ -95,7 +95,7 @@ Page({
     },
     // 取消订单
     HttpCancel:function (params) {
-        CancelOrder(params).then(res=>{
+        CancelGoodsOrder(params).then(res=>{
             console.log(res);
             if(res.code===1){
                 aData.Page=1;
@@ -107,7 +107,7 @@ Page({
     },
     // 确认收获
     HttpCofig:function (params) {
-        ComfirmFinished(params).then(res=>{
+        ComfirmGoodsOrder(params).then(res=>{
             console.log(res);
             if(res.code===1){
                 aData.Page=1;
@@ -120,6 +120,7 @@ Page({
     // 取消事件
     cancelEevent:function (e) {
         let id=e.currentTarget.dataset.id;
+        console.log(id);
         aData2.oid=id;
         this.HttpCancel(aData2);
     },
@@ -128,5 +129,9 @@ Page({
         let id=e.currentTarget.dataset.id;
         aData2.oid=id;
         this.HttpCofig(aData2);
+    },
+    // 查看详情
+    GoDetail:function (e) {
+        goRouter("/pages/gooddetails/gooddetails?id="+e.currentTarget.dataset.id);
     }
 });

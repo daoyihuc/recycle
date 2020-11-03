@@ -495,6 +495,12 @@
           "pathName": "pages/member/recycle-guide/recycle-guide",
           "query": "scene=id%25%26goodsid%3D22",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consult/index",
+          "pathName": "pages/consult/index",
+          "scene": null
         }
       ]
     }

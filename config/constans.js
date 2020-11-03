@@ -1,6 +1,7 @@
 /*开发环境*/
 export const BASE_URL = 'https://fg.996sh.com/';
 
+export const PHONE="13687312520";
 export const API={
     wxlogin: BASE_URL+"WxLogin", // 授权登录
     NewList: BASE_URL+"NewList", // 资讯列表接口

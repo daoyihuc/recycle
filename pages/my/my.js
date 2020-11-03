@@ -3,6 +3,7 @@ import {
     goRouter
 } from '../../utils/macutils'
 import {Mine} from "../../api/order";
+import {PHONE} from "../../config/constans";
 
 var that;
 var aData={
@@ -130,7 +131,7 @@ Page({
                 url = "/pages/member/my-order/my-order?type=all"; //全部
                 break;
             case 2.2:
-                url = "/pages/member/my-order/my-order?type=1"; // 发唆
+                url = "/pages/member/my-order/my-order?type=1"; // 发货
                 break;
             case 2.3:
                 url = "/pages/member/my-order/my-order?type=2"; //完层
@@ -163,6 +164,13 @@ Page({
                     }
                 });
                 break
+            case 11: // 客服
+                // 拨打手机号
+                    let number = PHONE;
+                    wx.makePhoneCall({
+                        phoneNumber: number
+                    })
+                break;
             case 12: // 回收地址
                 url = "/pages/member/address/address";
                 break

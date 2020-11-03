@@ -3,8 +3,8 @@ page {
 }
 
 .status {
-    width: 750rpx;
-    height: 338rpx;
+    /*width: 750rpx;*/
+    /*height: 338rpx;*/
     margin-bottom: 20rpx;
 }
 

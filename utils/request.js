@@ -1,3 +1,4 @@
+import {goRouter} from "./macutils";
 
 
 const request = function (params) {
@@ -22,6 +23,9 @@ const request = function (params) {
                 wx.hideLoading();
                 wx.hideNavigationBarLoading();
                 resolve(res.data);
+                if(res.data.data===3){
+                    goRouter("/pages/login/login")
+                }
                 console.log(res);
             },
             fail: function (e) {

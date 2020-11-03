@@ -90,6 +90,13 @@ export function goRouter(url) {
         url: url
     })
 }
+ // 路由跳转并关闭当前界面
+export function goRouterR(url) {
+    wx.redirectTo({
+        url: url
+    })
+}
+
 // 返回上一页
 export function back(number) {
     wx.navigateBack({

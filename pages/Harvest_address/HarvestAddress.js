@@ -1,4 +1,4 @@
-import {goRouter, toast} from "../../utils/macutils";
+import {goRouter, goRouterR, toast} from "../../utils/macutils";
 import {AddressDelete, AddressList} from "../../api/app";
 
 var aData = {
@@ -109,6 +109,6 @@ Page({
         const a="/pages/confirm-order/index?type=2&province=" + province+
         "&city="+city+"&district="+district+"&street="+street+"&address="+address+
         "&address_id="+address_id+"&contacts="+contacts+"&mobile="+mobile;
-        goRouter(a);
+        goRouterR(a);
     }
 });
