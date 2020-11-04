@@ -15,8 +15,11 @@ Page({
         openSettingBtnHidden: false,//是否授权
     },
     onLoad: function (options) {
-        aData.token=wx.getStorageSync("token");
+
         that=this;
+    },
+    onShow:function(){
+        aData.token=wx.getStorageSync("token");
         this.isLogin();
         this.Http(aData);
     },

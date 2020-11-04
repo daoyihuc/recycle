@@ -500,7 +500,22 @@
           "id": -1,
           "name": "pages/consult/index",
           "pathName": "pages/consult/index",
+          "query": "",
           "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 63,
+          "name": "更新",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": 1001
         }
       ]
     }

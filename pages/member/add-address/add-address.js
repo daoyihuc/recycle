@@ -229,8 +229,6 @@ Page({
            this.HttpAddress(adata);
         }
         console.log("请求数据",adata);
-
-
     },
     // 手机号检验
     checkPhone:function(phone) {

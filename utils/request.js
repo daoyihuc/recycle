@@ -3,7 +3,7 @@ import {goRouter} from "./macutils";
 
 const request = function (params) {
     !params.params && (params.params = {});
-    wx.getStorageSync('token') && (params.params.token = wx.getStorageSync('token'))
+    // wx.getStorageSync('token') && (params.params.token = wx.getStorageSync('token'))
     !params.showLoad && wx.showLoading({
         title: '正在加载...',
         mask: true,
@@ -23,8 +23,12 @@ const request = function (params) {
                 wx.hideLoading();
                 wx.hideNavigationBarLoading();
                 resolve(res.data);
-                if(res.data.data===3){
+                if(res.data.status===3){
                     goRouter("/pages/login/login")
+                }else if(res.data.status===4){
+                    goRouter("/pages/member/admin-login/admin-login")
+                }else{
+
                 }
                 console.log(res);
             },

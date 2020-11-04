@@ -103,11 +103,12 @@ Page({
         integral: ''// 积分
     },
     onLoad: function (options) {
-        aData.token=wx.getStorageSync("token");
+
         that=this;
-        this.HttpMine(aData);
+        // this.HttpMine(aData);
     },
     onShow() {
+        aData.token=wx.getStorageSync("token");
         this.isLogin();
         this.HttpMine(aData);
     },

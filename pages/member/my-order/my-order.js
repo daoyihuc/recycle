@@ -41,8 +41,11 @@ Page({
         this.setData({
             activited: options.type
         });
-        aData.token=wx.getStorageSync("token");
         aData.type=this.data.activited;
+
+    },
+    onShow:function(){
+        aData.token=wx.getStorageSync("token");
         aData2.token=wx.getStorageSync("token");
         this.HttpOrderList(aData);
     },

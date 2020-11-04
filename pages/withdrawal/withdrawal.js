@@ -68,6 +68,7 @@ Page({
         this.setData({
             price: this.data.money,
         });
+        aData2.money=this.data.money;
     },
     // 姓名
     realName:function (event) {

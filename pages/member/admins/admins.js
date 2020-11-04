@@ -3,7 +3,7 @@ import {goRouter, toast} from "../../../utils/macutils";
 import {AdminAppointmentList, AdminCategoryList, ReceivingOrders, UpdateOrderStatus} from "../../../api/order";
 
 var that;
-var aData={
+var aData1={
     token: "",
     type: "all",
     Page: 1,
@@ -71,10 +71,6 @@ Page({
      */
     onLoad: function (options) {
         that=this;
-        aData.token=wx.getStorageSync("atoken");
-        aData2.token=wx.getStorageSync("atoken");
-        // this.initData();
-        this.HttpAdminAppointmentList(aData);
     },
 
     /**
@@ -88,15 +84,20 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        console.log(wx.getStorageSync("atoken"));
+        aData1.token=wx.getStorageSync("atoken");
+        aData2.token=wx.getStorageSync("atoken");
+        console.log(aData1);
+        // this.initData();
+        this.HttpAdminAppointmentList(aData1);
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        if (aData.Page <= count) {
-            this.HttpAdminAppointmentList(aData);
+        if (aData1.Page <= count) {
+            this.HttpAdminAppointmentList(aData1);
         } else {
             toast("没有更多数据了",1);
         }
@@ -144,10 +145,10 @@ Page({
     },
     onTabChange(event) {
         let a=event.detail.name;
-        aData.type=a;
-        aData.Page=1;
+        aData1.type=a;
+        aData1.Page=1;
         listData=[];
-        this.HttpAdminAppointmentList(aData);
+        this.HttpAdminAppointmentList(aData1);
     },
     // 列表
     HttpAdminAppointmentList:function(params){
@@ -187,7 +188,7 @@ Page({
         });
     },
     onUnload() {
-        aData.Page=1;
+        aData1.Page=1;
         listData=[];
     },
     // 接单事件
@@ -221,7 +222,7 @@ Page({
                 toast(res.msg,1);
                 aData.Page=1;
                 listData=[];
-                this.HttpAdminAppointmentList(aData);
+                this.HttpAdminAppointmentList(aData1);
             }
         });
     },

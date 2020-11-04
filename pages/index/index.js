@@ -52,8 +52,6 @@ Page({
         qqmapsdk = new QQMapWX({
             key: 'ORNBZ-U2M3U-VGLV2-2DLG2-SUH7V-5IFPD'
         });
-        this.http(aNew);
-        this.httpIndex();
     },
     onReady() {
         console.log('daoyi',"onready")
@@ -62,7 +60,8 @@ Page({
     onShow(options) {
         this.isLogin();
         console.log('daoyi',"onshow");
-
+        this.http(aNew);
+        this.httpIndex();
     },
     addBanner: function () {
         let banner = [];

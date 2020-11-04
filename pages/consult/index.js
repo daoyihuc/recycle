@@ -27,6 +27,8 @@ Page({
     onLoad: function (options) {
         // this.listItem();
         that=this;
+    },
+    onShow:function(){
         this.http(aData);
     },
     onChange(event) {
