@@ -1,5 +1,5 @@
 <view class="recommend-content ">
-    <view class="recommend-content-item "  wx:for="{{goodlist}}" wx:key="index">
+    <view class="recommend-content-item "  wx:for="{{goodlist}}" wx:key="index" bind:tap="jump" data-id="{{item.id}}">
         <image mode class="" src="{{item.image}}"></image>
         <view class="recommend-content-item-text-1 ">
             <image mode class="" src="../../static/images/icon_huanbaobi@2x.png"></image>

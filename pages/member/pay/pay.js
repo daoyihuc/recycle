@@ -1,4 +1,4 @@
-import {AdminCategoryList, OrderWeight} from "../../../api/order";
+import {AdminCategoryList, OrderWeight, OrderWeightPrice} from "../../../api/order";
 import {back, toast} from "../../../utils/macutils";
 
 
@@ -6,6 +6,7 @@ var that="";
 var columnW=[];
 var columns=[];
 var classLists=[];
+var moneyList=[];
 var aData={
   token: ''
 };
@@ -21,6 +22,7 @@ Page({
         show: false,
         classList: [],
         radio: '0',
+        moneySum: 0
     },
     onLoad: function (options) {
         let id=options.id;
@@ -133,6 +135,13 @@ Page({
         console.log(e);
         let index=e.currentTarget.dataset.index;
         classLists[index].weight=e.detail.value;
+        this.Calculation();
+    },
+    onWeight1:function (e) {
+        console.log(e);
+        let index=e.currentTarget.dataset.index;
+        classLists[index].weight=e.detail;
+        this.Calculation();
     },
     // 立即支付
     onPays:function () {
@@ -155,6 +164,7 @@ Page({
         });
         aData2.pay_id=event.detail;
     },
+    // 称重结算
     HttpOrderWeight:function (params) {
         OrderWeight(params).then(res=>{
            toast(res.msg,1);
@@ -162,9 +172,28 @@ Page({
                setTimeout(()=>{
                    back(1);
                },1000)
-
            }
         });
+
+    },
+    // 价格计算
+    HttpOrderWeightPrice:function(params){
+        OrderWeightPrice(params).then(res=>{
+            if(res.code===1){
+
+            }
+        });
+    },
+    // 金额计算
+    Calculation:function(){
+        console.log("开始计算金额");
+        let sum=0;
+      for(let i=0;i<classLists.length;i++){
+          sum+=classLists[i].price*classLists[i].weight;
+      }
+      this.setData({
+          moneySum: sum
+      });
     },
     onUnload:function () {
         classLists=[];

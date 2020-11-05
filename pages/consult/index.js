@@ -53,6 +53,7 @@ Page({
         listItems=[];
     },
     onHide:function(){
+        aData.Page=1;
         listItems=[];
     },
     // 测试

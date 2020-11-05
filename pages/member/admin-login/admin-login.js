@@ -1,5 +1,5 @@
 // pages/admin-login/admin-login.js
-import {goRouter, toast} from "../../../utils/macutils";
+import {goRouterR, toast} from "../../../utils/macutils";
 import {AdminLogin} from "../../../api/order";
 
 var that;
@@ -78,7 +78,7 @@ Page({
         wx.setStorageSync("auname",a.username);
         wx.setStorageSync("aid",a.id);
         setTimeout(()=>{
-          goRouter("/pages/member/admins/admins");
+          goRouterR("/pages/member/admins/admins");
         },1000);
 
       }

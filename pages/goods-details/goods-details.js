@@ -41,7 +41,7 @@ Page({
         for(let i=0;i<list.length;i++){
           banner.push(list[i].img);
         }
-        banner.push("../../static/images/testbanner.png");
+        // banner.push("../../static/images/testbanner.png");
         this.setData({
             bannerList: banner
         });

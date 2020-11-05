@@ -50,7 +50,7 @@
                                     bind:tap="WeighingEvent"
                                     data-id="{{item.id}}"
                                     wx:if="{{item.status===1}}">
-                            承重</van-button>
+                            称重</van-button>
                         <van-button round type="info"
                                     bind:tap="goDetails"
                                     data-id="{{item.id}}"

@@ -98,6 +98,10 @@ Page({
         // this.initData();
         this.HttpAdminAppointmentList(aData1);
     },
+    onHide() {
+        aData1.Page=1;
+        listData=[];
+    },
 
     /**
      * 页面上拉触底事件的处理函数
@@ -188,7 +192,7 @@ Page({
                 that.setData({
                     orderlist: listData
                 });
-                aData.Page+=1;
+                aData1.Page+=1;
                 count=res.data.Pageinate.Pages;
             }
 

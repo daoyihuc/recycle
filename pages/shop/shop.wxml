@@ -42,8 +42,6 @@
 		 wx:for="{{shopList}}"
 		 wx:key="index"
 		 wx:for-item="item"
-		 bind:tap="goDetails"
-		 data-id="{{1}}"
 		>
 			<view class="">
 				<text class="recommend-title">{{item.name}}</text>
@@ -55,6 +53,8 @@
 				 wx:for-index="index2"
 				 wx:for-item="item2"
 				 wx:key="index2"
+				 bind:tap="goDetails"
+				 data-id="{{item.id}}"
 				>
 					<image mode class="" src="{{item2.image}}" />
 					<view class="recommend-content-item-text-1 ">

@@ -8,6 +8,7 @@
                 placeholder="请输入重量"
                 border="{{ false }}"
                 data-index="{{index}}"
+                bind:change="onWeight1"
                 bind:blur="onWeight"
         />
     </view>
@@ -17,7 +18,10 @@
         <van-radio name="1" checked-color="#fcba30" class="margin">现金支付</van-radio>
     </van-radio-group>
 
-    <view></view>
+    <view class="moneyBox">
+        <view>回收金额为: </view>
+        <view style="color: #fcba30;font-size: 30rpx; font-weight: bolder">￥:{{moneySum}} 元</view>
+    </view>
     <view class="button_box">
         <button
                 bind:tap="addItem"

@@ -34,6 +34,7 @@ Page({
         console.log("daoyi",options.id);
         that=this;
         aData.CatId=options.id;
+        aData.OrderBy=this.data.active;
         this.HttpGoodList(aData);
     },
 
