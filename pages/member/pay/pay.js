@@ -159,8 +159,14 @@ Page({
         OrderWeight(params).then(res=>{
            toast(res.msg,1);
            if(res.code===1){
-               back(1);
+               setTimeout(()=>{
+                   back(1);
+               },1000)
+
            }
         });
+    },
+    onUnload:function () {
+        classLists=[];
     }
 });

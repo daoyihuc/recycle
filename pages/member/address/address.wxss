@@ -10,6 +10,7 @@
     padding: 20rpx;
     color: #878787;
     border-top: 2rpx solid #f0f0f6;
+    margin-top: 20rpx;
 }
 
 .addList .controls {

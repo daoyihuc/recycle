@@ -69,6 +69,8 @@ Page({
   onReachBottom: function () {
     this.HttpRank(aData);
   },
+
+
   HttpRank:function (params) {
     RankingList(params).then(res=>{
       console.log(res);

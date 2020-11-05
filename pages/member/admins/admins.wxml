@@ -12,7 +12,12 @@
                                   class="img"
                                   src="{{item.avatar}}"/>
                         <view>
-                            <view class="item address">{{item.province+item.city+item.district+item.street+item.address}}</view>
+                            <view class="item ">
+                                <view class="address">
+                                    {{item.province+item.city+item.district+item.street+item.address}}
+                                </view>
+
+                            </view>
                             <view class="item">{{item.contacts}}</view>
                             <view class="item phone_box">
                                 <text>{{item.mobile}}</text>
@@ -20,6 +25,9 @@
                                        bind:tap="callPhone"
                                        data-number="{{item.mobile}}"
                                        src="../../../static/images/iphone.png"></image>
+                                <button class="bottonSize" bind:tap="mapNavigation"
+                                        data-addr="{{item.province+item.city+item.district+item.street+item.address}}"
+                                >位置</button>
                             </view>
                             <view class="item">
                                 <text>回收预约时间:</text>
@@ -31,19 +39,23 @@
                         <van-button round type="primary"
                                     bind:tap="ReceveEvent"
                                     data-id="{{item.id}}"
-                                    wx:if="{{item.admin_status===1}}">接单</van-button>
+                                    wx:if="{{item.admin_status===1}}">
+                            接单</van-button>
                         <van-button round type="info"
                                     bind:tap="goEvent"
                                     data-id="{{item.id}}"
-                                    wx:if="{{item.admin_status===0&&item.status===0}}">前往回收</van-button>
+                                    wx:if="{{item.admin_status===0&&item.status===0}}"
+                        >前往回收</van-button>
                         <van-button round type="danger"
                                     bind:tap="WeighingEvent"
                                     data-id="{{item.id}}"
-                                    wx:if="{{item.status===1}}">承重</van-button>
+                                    wx:if="{{item.status===1}}">
+                            承重</van-button>
                         <van-button round type="info"
                                     bind:tap="goDetails"
                                     data-id="{{item.id}}"
-                                    color="#fcba30">查看详情</van-button>
+                                    color="#fcba30">
+                            查看详情</van-button>
                     </view>
                 </view>
             </view>

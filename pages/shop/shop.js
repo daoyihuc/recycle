@@ -24,7 +24,7 @@ Page({
         for (let i = 0; i < imgs.length; i++) {
             banner.push(imgs[i].img);
         }
-        banner.push("http://ptadmin.ccshpt.com///uploads/20200827/9dca86afc214a6d2aa5859252300a826.png");
+        // banner.push("http://ptadmin.ccshpt.com///uploads/20200827/9dca86afc214a6d2aa5859252300a826.png");
         this.setData({
             bannerList: banner
         });

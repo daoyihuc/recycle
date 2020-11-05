@@ -44,7 +44,7 @@ Page({
         }
 
         that=this;
-        this.addBanner();
+        // this.addBanner();
         this.addMenu();
         // this.listItem();
         this.isLogin();
@@ -254,6 +254,9 @@ Page({
             for(let i=0;i<bann.length;i++){
                 banners.push(bann[i].img);
             }
+            that.setData({
+                bannerList: banners
+            });
             console.log(banners);
             // 资讯数据清洗
             const newL=[]; // 容器

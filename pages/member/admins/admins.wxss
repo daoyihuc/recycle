@@ -9,6 +9,19 @@
     margin-bottom: 100rpx;
 
 }
+.itemAddresbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottonSize{
+    width: 148rpx;
+    height: 65rpx;
+    background: #fcba30;
+    color: white;
+    line-height: 65rpx;
+    font-size: 30rpx;
+}
 .address{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -17,6 +30,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-align: center;
     align-items: center;
+    width: 80%;
 }
 .img{
     margin-right: 10rpx;

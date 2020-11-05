@@ -3,7 +3,7 @@
 <view class="consult-details  ">
     <view class="title  ">{{info.title}}</view>
     <view class="time  ">
-        <view  >麦芒回收</view>
+        <view  >一起环保</view>
         <view  >{{info.dateline+' '+info.read_num+'阅读'}}</view>
     </view>
     <view class="recycle-classify  ">

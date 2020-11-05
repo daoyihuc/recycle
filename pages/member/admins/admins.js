@@ -2,6 +2,10 @@
 import {goRouter, toast} from "../../../utils/macutils";
 import {AdminAppointmentList, AdminCategoryList, ReceivingOrders, UpdateOrderStatus} from "../../../api/order";
 
+
+// 引入SDK核心类
+var QQMapWX = require('../../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
 var that;
 var aData1={
     token: "",
@@ -34,7 +38,7 @@ Page({
         }],
         list: [
             {
-                cate_name: "全部",
+                cate_name: "抢单大厅",
                 name: "all"
             }, {
                 cate_name: "待服务",
@@ -63,6 +67,8 @@ Page({
         active: 1,
         activeB: 0,
         toggle: !0,
+        latitude: '',
+        longitude: ''
     },
 
 
@@ -84,6 +90,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        listData=[];
         console.log(wx.getStorageSync("atoken"));
         aData1.token=wx.getStorageSync("atoken");
         aData2.token=wx.getStorageSync("atoken");
@@ -203,9 +210,9 @@ Page({
             console.log(res);
             if(res.code===1){
                 toast(res.msg,1);
-                aData.Page=1;
+                aData1.Page=1;
                 listData=[];
-                this.HttpAdminAppointmentList(aData);
+                this.HttpAdminAppointmentList(aData1);
             }
         });
     },
@@ -220,7 +227,7 @@ Page({
         UpdateOrderStatus(params).then(res=>{
             if(res.code===1){
                 toast(res.msg,1);
-                aData.Page=1;
+                aData1.Page=1;
                 listData=[];
                 this.HttpAdminAppointmentList(aData1);
             }
@@ -235,6 +242,39 @@ Page({
     WeighingEvent:function (e) {
         let id=e.currentTarget.dataset.id;
         goRouter("/pages/member/pay/pay?id="+id);
-    }
+    },
+    mapNavigation(e) {
+        // console.log(e)
+        console.log(e.target.dataset.addr);
+        var addr = e.target.dataset.addr;
 
+        // 使用 JavaScript SDK 获取目的地经纬度
+        // 实例化API核心类
+        qqmapsdk = new QQMapWX({
+            key: 'ORNBZ-U2M3U-VGLV2-2DLG2-SUH7V-5IFPD'
+        });
+        qqmapsdk.geocoder({
+            address: addr,
+            success: function (res) {
+                console.log(res);
+                var local = res.result.location;
+                that.setData({
+                    latitude: local.lat,
+                    longitude: local.lng
+                })
+            }
+        });
+        // 使用微信内置地图查看位置
+        wx.getLocation({
+            type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+            success: function (res) {
+                wx.openLocation({
+                    latitude: that.data.latitude,
+                    longitude: that.data.longitude,
+                    scale: 28,
+                    name: addr, //打开后显示的地址名称
+                })
+            }
+        });
+    }
 })
