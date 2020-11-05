@@ -54,7 +54,7 @@
 				 wx:for-item="item2"
 				 wx:key="index2"
 				 bind:tap="goDetails"
-				 data-id="{{item.id}}"
+				 data-id="{{item2.id}}"
 				>
 					<image mode class="" src="{{item2.image}}" />
 					<view class="recommend-content-item-text-1 ">
