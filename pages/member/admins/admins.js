@@ -216,6 +216,7 @@ Page({
                 toast(res.msg,1);
                 aData1.Page=1;
                 listData=[];
+                toast(res.msg,0);
                 this.HttpAdminAppointmentList(aData1);
             }
         });
