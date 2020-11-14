@@ -73,10 +73,10 @@ Page({
     addMenu: function () {
         const menuLists = [];
         const a = [
-            "../../static/images/yaoqing_daoyi.png",
-            "../../static/images/dingdanyuyue_daoyi.png",
-            "../../static/images/huanbaodaoyi.png",
-            "../../static/images/huishoudaoyi.png"
+            "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first18.png",
+            "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first20.png",
+            "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first14.png",
+            "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first1.png"
         ];
         const b = [
             "邀请有礼",

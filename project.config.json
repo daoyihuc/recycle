@@ -1,523 +1,523 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"useMultiFrameRuntime": false,
-		"useApiHook": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": []
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.13.2",
-	"appid": "wx30adf21532b27c0a",
-	"projectname": "test",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"scripts": {},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"current": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/goods-category/goods-category",
-					"pathName": "pages/goods-category/goods-category",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/consult-details/consult-details",
-					"pathName": "pages/consult-details/consult-details",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subsidiary/subsidiary",
-					"pathName": "pages/subsidiary/subsidiary",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/my/my",
-					"pathName": "pages/my/my",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/invite/invite",
-					"pathName": "pages/invite/invite",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subscribe-order/subscribe-order",
-					"pathName": "pages/subscribe-order/subscribe-order",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/login/login",
-					"pathName": "pages/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/options/options",
-					"pathName": "pages/options/options",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/withdrawal/withdrawal",
-					"pathName": "pages/withdrawal/withdrawal",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/my-invite/my-invite",
-					"pathName": "pages/my-invite/my-invite",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/refund/refund",
-					"pathName": "pages/refund/refund",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/goods-details/goods-details",
-					"pathName": "pages/goods-details/goods-details",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/edit-address/edit-address",
-					"pathName": "pages/edit-address/edit-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop-add-ad/shop-add-ad",
-					"pathName": "pages/shop-add-ad/shop-add-ad",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/admin-details/admin-details",
-					"pathName": "pages/admin-details/admin-details",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/admin-details/admin-details",
-					"pathName": "pages/admin-details/admin-details",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/admin-center/admin-center",
-					"pathName": "pages/admin-center/admin-center",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/poster/poster",
-					"pathName": "pages/poster/poster",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/my-info/index",
-					"pathName": "pages/my-info/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/address/address",
-					"pathName": "pages/address/address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/chooseAdress/chooseAdress",
-					"pathName": "pages/chooseAdress/chooseAdress",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/edit-address/edit-address",
-					"pathName": "pages/edit-address/edit-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/add-address/add-address",
-					"pathName": "pages/add-address/add-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/recycle-guide/recycle-guide",
-					"pathName": "pages/recycle-guide/recycle-guide",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/golive/golive",
-					"pathName": "pages/golive/golive",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop/shop",
-					"pathName": "pages/shop/shop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/recycle-classify/recycle-classify",
-					"pathName": "pages/recycle-classify/recycle-classify",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/recycle-guide/recycle-guide",
-					"pathName": "pages/recycle-guide/recycle-guide",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop-ad/shop-ad",
-					"pathName": "pages/shop-ad/shop-ad",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop-add-ad/shop-add-ad",
-					"pathName": "pages/shop-add-ad/shop-add-ad",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/confirm-order/index",
-					"pathName": "pages/confirm-order/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop-list-two/shop-list-two",
-					"pathName": "pages/shop-list-two/shop-list-two",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/add-address/add-address",
-					"pathName": "pages/add-address/add-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/admin/admin",
-					"pathName": "pages/member/admin/admin",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/consult-details/consult-details",
-					"pathName": "pages/consult-details/consult-details",
-					"query": "id=1",
-					"scene": 1155
-				},
-				{
-					"id": 35,
-					"name": "pages/consult-details/consult-details",
-					"pathName": "pages/consult-details/consult-details",
-					"query": "id=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subscribe/index",
-					"pathName": "pages/subscribe/index",
-					"query": "id=1",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/add-address/add-address",
-					"pathName": "pages/add-address/add-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/add-address/add-address",
-					"pathName": "pages/member/add-address/add-address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/address/address",
-					"pathName": "pages/member/address/address",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 40,
-					"name": "pages/member/edit-address/edit-address",
-					"pathName": "pages/member/edit-address/edit-address",
-					"query": "id=4",
-					"scene": 1069
-				},
-				{
-					"id": -1,
-					"name": "pages/goods-details/goods-details",
-					"pathName": "pages/goods-details/goods-details",
-					"query": "id=4",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/confirm-order/index",
-					"pathName": "pages/confirm-order/index",
-					"query": "id=4",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/go-recycle/go-recycle",
-					"pathName": "pages/go-recycle/go-recycle",
-					"query": "id=4",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/goods-details/goods-details",
-					"pathName": "pages/goods-details/goods-details",
-					"query": "id=4",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop-list-two/shop-list-two",
-					"pathName": "pages/shop-list-two/shop-list-two",
-					"query": "id=4",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/subscribe-order/subscribe-order",
-					"pathName": "pages/subscribe-order/subscribe-order",
-					"query": "id=0",
-					"scene": null
-				},
-				{
-					"id": 47,
-					"name": "pages/subscribe-order-details/subscribe-order-details",
-					"pathName": "pages/subscribe-order-details/subscribe-order-details",
-					"query": "id=13",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/rank/rank",
-					"pathName": "pages/member/rank/rank",
-					"query": "id=13",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/my-invite/my-invite",
-					"pathName": "pages/member/my-invite/my-invite",
-					"query": "id=13",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/options/options",
-					"pathName": "pages/member/options/options",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/shop/shop",
-					"pathName": "pages/shop/shop",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/my-order/my-order",
-					"pathName": "pages/member/my-order/my-order",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/gooddetails/gooddetails",
-					"pathName": "pages/gooddetails/gooddetails",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/admins/admins",
-					"pathName": "pages/member/admins/admins",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/admin-details/admin-details",
-					"pathName": "pages/member/admin-details/admin-details",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/pay/pay",
-					"pathName": "pages/member/pay/pay",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/admin-center/admin-center",
-					"pathName": "pages/member/admin-center/admin-center",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/member/invite/invite",
-					"pathName": "pages/member/invite/invite",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 59,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "scene=id%25%26goodsid%3D22",
-					"scene": 1047
-				},
-				{
-					"id": -1,
-					"name": "pages/member/recycle-guide/recycle-guide",
-					"pathName": "pages/member/recycle-guide/recycle-guide",
-					"query": "scene=id%25%26goodsid%3D22",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/consult/index",
-					"pathName": "pages/consult/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 63,
-					"name": "更新",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": 1001
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.13.2",
+  "appid": "wx30adf21532b27c0a",
+  "projectname": "test",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/goods-category/goods-category",
+          "pathName": "pages/goods-category/goods-category",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consult-details/consult-details",
+          "pathName": "pages/consult-details/consult-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/subsidiary/subsidiary",
+          "pathName": "pages/subsidiary/subsidiary",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/invite/invite",
+          "pathName": "pages/invite/invite",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/subscribe-order/subscribe-order",
+          "pathName": "pages/subscribe-order/subscribe-order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/options/options",
+          "pathName": "pages/options/options",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/withdrawal/withdrawal",
+          "pathName": "pages/withdrawal/withdrawal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my-invite/my-invite",
+          "pathName": "pages/my-invite/my-invite",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/refund/refund",
+          "pathName": "pages/refund/refund",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goods-details/goods-details",
+          "pathName": "pages/goods-details/goods-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/edit-address/edit-address",
+          "pathName": "pages/edit-address/edit-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop-add-ad/shop-add-ad",
+          "pathName": "pages/shop-add-ad/shop-add-ad",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/admin-details/admin-details",
+          "pathName": "pages/admin-details/admin-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/admin-details/admin-details",
+          "pathName": "pages/admin-details/admin-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/admin-center/admin-center",
+          "pathName": "pages/admin-center/admin-center",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/poster/poster",
+          "pathName": "pages/poster/poster",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my-info/index",
+          "pathName": "pages/my-info/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/address/address",
+          "pathName": "pages/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/chooseAdress/chooseAdress",
+          "pathName": "pages/chooseAdress/chooseAdress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/edit-address/edit-address",
+          "pathName": "pages/edit-address/edit-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/add-address/add-address",
+          "pathName": "pages/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/recycle-guide/recycle-guide",
+          "pathName": "pages/recycle-guide/recycle-guide",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/golive/golive",
+          "pathName": "pages/golive/golive",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop/shop",
+          "pathName": "pages/shop/shop",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/recycle-classify/recycle-classify",
+          "pathName": "pages/recycle-classify/recycle-classify",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/recycle-guide/recycle-guide",
+          "pathName": "pages/recycle-guide/recycle-guide",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop-ad/shop-ad",
+          "pathName": "pages/shop-ad/shop-ad",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop-add-ad/shop-add-ad",
+          "pathName": "pages/shop-add-ad/shop-add-ad",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/confirm-order/index",
+          "pathName": "pages/confirm-order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop-list-two/shop-list-two",
+          "pathName": "pages/shop-list-two/shop-list-two",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/add-address/add-address",
+          "pathName": "pages/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/admin/admin",
+          "pathName": "pages/member/admin/admin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consult-details/consult-details",
+          "pathName": "pages/consult-details/consult-details",
+          "query": "id=1",
+          "scene": 1155
+        },
+        {
+          "id": 35,
+          "name": "pages/consult-details/consult-details",
+          "pathName": "pages/consult-details/consult-details",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/subscribe/index",
+          "pathName": "pages/subscribe/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/add-address/add-address",
+          "pathName": "pages/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/add-address/add-address",
+          "pathName": "pages/member/add-address/add-address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/address/address",
+          "pathName": "pages/member/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 40,
+          "name": "pages/member/edit-address/edit-address",
+          "pathName": "pages/member/edit-address/edit-address",
+          "query": "id=4",
+          "scene": 1069
+        },
+        {
+          "id": -1,
+          "name": "pages/goods-details/goods-details",
+          "pathName": "pages/goods-details/goods-details",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/confirm-order/index",
+          "pathName": "pages/confirm-order/index",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/go-recycle/go-recycle",
+          "pathName": "pages/go-recycle/go-recycle",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goods-details/goods-details",
+          "pathName": "pages/goods-details/goods-details",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop-list-two/shop-list-two",
+          "pathName": "pages/shop-list-two/shop-list-two",
+          "query": "id=4",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/subscribe-order/subscribe-order",
+          "pathName": "pages/subscribe-order/subscribe-order",
+          "query": "id=0",
+          "scene": null
+        },
+        {
+          "id": 47,
+          "name": "pages/subscribe-order-details/subscribe-order-details",
+          "pathName": "pages/subscribe-order-details/subscribe-order-details",
+          "query": "id=13",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/rank/rank",
+          "pathName": "pages/member/rank/rank",
+          "query": "id=13",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/my-invite/my-invite",
+          "pathName": "pages/member/my-invite/my-invite",
+          "query": "id=13",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/options/options",
+          "pathName": "pages/member/options/options",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shop/shop",
+          "pathName": "pages/shop/shop",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/my-order/my-order",
+          "pathName": "pages/member/my-order/my-order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/gooddetails/gooddetails",
+          "pathName": "pages/gooddetails/gooddetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/admins/admins",
+          "pathName": "pages/member/admins/admins",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/admin-details/admin-details",
+          "pathName": "pages/member/admin-details/admin-details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/pay/pay",
+          "pathName": "pages/member/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/admin-center/admin-center",
+          "pathName": "pages/member/admin-center/admin-center",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/invite/invite",
+          "pathName": "pages/member/invite/invite",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 59,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "scene=id%25%26goodsid%3D22",
+          "scene": 1047
+        },
+        {
+          "id": -1,
+          "name": "pages/member/recycle-guide/recycle-guide",
+          "pathName": "pages/member/recycle-guide/recycle-guide",
+          "query": "scene=id%25%26goodsid%3D22",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/consult/index",
+          "pathName": "pages/consult/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 63,
+          "name": "更新",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": 1001
+        }
+      ]
+    }
+  }
 }

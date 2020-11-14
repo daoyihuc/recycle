@@ -1,9 +1,14 @@
+.max{
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.1/home27.png") no-repeat;
+    background-size: 100% 30%;
+}
+
 .header{
     height: 170rpx;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-
+    position: relative;
 }
 .avt{
     position: relative;
@@ -40,11 +45,29 @@
 }
 .title{
     margin-bottom: 15rpx;
+    font-size: 21px;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
 }
 .user_id{
-    font-size: 25rpx;
-    color: #999999;
+    margin-top: 11rpx;
+    font-size: 28rpx;
+    font-family: DINPro;
+    font-weight: 500;
+    color: #C5FFE3;
 
+}
+.withdraw{
+    background: linear-gradient(-45deg, #787E88, #484C61);
+    border-radius: 8rpx 0px 0px 8rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFD989;
+    padding: 16rpx 20rpx;
+    position: absolute;
+    right: 0;
 }
 .edit-icon{
     width: 40rpx;
@@ -66,17 +89,56 @@
     padding-bottom: 30rpx;
     background: #fff;
     box-shadow: 0 0 10rpx hsla(0,0%,87.1%,.8);
-
+    border-radius: 10rpx;
 }
+.my-en-s{
+    margin-bottom: 30rpx;
+}
+.header_itembox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16rpx;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item_title{
+    font-size: 36rpx;
+    font-family: DINPro;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 42rpx;
+}
+.item_label{
+
+    font-size: 20rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 42rpx;
+    margin-top: 16rpx;
+}
+
 .my-en-top{
     width: 650rpx;
     height: 85rpx;
-    line-height: 85rpx;
     margin: 0 auto;
-    font-size: 28rpx;
-    border-bottom: 2rpx solid #f0eef4;
+    /*border-bottom: 2rpx solid #f0eef4;*/
+    font-size: 34rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #1C222C;
+    line-height: 85rpx;
 
 }
+.grid_item{
+    background: white;
+}
+
 .my-en-bottom{
     height: 210rpx;
     display: flex;

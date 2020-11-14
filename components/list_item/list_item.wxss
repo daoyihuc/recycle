@@ -5,8 +5,10 @@
 }
 
 .images {
-    width: 225rpx;
-    height: 225rpx;
+    width: 224rpx;
+    height: 150rpx;
+    background: #EEEEEE;
+    border-radius: 12px;
 }
 
 .new-consult-list-item-right {
@@ -22,7 +24,18 @@
 }
 
  .new-consult-list-item-right-text-1 {
-    font-size: 32rpx;
+     font-size: 32rpx;
+     font-family: PingFang SC;
+     font-weight: 500;
+     color: #28303E;
+     line-height: 46rpx;
+     display: -webkit-box;
+     word-break: break-all;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp:2; /*设置超出两行进行隐藏*/
+
 }
 
 .new-consult-list-item-right-text-2 {
@@ -37,7 +50,7 @@
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    margin-top: 60rpx;
+    margin-top: 30rpx;
 }
 
 .new-consult-list-item-right-text-3-data .new-consult-list-item-right-text-3-data-left {

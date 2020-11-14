@@ -20,7 +20,11 @@ Component({
     },
     iconColor:{
       type: String,
-      value: '#000'
+      value: '#fff'
+    },
+    textColor:{
+      type: String,
+      value: '#fff'
     }
   },
 

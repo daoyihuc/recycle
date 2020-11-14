@@ -1,15 +1,29 @@
 /**index.wxss**/
+.max{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 360rpx;
+
+}
 
 .banner{
   width: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
 }
 .index_menu_box{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 10px;
+}
+.index_menu_box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*margin-top: 10px;*/
 }
 .index_menu{
   display: flex;
@@ -27,13 +41,24 @@
 }
 .recycle_image{
   width: 346rpx;
-  height: 174rpx;
+  height: 158rpx;
+  margin-top: 12rpx;
 }
 .recycle_image2{
-  width: 96%;
-  height: 175rpx;
+  width: 308rpx;
+  height: 308rpx;
+  /*height: 175rpx;*/
   margin-left: 19rpx;
   margin-right: 10rpx;
+}
+.item_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 10rpx;
+  margin-top: 48rpx;
 }
 
 .userinfo {
@@ -60,9 +85,24 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  margin-left: 19rpx;
+  margin-left: 40rpx;
   margin-top: 20rpx;
 }
+.green-gold-title1{
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #28303E;
+  line-height: 48rpx;
+}
+.Recommend_box{
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  box-shadow: 0px 0px 20px 0px rgba(153, 153, 157, 0.15);
+  border-radius: 12px;
+  margin: 10rpx 40rpx;
+}
+
 .green-gold-login{
   height: 220rpx;
   display: flex;
@@ -76,7 +116,7 @@
   height: 70rpx;
   line-height: 70rpx;
   text-align: center;
-  background: linear-gradient(90deg,#fdca30,#fcba03);
+  background:#01BC6B;
   font-size: 32rpx;
   color: #fff;
   border-radius: 35rpx;
@@ -84,12 +124,14 @@
 .vertical{
   width: 7rpx;
   height: 30rpx;
-  background: #fcba03;
+  background: #01BC6B;
   margin-right: 20rpx;
 }
 .my-vertical{
   display: flex;
   margin-top: 30rpx;
+  justify-content: space-around;
+  align-items: center;
 }
 .my-vertical-box{
   width: 25%;
@@ -119,13 +161,20 @@
   align-items: center;
 }
 .my-vertical-item-num{
-  font-size: 36rpx;
-  font-weight: 700;
+  font-size: 48rpx;
+  font-family: DINPro;
+  font-weight: bold;
+  color: #28303E;
+  line-height: 42rpx;
 }
 .my-vertical-item-text{
-  font-size: 22rpx;
+
   margin-top: 20rpx;
-  color: #666;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #9498A0;
+  line-height: 42rpx;
 }
 .green-gold-location{
   height: 290rpx;
@@ -152,7 +201,7 @@
   line-height: 50rpx;
   text-align: center;
   font-size: 24rpx;
-  background: linear-gradient(90deg,#fdca30,#fcba03);
+  background: #01BC6B;
   color: #fff;
   border-radius: 35rpx;
   outline: none;
@@ -160,6 +209,9 @@
 }
 .new-consult{
   padding-bottom: 300rpx;
+  background: white;
+  margin-top: 42rpx;
+  padding-top: 40rpx;
 }
 .new-consult-title{
   display: flex;
@@ -180,7 +232,11 @@
   margin-right: 19rpx;
 }
 .titleText{
-  font-size: 32rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #28303E;
+  line-height: 48rpx;
 }
 .new-consult-title-right-more{
   font-size: 26rpx;
@@ -210,8 +266,8 @@
 }
 
 .ready-green-gold-location-top-left>image {
-  width: 32rpx;
-  height: 36rpx;
+  width: 23rpx;
+  height: 32rpx;
   margin-left: 20rpx;
 }
 
@@ -249,9 +305,11 @@
   font-size: 32rpx;
   line-height: 70rpx;
   text-align: center;
-  background: linear-gradient(90deg,#fdca30,#fcba03);
+  background: #01BC6B;
   color: #fff;
   border-radius: 35rpx;
   margin-top: 35rpx;
+  opacity: 0.7;
+  box-shadow: 1px 1px 10px 2px #01BC6B;
 }
 

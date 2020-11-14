@@ -5,7 +5,7 @@
     <view class="new-consult-list-item-right ">
         <view class="new-consult-list-item-right-box ">
             <view class="new-consult-list-item-right-text-1 ">{{item.name}}</view>
-            <view class="new-consult-list-item-right-text-2 ">{{item.desc}}</view>
+<!--            <view class="new-consult-list-item-right-text-2 ">{{item.desc}}</view>-->
         </view>
         <view class="new-consult-list-item-right-text-3 ">
             <view class="new-consult-list-item-right-text-3-data ">

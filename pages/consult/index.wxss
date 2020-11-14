@@ -1,0 +1,16 @@
+.img{
+    width: 750rpx;
+    height: 240rpx;
+}
+.tabback{
+    background: #01BC6B;
+    color: white;
+    /*padding: 5rpx 0;*/
+}
+.tabcolor{
+
+    font-size: 38rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: white!important;
+}

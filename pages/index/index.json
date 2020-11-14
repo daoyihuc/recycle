@@ -1,7 +1,9 @@
 
 {
 
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "一起环保",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
 
   "usingComponents": {
     "navbar": "/components/navbar/index",

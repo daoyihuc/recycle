@@ -1,27 +1,28 @@
 <view class="shop ">
 	<view class="content ">
-		<view class="search ">
-			<view  class="search-class ">
-				<image mode class="" src="../../static/images/icon_fenlei@2x.png" />
-				<text class="">分类</text>
+		<view class="contentbox">
+			<view style="background: #01BC6B;width: 100%;height: 160rpx;position: absolute">
 			</view>
-			<view class="search-text ">
-				<van-search
-				 class=""
-				 inputAlign="center"
-				 placeholder="搜索你想要的商品"
-				 value="{{keyword}}"
+			<view class="search ">
+				<view class="search-text ">
+					<van-search
+							class=""
+							inputAlign="center"
+							placeholder="搜索你想要的商品"
+							value="{{keyword}}"
+					/>
+				</view>
+			</view>
+			<view class="my-banner ">
+				<swipers
+						imgs="{{bannerList}}"
+						height="350rpx"
+						radius="20rpx"
+						width="700rpx"
 				/>
 			</view>
 		</view>
-		<view class="my-banner ">
-			<swipers
-			 imgs="{{bannerList}}"
-			 height="350rpx"
-			 radius="20rpx"
-			 width="700rpx"
-			/>
-		</view>
+
 		<view class="notice ">
 			<van-notice-bar
 			 bgColor="#ffffff"

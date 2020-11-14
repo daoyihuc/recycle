@@ -1,105 +1,119 @@
-<view class="header ">
-	<view class="avt ">
-		<image
-		 mode
-		 class="head-portrait "
-		 src="{{avatar}}"
-		 wx:if="{{avatar}}"
-		/>
-		<image
-		 mode
-		 class="head-portrait "
-		 src="../../static/images/ywy.png"
-		 wx:else
-		></image>
-		<!--        <image mode bindtap="__e" class="avt-img edit-icon " data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" src="{{level.img}}" style="border-radius:50%;"></image>-->
-	</view>
-	<view class="nickname ">
-		<text class="title">{{nickname}}</text>
-		<text class="user_id">{{'ID:'+(id||'')}}</text>
-	</view>
-	<view class="header_box">
-		<view class="header_box_text1">积分:</view>
-		<text class="header_box_text">{{integral||0}}</text>
-	</view>
-	<image
-	 mode
-	 class="edit-icon "
-	 src="../../static/images/bianji@2x.png"
-	 hidden="{{true}}"
-	/>
-	<image
-	 mode
-	 class="edit-icon "
-	 src="../../static/images/sp8-3.png"
-	 style="display:none;"
-	/>
-	<image mode class="goUp " src="../../static/images/vip18-3.png" style="display: none"/>
-</view>
 
-<view class="my-en ">
-	<view class="my-en-top ">我的环保金</view>
-	<view class="my-en-bottom ">
-		<view class="my-en-bottom-item-1 ">
-			<view class="btn-1 " data-menuid="{{15}}" bind:tap="onClick">提现
+<view style="background: #eeeeee">
+	<view class="max">
+		<view class="header">
+			<view class="avt ">
+				<image
+						mode
+						class="head-portrait "
+						src="{{avatar}}"
+						wx:if="{{avatar}}"
+				/>
+				<image
+						mode
+						class="head-portrait "
+						src="../../static/images/ywy.png"
+						wx:else
+				></image>
+				<!--        <image mode bindtap="__e" class="avt-img edit-icon " data-event-opts="{{[ [ 'tap',[ [ '',['$event'] ] ] ] ]}}" src="{{level.img}}" style="border-radius:50%;"></image>-->
 			</view>
-			<view class="btn-1 btn-2 " data-menuid="{{16}}" bind:tap="onClick">明细</view>
+
+			<view class="nickname ">
+				<text class="title">{{nickname}}</text>
+				<text class="user_id">{{'ID:'+(id||'')}}</text>
+			</view>
+			<!--		<view class="header_box">-->
+			<!--			<view class="header_box_text1">积分:</view>-->
+			<!--			<text class="header_box_text">{{integral||0}}</text>-->
+			<!--		</view>-->
+			<view class="withdraw">
+				去提现
+			</view>
 		</view>
-		<view class="my-en-bottom-item-2 " />
-		<view class="my-en-bottom-item-3 ">
-			<view class="price ">{{''+money+''}}</view>
-			<view class="text ">环保金额</view>
+
+		<view class="header_itembox ">
+			<!--		<view class="my-en-top ">我的环保金</view>-->
+			<!--		<view class="my-en-bottom ">-->
+			<!--			<view class="my-en-bottom-item-1 ">-->
+			<!--				<view class="btn-1 " data-menuid="{{15}}" bind:tap="onClick">提现-->
+			<!--				</view>-->
+			<!--				<view class="btn-1 btn-2 " data-menuid="{{16}}" bind:tap="onClick">明细</view>-->
+			<!--			</view>-->
+			<!--			<view class="my-en-bottom-item-2 " />-->
+			<!--			<view class="my-en-bottom-item-3 ">-->
+			<!--				<view class="price ">{{''+money+''}}</view>-->
+			<!--				<view class="text ">环保金额</view>-->
+			<!--			</view>-->
+			<!--			<view class="my-en-bottom-item-3 ">-->
+			<!--				<view class="price ">{{""+appointments_num}}</view>-->
+			<!--				<view class="text ">投递次数</view>-->
+			<!--			</view>-->
+			<!--		</view>-->
+			<view class="item">
+				<view class="item_title">{{''+money+''}}</view>
+				<view class="item_label ">环保金额</view>
+			</view>
+			<view class="item">
+				<view class="item_title ">{{''+appointments_num+''}}</view>
+				<view class="item_label ">投递次数</view>
+			</view>
+			<view class="item">
+				<view class="item_title ">{{integral||0}}</view>
+				<view class="item_label ">积分</view>
+			</view>
+
 		</view>
-		<view class="my-en-bottom-item-3 ">
-			<view class="price ">{{""+appointments_num}}</view>
-			<view class="text ">投递次数</view>
+		<view class="my-en ">
+			<view class="my-en-top ">回收预约</view>
+			<van-grid column-num="4" border="{{ false }}" gutter="{{0}}" custom-class="grid_item">
+				<van-grid-item
+						use-slot
+						wx:for="{{ subscribeList }}"
+						wx:for-item="item"
+						bind:click="onClick"
+
+						data-menuid="{{item.menuId}}"
+
+						content-class="grid_item"
+				>
+					<image class="image_item" src="{{item.imgUrl}}" />
+					<text class="text_item">{{item.text}}</text>
+				</van-grid-item>
+			</van-grid>
+		</view>
+
+		<view class="my-en ">
+			<view class="my-en-top ">商城订单</view>
+			<van-grid column-num="4" border="{{ false }}">
+				<van-grid-item
+						use-slot
+						wx:for="{{ orderList }}"
+						wx:for-item="item"
+						bind:click="onClick"
+						data-menuid="{{item.menuId}}"
+				>
+					<image class="image_item" src="{{item.imgUrl}}" />
+					<text class="text_item">{{item.text}}</text>
+				</van-grid-item>
+			</van-grid>
+		</view>
+		<view class="my-en my-en-s">
+			<view class="my-en-top ">常用工具</view>
+			<van-grid column-num="4" border="{{ false }}">
+				<van-grid-item
+						use-slot
+						wx:for="{{ toolList }}"
+						wx:for-item="item"
+						bind:click="onClick"
+						data-menuid="{{item.menuId}}"
+				>
+					<image class="image_item" src="{{item.imgUrl}}" />
+					<text class="text_item">{{item.text}}</text>
+				</van-grid-item>
+			</van-grid>
 		</view>
 	</view>
 </view>
-<view class="my-en ">
-	<view class="my-en-top ">回收预约</view>
-	<van-grid column-num="4" border="{{ true }}">
-		<van-grid-item
-		 use-slot
-		 wx:for="{{ subscribeList }}"
-		 wx:for-item="item"
-		 bind:click="onClick"
-		 data-menuid="{{item.menuId}}"
-		>
-			<image class="image_item" src="{{item.imgUrl}}" />
-			<text class="text_item">{{item.text}}</text>
-		</van-grid-item>
-	</van-grid>
-</view>
 
-<view class="my-en ">
-	<view class="my-en-top ">商城订单</view>
-	<van-grid column-num="4" border="{{ true }}">
-		<van-grid-item
-		 use-slot
-		 wx:for="{{ orderList }}"
-		 wx:for-item="item"
-		 bind:click="onClick"
-		 data-menuid="{{item.menuId}}"
-		>
-			<image class="image_item" src="{{item.imgUrl}}" />
-			<text class="text_item">{{item.text}}</text>
-		</van-grid-item>
-	</van-grid>
-</view>
-<view class="my-en ">
-	<view class="my-en-top ">常用工具</view>
-	<van-grid column-num="4" border="{{ true }}">
-		<van-grid-item
-		 use-slot
-		 wx:for="{{ toolList }}"
-		 wx:for-item="item"
-		 bind:click="onClick"
-		 data-menuid="{{item.menuId}}"
-		>
-			<image class="image_item" src="{{item.imgUrl}}" />
-			<text class="text_item">{{item.text}}</text>
-		</van-grid-item>
-	</van-grid>
-</view>
+
 

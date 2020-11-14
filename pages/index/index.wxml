@@ -1,96 +1,113 @@
 <!--index.wxml-->
-<view class="banner">
-	<swipers
-	 imgs="{{bannerList}}"
-	 height="350rpx"
-	 radius="20rpx"
-	 width="700rpx"
-	/>
-</view>
-<!--menu-->
-<view class="index_menu_box">
-	<view
-	 class="index_menu"
-	 wx:for="{{menuList}}"
-	 wx:for-item="item"
-	 bind:tap="onclick"
-	 data-index="{{item.id}}"
-	>
-		<image class="icon_menu" src="{{item.logo}}" />
-		<text class="text_menu">{{item.name}}</text>
-	</view>
-</view>
-<!--recycle-->
-<view>
-	<view class="index_menu_box">
-		<image src="../../static/images/huishoufenlei.png" class="recycle_image" bind:tap="onclick" data-index="{{4}}"/>
-		<image src="../../static/images/huishoubangdan.png" class="recycle_image" bind:tap="onclick" data-index="{{5}}"/>
-	</view>
-	<image src="../../static/images/recyclesm.png" class="recycle_image2" bind:tap="onclick" data-index="{{6}}"/>
-</view>
-<!--recyclemoney-->
-<view>
-	<view class="green-gold-title">
-		<view class="vertical" />
-		<text class="">我的环保金</text>
-	</view>
-	<view class="green-gold-login" wx:if="{{!isLogin}}">
-		<view class="green-gold-login-btn" bindtap="goLogin">登录</view>
-	</view>
-	<view class="my-vertical" wx:else>
-		<view class="my-vertical-box" >
-			<image class="my-vertical-img" src="{{avatarUrl}}" />
+
+<view style="background: #F9F9F9">
+	<view class="max">
+		<view style="background: #01BC6B;display: -webkit-box;height: 150rpx;width: 100%">
+
 		</view>
-		<view class="my-vertical-box">
-			<view class="segmentation" />
-		</view>
-		<view class="my-vertical-item ">
-			<view class="my-vertical-item-num ">{{money}}</view>
-			<view class="my-vertical-item-text ">环保金额</view>
-		</view>
-		<view class="my-vertical-item ">
-			<view class="my-vertical-item-num ">{{appointments_num}}</view>
-			<view class="my-vertical-item-text ">投递次数</view>
-		</view>
-	</view>
-	<view class="green-gold-location " wx:if="{{!isLogin}}">
-		<text class="green-gold-location-title ">点击获取您的位置</text>
-		<view class="green-gold-location-content ">
-			<view  class="green-gold-location-content-position " >获取定位</view>
-		</view>
-	</view>
-	<view class="ready-green-gold-location " wx:else>
-		<view class="ready-green-gold-location-top ">
-			<view bindtap="__e" class="ready-green-gold-location-top-left " >
-				<image class="" src="../../static/images/www.png" />
-				<view class="adress-text ">
-					<view class="adress-text-1 " model:value="{{address}}">{{address}}</view>
-				</view>
-			</view>
-			<view class="ready-green-gold-location-top-right ">
-				<image class="" src="../../static/images/gnegudo@2x.png" />
-			</view>
-		</view>
-		<view class="ready-green-gold-location-bottom ">
-			<button bindtap="onclick" class=""  data-index="{{6}}">立即预约</button>
+		<view class="banner">
+			<swipers
+					imgs="{{bannerList}}"
+					height="350rpx"
+					radius="20rpx"
+					width="700rpx"
+			/>
 		</view>
 	</view>
 
-</view>
-<!--information-->
-<view class="new-consult ">
-	<view class="new-consult-title">
-		<view class="new-consult-title-left ">
-			<view class="vertical " />
-			<text class="titleText">最新资讯</text>
-		</view>
-		<view class="new-consult-title-right " bind:tap="goMore">
-			<text class="new-consult-title-right-more " >更多</text>
-			<image class="new-consult-title-right-image" src="../../static/images/gnegudo@2x.png" />
+	<!--menu-->
+	<view class="index_menu_box">
+		<view
+				class="index_menu"
+				wx:for="{{menuList}}"
+				wx:for-item="item"
+				bind:tap="onclick"
+				data-index="{{item.id}}"
+		>
+			<image class="icon_menu" src="{{item.logo}}" />
+			<text class="text_menu">{{item.name}}</text>
 		</view>
 	</view>
-	<view class="new-consult-list ">
-		<consult-list newList="{{listItem}}" />
+	<!--recycle-->
+	<view class="item_box">
+		<image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first24.png"
+			   class="recycle_image2" bind:tap="onclick" data-index="{{6}}"/>
+		<view class="index_menu_box1">
+			<image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first26.png"
+				   class="recycle_image" bind:tap="onclick" data-index="{{4}}"/>
+			<image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first3.png"
+				   class="recycle_image" bind:tap="onclick" data-index="{{5}}"/>
+		</view>
+
+	</view>
+	<!--recyclemoney-->
+	<view>
+		<view class="green-gold-title">
+			<!--		<view class="vertical" />-->
+			<text class="green-gold-title1">为你推荐</text>
+		</view>
+		<view class="Recommend_box">
+			<view class="green-gold-login" wx:if="{{!isLogin}}">
+				<view class="green-gold-login-btn" bindtap="goLogin">登录</view>
+			</view>
+			<view class="my-vertical" wx:else>
+				<view class="my-vertical-box" >
+					<image class="my-vertical-img" src="{{avatarUrl}}" />
+				</view>
+				<!--			<view class="my-vertical-box">-->
+				<!--				<view class="segmentation" />-->
+				<!--			</view>-->
+				<view class="my-vertical-item ">
+					<view class="my-vertical-item-num ">{{money}}</view>
+					<view class="my-vertical-item-text ">环保金额</view>
+				</view>
+				<view class="my-vertical-item ">
+					<view class="my-vertical-item-num ">{{appointments_num}}</view>
+					<view class="my-vertical-item-text ">投递次数</view>
+				</view>
+			</view>
+			<view class="green-gold-location " wx:if="{{!isLogin}}">
+				<text class="green-gold-location-title ">点击获取您的位置</text>
+				<view class="green-gold-location-content ">
+					<view  class="green-gold-location-content-position " >获取定位</view>
+				</view>
+			</view>
+			<view class="ready-green-gold-location " wx:else>
+				<view class="ready-green-gold-location-top ">
+					<view bindtap="__e" class="ready-green-gold-location-top-left " >
+						<image class="" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/first5.png" />
+						<view class="adress-text ">
+							<view class="adress-text-1 " model:value="{{address}}">{{address}}</view>
+						</view>
+					</view>
+					<view class="ready-green-gold-location-top-right ">
+						<image class="" src="../../static/images/gnegudo@2x.png" />
+					</view>
+				</view>
+				<view class="ready-green-gold-location-bottom ">
+					<button bindtap="onclick" class=""  data-index="{{6}}">立即预约</button>
+				</view>
+			</view>
+		</view>
+
+
+	</view>
+	<!--information-->
+	<view class="new-consult ">
+		<view class="new-consult-title">
+			<view class="new-consult-title-left ">
+				<view class="vertical " />
+				<text class="titleText">最新资讯</text>
+			</view>
+			<view class="new-consult-title-right " bind:tap="goMore">
+				<text class="new-consult-title-right-more " >更多</text>
+				<image class="new-consult-title-right-image" src="../../static/images/gnegudo@2x.png" />
+			</view>
+		</view>
+		<view class="new-consult-list ">
+			<consult-list newList="{{listItem}}" />
+		</view>
 	</view>
 </view>
+
 

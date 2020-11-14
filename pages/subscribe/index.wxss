@@ -1,7 +1,28 @@
 .maxBox{
-    background-image: linear-gradient(#fcba03,#fdf5de);
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/yuyue11.png");
+    background-size: 100% 100%;
     width: 100vw;
     height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.max{
+    background: #FFFFFF;
+    border-radius: 20rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top: 140rpx;
+    padding-bottom: 30rpx;
+}
+.just_center{
+    display: flex;
+    justify-content: center;
+}
+.img_header{
+    width: 320rpx;
+    height: 82rpx;
+    background: #11AB68;
+    border-radius: 0rpx 0rpx 36rpx 36rpx;
 }
 .weight{
     /*height: 300rpx;*/
@@ -12,37 +33,59 @@
     width: 670rpx;
     margin: 20rpx auto;
     border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+.weightBox1{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-left: 39rpx;
 }
 .title{
-    font-size: 24rpx;
+
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #1A203C;
+    line-height: 36rpx;
 }
 .choose{
-    width: 518rpx;
+    /*width: 518rpx;*/
     display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin: 25rpx auto 0;
 }
 .tips{
-    font-size: 33rpx;
-    color: #e0895a;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #FFBF27;
+    line-height: 36rpx;
+    margin-top: 10rpx;
 }
 .textStyle{
     display: block;
-    width: 229rpx;
-    height: 47rpx;
+    width: 294rpx;
+    height: 60rpx;
     text-align: center;
-    border: 2rpx solid #a0a0a0;
+    /*border: 2rpx solid #a0a0a0;*/
+    border-radius: 5rpx;
+    background: #F9F9F9;
     font-size: 24rpx;
-    color: #666;
-    line-height: 47rpx;
+    color: #9498A0;
+    line-height: 60rpx;
     margin-bottom: 25rpx;
+    margin-left: 10rpx;
 }
 .sel-we{
-    background: #f2b53f;
-    color: #fff;
-    border: 2rpx solid #f2b53f;
+    /*background: #f2b53f;*/
+    color: #01BC6B;
+    border: 2rpx solid #01BC6B;
+    border-radius: 5rpx;
 }
 .seleted_box{
     padding: 0 19px;
@@ -54,11 +97,12 @@
     background-color: white;
     font-size: 14px;
 }
+.buttonbox{
+    display: flex;
+    justify-content: center;
+}
 .submit{
-    position: fixed;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
+    /*position: fixed;*/
     height: 81rpx;
     width: 70vw;
     margin-top: 30rpx!important;

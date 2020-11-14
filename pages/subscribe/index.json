@@ -1,6 +1,7 @@
 {
 
-  "navigationBarBackgroundColor": "#fdca30",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "backgroundColorBottom": "#fdca30",
   "backgroundColor": "#fdca30",
   "navigationStyle": "custom",
