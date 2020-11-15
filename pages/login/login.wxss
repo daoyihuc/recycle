@@ -6,25 +6,47 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    margin-top: 260rpx;
+    margin-top: 100rpx;
+}
+.labelText{
+
+    font-size: 48rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 43rpx;
+}
+.labelImage{
+    width: 515rpx;
+    height: 397rpx;
+    margin-top: 119rpx;
 }
 
 .btn  {
-    width: 149px;
-    height: 41px;
-    font-size: 15px;
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
 }
 
 .btn-1{
-    background-color: #1aad19;
-    color: #fff;
+    width: 610rpx;
+    height: 90rpx;
+    background: #01BC6B;
+    border-radius: 45px;
+    color: white;
+    margin-top: 100rpx;
 }
 
 .btn-2 {
     background-color: #fff;
-    color: silver;
+    /*color: silver;*/
     margin-top: 50rpx;
+
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #666666;
 }
 
 .btn-2::after {

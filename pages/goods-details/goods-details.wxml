@@ -4,18 +4,20 @@
     <view class="goods-details-top  ">
         <u-swiper
                 imgs="{{bannerList}}"
-                height="400rpx"
+                height="750rpx"
                 radius="20rpx"
                 width="750rpx"
         />
         <view class="goods-details-top-bottom  ">
-            <view class="goods-details-top-bottom-describe  ">{{info.goods_name}}</view>
-            <view class="desc">{{info.desc}}</view>
             <view class="goods-details-top-bottom-price  ">
-                <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
+                <view class="iconimage">
+                    <image mode  class="iconimage1" src="../../static/images/spxq_icon_36@2x.png"></image>
+                </view>
+
                 <view class="goods-details-top-bottom-price-text  ">{{info.goods_price}}</view>
             </view>
-
+            <view class="goods-details-top-bottom-describe  ">{{info.goods_name}}</view>
+<!--            <view class="desc">{{info.desc}}</view>-->
         </view>
     </view>
     <view class="goods-details-bottom  ">
@@ -65,7 +67,7 @@
 <!--                type="warning"-->
 <!--                bind:click="onJoinShop"-->
 <!--        />-->
-        <van-goods-action-button text="立即兑换" bind:click="onbuy" />
+        <van-goods-action-button color="#01BC6B" text="立即兑换" bind:click="onbuy" />
     </van-goods-action>
     <u-toast  id="van-toast" ></u-toast>
 </view>

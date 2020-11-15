@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "商城",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-search": "@vant/weapp/search/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index",

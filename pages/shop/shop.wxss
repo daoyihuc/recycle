@@ -88,6 +88,9 @@
     align-items: center;
     margin-top: 30rpx;
     /*position: absolute;*/
+    z-index: 999;
+    width: 100%;
+
 }
 
 .shop .content .search .search-text {
@@ -122,8 +125,14 @@
     /*position: absolute;*/
 }
 
-.shop .notice {
+.notice {
     box-shadow: 0 0 20rpx hsla(0,0%,87.1%,.5);
+    margin-top: 64rpx;
+    background: white;
+}
+.noticebar{
+    background: white;
+    color: black;
 }
 
 .shop .classify {
@@ -159,7 +168,12 @@
 }
 
 .shop .recommend .recommend-title {
-    font-size: 32rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #28303E;
+    margin-left: 30rpx;
+    margin-top: 41rpx;
 }
 
 .shop .recommend .recommend-content {
@@ -168,6 +182,8 @@
     justify-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
 }
 
 .shop .recommend .recommend-content .recommend-content-item {
@@ -182,22 +198,34 @@
     border-radius: 6rpx;
 }
 
-.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 {
+ .recommend-content-item-text-1 {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     margin: 20rpx 0 10rpx 20rpx;
 }
 
-.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 image {
+.recommend-content-item-text-1 image {
     width: 35rpx;
     height: 35rpx;
 }
 
-.shop .recommend .recommend-content .recommend-content-item .recommend-content-item-text-1 text {
+.recommend-content-item-text-1 text {
     font-size: 36rpx;
-    color: #fcba03;
+    color: #01BC6B;
     margin-left: 20rpx;
+}
+.recommend-content-item-text-2{
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #28303E;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2; /*设置超出两行进行隐藏*/
 }
 
 .shop .recommend .recommend-content .recommend-content-item>image {

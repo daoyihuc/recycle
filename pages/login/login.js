@@ -1,4 +1,4 @@
-import {back,wxLogin,toast} from "../../utils/macutils";
+import {back, wxLogin, toast, goRouterR} from "../../utils/macutils";
 import {WxLogin} from "../../api/app"
 
 var  a={
@@ -49,7 +49,7 @@ Page({
     },
     onback:function () {
         // 在C页面内 navigateBack，将返回A页面
-        back(1);
+        wx.switchTab({url:"/pages/index/index"});
     },
     // login
     http:function (params) {

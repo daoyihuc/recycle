@@ -5,13 +5,15 @@
     height: 700px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .max{
     background: #FFFFFF;
     border-radius: 20rpx;
     margin-left: 30rpx;
     margin-right: 30rpx;
-    margin-top: 140rpx;
+    margin-top: 100rpx;
     padding-bottom: 30rpx;
 }
 .just_center{

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "商品详情",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "u-swiper": "/components/meu-swiper/index",
     "u-popup": "@vant/weapp/popup/index",

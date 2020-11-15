@@ -30,23 +30,55 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
+     align-content: center;
+     /*height: 50rpx;*/
 }
-.goods-details-top-bottom-price image  {
+.iconimage1  {
+    display: inline-block;
     width: 46rpx;
     height: 46rpx;
+    overflow: hidden;
+
+}
+.iconimage{
+    display: flex;
+    align-items: center;
 }
 
+.iconimage > .iconimage1 {
+    position: relative;
+    left: -43rpx;
+    /*border-right: 46rpx solid transparent;*/
+    -webkit-filter: drop-shadow(#01BC6B 46px 0);
+    filter: drop-shadow(#01BC6B 46rpx 0);
+
+}
+
+
 .goods-details .goods-details-top .goods-details-top-bottom .goods-details-top-bottom-price .goods-details-top-bottom-price-text  {
-    font-size: 48rpx;
-    color: #fcba03;
-    margin-left: 20rpx;
+    font-size: 40rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #01BC6B;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
 }
 
 .goods-details-top-bottom-describe  {
-    font-size: 40rpx;
     letter-spacing: 0.2rpx;
-    margin-top: 10rpx;
+    margin-top: 37rpx;
     margin-bottom: 10rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #28303E;
+    line-height: 42rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2; /*设置超出两行进行隐藏*/
 }
 .desc{
     color: #999999;

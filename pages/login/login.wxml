@@ -1,5 +1,8 @@
 <view class="login ">
 	<view class="btn ">
+
+		<text class="labelText">一起互联网环保废品回收</text>
+		<image class="labelImage" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.3/shouquan2.png"></image>
 		<button class="btn-1" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
 		<button class="btn-2 " bindtap="onback">取消</button>
 	</view>
