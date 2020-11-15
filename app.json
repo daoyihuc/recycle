@@ -60,35 +60,35 @@
   },
   "tabBar": {
     "color": "#B0B0B0",
-    "selectedColor": "#fdca30",
+    "selectedColor": "#01BC6B",
     "list": [
       {
-        "iconPath": "/static/images/tabbar_icon_home_nor@2x.png",
-        "selectedIconPath": "/static/images/tabbar_icon_home_sel@2x.png",
+        "iconPath": "/static/images/footer17.png",
+        "selectedIconPath": "/static/images/footer19.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
-        "iconPath": "/static/images/tabbar_icon_zixun_nor@2x.png",
-        "selectedIconPath": "/static/images/tabbar_icon_zixun_sel@2x.png",
+        "iconPath": "/static/images/footer9.png",
+        "selectedIconPath": "/static/images/footer11.png",
         "pagePath": "pages/consult/index",
         "text": "咨讯"
       },
       {
-        "iconPath": "/static/images/tab_icon_yuyue.png",
-        "selectedIconPath": "/static/images/tab_icon_yuyue.png",
+        "iconPath": "/static/images/footer13.png",
+        "selectedIconPath": "/static/images/footer15.png",
         "pagePath": "pages/subscribe/index",
         "text": "预约"
       },
       {
-        "iconPath": "/static/images/tabbar_icon_shagncheng_nor@2x.png",
-        "selectedIconPath": "/static/images/tabbar_icon_shagncheng_sel@2x.png",
+        "iconPath": "/static/images/footer1.png",
+        "selectedIconPath": "/static/images/footer3.png",
         "pagePath": "pages/shop/shop",
         "text": "商城"
       },
       {
-        "iconPath": "/static/images/tabbar_icon_my_nor@2x.png",
-        "selectedIconPath": "/static/images/tabbar_icon_my_sel@2x.png",
+        "iconPath": "/static/images/footer5.png",
+        "selectedIconPath": "/static/images/footer7.png",
         "pagePath": "pages/my/my",
         "text": "我的"
       }

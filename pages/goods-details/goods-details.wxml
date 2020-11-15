@@ -10,10 +10,7 @@
         />
         <view class="goods-details-top-bottom  ">
             <view class="goods-details-top-bottom-price  ">
-                <view class="iconimage">
-                    <image mode  class="iconimage1" src="../../static/images/spxq_icon_36@2x.png"></image>
-                </view>
-
+                <image mode   src="../../static/images/spxq_icon_36@2x.png"></image>
                 <view class="goods-details-top-bottom-price-text  ">{{info.goods_price}}</view>
             </view>
             <view class="goods-details-top-bottom-describe  ">{{info.goods_name}}</view>

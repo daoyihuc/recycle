@@ -30,30 +30,14 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-     align-content: center;
-     /*height: 50rpx;*/
 }
-.iconimage1  {
-    display: inline-block;
+.goods-details-top-bottom-price image  {
     width: 46rpx;
     height: 46rpx;
-    overflow: hidden;
+    /*background-image: linear-gradient(#01BC6B, #01BC6B);*/
+    /*background-blend-mode: lighten;*/
 
 }
-.iconimage{
-    display: flex;
-    align-items: center;
-}
-
-.iconimage > .iconimage1 {
-    position: relative;
-    left: -43rpx;
-    /*border-right: 46rpx solid transparent;*/
-    -webkit-filter: drop-shadow(#01BC6B 46px 0);
-    filter: drop-shadow(#01BC6B 46rpx 0);
-
-}
-
 
 .goods-details .goods-details-top .goods-details-top-bottom .goods-details-top-bottom-price .goods-details-top-bottom-price-text  {
     font-size: 40rpx;
