@@ -45,8 +45,7 @@ page {
     width: 12rpx;
     height: 20rpx;
 }
-
-.item .main {
+.main {
     display: flex;
     /*margin-top: 11rpx;*/
     -webkit-box-pack: justify;
@@ -55,14 +54,14 @@ page {
     margin-top: 38rpx;
 }
 
-.item .main image {
+.main image {
     display: block;
     width: 172rpx;
     height: 172rpx;
     border-radius: 6rpx;
 }
 
-.item .main .des {
+.main .des {
     width: 335rpx;
 }
 
