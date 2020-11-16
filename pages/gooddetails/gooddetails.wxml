@@ -12,7 +12,10 @@
         <view class="item_box" >
             <image style="width: 28rpx;height: 22rpx;"
                    src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.7/first54@2x.png"></image>
-            <text class="con_title">您的订单已进入仓库，为您尽快安排出库！</text>
+            <text class="con_title" wx:if="{{info.orderstatus===0}}">您的订单已进入仓库，为您尽快安排出库！</text>
+            <text class="con_title" wx:if="{{info.orderstatus===1}}">您的订单已进入已发货,请关注物流信息</text>
+            <text class="con_title" wx:if="{{info.orderstatus===2}}">您的订单已已完成!</text>
+            <text class="con_title" wx:if="{{info.orderstatus===3}}">您的订单已已取消！</text>
         </view>
 
         <view class="item_box">
