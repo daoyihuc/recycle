@@ -1,19 +1,23 @@
 <view class="maxBox">
-    <van-tabs active="{{ active }}" bind:change="onTabChange" sticky>
+    <van-tabs active="{{ active }}" bind:change="onTabChange"  color="#01BC6B" sticky>
         <van-tab  wx:for="{{list}}" wx:for-item="item"  title="{{item.cate_name}}" wx:key="index">
 
             <van-empty image="search" description="还没有预约哦" wx:if="{{!orderlist.length}}"/>
             <view class="box" wx:else>
                 <view class="scroll-view-item " wx:for="{{orderlist}}" wx:key="index">
-                    <view class="title ">
-                        <text class="">{{item.status_name}}</text>
-                        <text bindtap="DeleteEvent" data-id="{{item.id}}" class="cancelTitle" wx:if="{{item.status_name==='待服务'}}">取消订单</text>
-                    </view>
+<!--                    <view class="title ">-->
+
+<!--                        <text bindtap="DeleteEvent" data-id="{{item.id}}" class="cancelTitle" wx:if="{{item.status_name==='待服务'}}">取消订单</text>-->
+<!--                    </view>-->
                     <view class="content ">
-                        <view class="content-time ">
-                            <text class="">预约时间:</text>
-                            <text class="">{{item.now_time}}</text>
+                        <view class="title">
+                            <view class="content-time ">
+                                <text class="">预约时间:</text>
+                                <text class="">{{item.now_time}}</text>
+                            </view>
+                            <text class="">{{item.status_name}}</text>
                         </view>
+
                         <view class="content-text">
                             <text class="">下单时间:</text>
                             <text class="">{{item.dateline}}</text>
@@ -28,7 +32,8 @@
                         </view>
                     </view>
                     <view bindtap="goDetails" class="foot " data-id="{{item.id}}">
-                        <text class="">查看详情>></text>
+                        <text class="info_button">查看详情</text>
+                        <text bindtap="DeleteEvent" data-id="{{item.id}}" class="cancelTitle" wx:if="{{item.status_name==='待服务'}}">取消订单</text>
                     </view>
                 </view>
             </view>

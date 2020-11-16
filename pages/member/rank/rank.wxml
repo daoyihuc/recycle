@@ -50,7 +50,7 @@
                 </u-avatar>
                 <text>{{item.nickname}}</text>
             </view>
-            <text>{{item.total_money}}</text>
+            <text class="money">{{item.total_money}}</text>
         </view>
     </view>
 </view>

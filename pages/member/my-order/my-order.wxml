@@ -1,37 +1,38 @@
 <view class="maxBox">
-    <van-tabs active="{{ activited }}" bind:change="onTabChange" sticky>
+    <van-tabs active="{{ activited }}" bind:change="onTabChange" color="#01BC6B" sticky>
         <van-tab  wx:for="{{list}}" wx:for-item="item"  title="{{item.cate_name}}" name="{{item.id}}" >
             <van-empty image="search" description="还没有订单哦" wx:if="{{!orderlist.length}}"/>
             <view class="" wx:else>
                 <view class="item" wx:for="{{orderlist}}">
                     <view class="header ">
                         <view class="headerLeft ">
-                            <image mode class="" src="../../../static/images/allorder-icon-shop@2x.png"></image>
-                            <text class="">{{item.name}}</text>
+                            <view class="priceTime">{{item.dateline}}</view>
+<!--                            <text class="">{{item.name}}</text>-->
                         </view>
                         <text class="">{{item.order_sn}}</text>
                     </view>
                     <view class="main ">
-                        <image mode class="" src="{{item.GoodsList.goods_image}}"></image>
+                        <image mode class="main_img" src="{{item.GoodsList[0].goods_image}}"></image>
                         <view class="des ">
-                            <text class="">{{item.GoodsList.goods_name}}</text>
-                            <text class="">
-                                <text class="" >{{item.GoodsList.desc+' '}}</text>
-                            </text>
+                            <text class="">{{item.GoodsList[0].goods_name}}</text>
+<!--                            <text class="">-->
+<!--                                <text class="" >{{item.GoodsList[0].desc+' '}}</text>-->
+<!--                            </text>-->
+                            <view class="price ">
+                                <view class="priceMoney">{{'￥'+item.total_amount}}</view>
+<!--                                <view class="priceTime">{{item.dateline}}</view>-->
+                            </view>
                         </view>
-                        <view class="price ">
-                            <view class="priceMoney">{{'￥'+item.total_amount}}</view>
-                            <view class="priceTime">{{item.dateline}}</view>
-                        </view>
+
 
                     </view>
                     <view class="footer ">
                         <text class=""></text>
                         <view class="sum ">
                             <view class="btns ">
-                                <text bindtap="cancelEevent" class="" data-id="{{item.oid}}" wx:if="{{item.orderstatus===0}}">取消订单</text>
-                                <text bindtap="comfirmEevent" class="" data-id="{{item.oid}}" wx:if="{{item.orderstatus===1}}">确认收货</text>
-                                <text bindtap="GoDetail"  data-id="{{item.oid}}" class="" >查看详情</text>
+                                <text bindtap="cancelEevent" class="tns2" data-id="{{item.oid}}" wx:if="{{item.orderstatus===0}}">取消订单</text>
+                                <text bindtap="comfirmEevent" class="tns2" data-id="{{item.oid}}" wx:if="{{item.orderstatus===1}}">确认收货</text>
+                                <text bindtap="GoDetail"  data-id="{{item.oid}}" class="tns1" >查看详情</text>
                             </view>
                         </view>
                     </view>

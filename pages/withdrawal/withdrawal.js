@@ -1,5 +1,6 @@
 import {Mine, Withdrawal} from "../../api/order";
-import {back, toast} from "../../utils/macutils";
+import {back, goRouter, toast} from "../../utils/macutils";
+import {PHONE} from "../../config/constans";
 
 
 var that;
@@ -89,6 +90,18 @@ Page({
                 back(1);
             }
         });
-    }
+    },
+    onClick: function (event) {
+        console.log(event.target.dataset.menuid);
+        let url;
+        switch (event.target.dataset.menuid) {
+
+            case 16: // 明细
+                url = "/pages/subsidiary/subsidiary";
+                break;
+
+        }
+        goRouter(url);
+    },
 
 });

@@ -48,16 +48,18 @@ page {
 
 .item .main {
     display: flex;
-    margin-top: 11rpx;
+    /*margin-top: 11rpx;*/
     -webkit-box-pack: justify;
-    justify-content: space-between;
-    height: 136rpx;
+    justify-content: space-around;
+    /*height: 136rpx;*/
+    margin-top: 38rpx;
 }
 
 .item .main image {
     display: block;
-    width: 136rpx;
-    height: 136rpx;
+    width: 172rpx;
+    height: 172rpx;
+    border-radius: 6rpx;
 }
 
 .item .main .des {
@@ -68,13 +70,18 @@ page {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    /*-webkit-line-clamp: 2;*/
     -webkit-box-orient: vertical;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #28303E;
+    line-height: 40rpx;
 }
 
 
 .item .main .price {
-    margin-top: 45rpx;
+    margin-top: 35rpx;
 }
 
 .item .main .price text {
@@ -82,16 +89,25 @@ page {
 }
 
 .priceTime{
-    color: #999;
+    /*color: #999;*/
     margin-top: 10rpx;
     margin-bottom: 10rpx;
-    font-size: 25rpx;
+    /*font-size: 25rpx;*/
     white-space: nowrap;
+
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #28303E;
+
 }
 .priceMoney{
-    color: #fcba30;
-    font-size: 28rpx;
+
     font-weight: bolder;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    /*font-weight: 500;*/
+    color: #01BC6B;
 }
 .item .main .price text:nth-of-type(2) {
     font-size: 26rpx;
@@ -105,7 +121,7 @@ page {
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    margin-top: 20rpx;
+    margin-top: 30rpx;
 }
 
 .item .footer .sum>text {
@@ -123,13 +139,31 @@ page {
     justify-content: flex-end;
 }
 
-.item .footer .sum .btns text {
+.tns1 {
     display: block;
     padding: 5rpx 15rpx;
     border: 2rpx solid;
     font-size: 22rpx;
     margin-left: 10rpx;
-    border: 1px solid #fcbc0a;
+    width: 152rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    text-align: center;
+}
+.tns2 {
+    display: block;
+    padding: 5rpx 15rpx;
+    border: 2rpx solid;
+    font-size: 22rpx;
+    margin-left: 10rpx;
+    width: 152rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 1px solid #01BC6B;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .textContent {

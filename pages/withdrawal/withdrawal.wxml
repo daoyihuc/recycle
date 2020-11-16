@@ -4,7 +4,7 @@
             <text class="headerBox_1_text">账户环保金余额</text>
             <text class="headerBox_1_number">{{money}}</text>
         </view>
-        <view class="headerBox2">
+        <view class="headerBox2" data-menuid="{{16}}" bind:tap="onClick">
             提现明细
         </view>
     </view>
