@@ -16,7 +16,7 @@
             <text class="foot_box_t">设为默认地址</text>
         </view>
         <view >
-            <u-switch activeColor="rgba(246, 186, 71, 1)"  checked="{{ checked }}"  bind:change="onChangeCheck"></u-switch>
+            <u-switch activeColor="#01BC6B"  checked="{{ checked }}"  bind:change="onChangeCheck"></u-switch>
         </view>
     </view>
     <view  class="submit" bind:tap="AddEnvent">保存地址</view>

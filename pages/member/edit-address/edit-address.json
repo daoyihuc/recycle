@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "编辑地址",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-picker": "@vant/weapp/picker/index",
     "u-field": "@vant/weapp/field/index",

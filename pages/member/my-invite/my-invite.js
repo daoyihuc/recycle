@@ -34,6 +34,7 @@ Page({
                     a.id=res.data.List[i].id;
                     a.avatar=res.data.List[i].avatar;
                     a.nickname=res.data.List[i].nickname;
+                    a.createtime=res.data.List[i].createtime;
                     ListData.push(a);
                 }
                 that.setData({
