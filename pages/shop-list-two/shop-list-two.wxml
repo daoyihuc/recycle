@@ -1,7 +1,7 @@
 <view>
     <van-tabs active="{{ active }}"
               sticky
-              color="#fdca30"
+              color="#01BC6B"
               ellipsis="{{true}}"
               bind:change="onChange">
         <van-tab title="默认" name="default">

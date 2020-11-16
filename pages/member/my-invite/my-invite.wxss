@@ -1,6 +1,7 @@
 .my-invite {
 
-}.top {
+}
+.top {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9,7 +10,7 @@
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
-    background: #fcba02;
+    background: #01BC6B;
     color: #fff;
     padding: 35rpx 0 40rpx;
 }
@@ -30,8 +31,35 @@
 .my-invite .noData image {
     width: 100%;
 }
+.item_box{
+    background: #01BC6B;
+    /*border-top-left-radius: 10rpx;*/
+    /*border-top-right-radius: 10rpx;*/
+    /*box-shadow: 1px 1px 10px 1px #c7c2c2;*/
+}
 
 .item {
+    /*margin-top: 10rpx;*/
+    /*margin-right: 10px;*/
+    /*margin-left: 10px;*/
+    box-sizing: border-box;
+    /*border-top: 1rpx solid silver;*/
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    background: #ffffff;
+    box-shadow: 1px 1px 10px 1px #c7c2c2;
+    /*border-radius: 20px;*/
+    padding-top: 48rpx;
+    padding-left: 41rpx;
+}
+.item_title{
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #1A203C;
+
+}
+.item_minBox{
     display: flex;
     /*height: 100rpx;*/
     /*line-height: 100rpx;*/
@@ -39,15 +67,8 @@
     align-items: center;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 10rpx 10rpx 10rpx 10rpx;
-    margin-top: 10rpx;
-    margin-right: 10px;
-    margin-left: 10px;
-    box-sizing: border-box;
-    /*border-top: 1rpx solid silver;*/
-    background: #ffffff;
-    box-shadow: 1px 1px 10px 1px #c7c2c2;
-    border-radius: 20px;
+    padding: 20rpx 15rpx 20rpx 15rpx;
+    margin-top: 42rpx;
 }
 
 .itemleft {

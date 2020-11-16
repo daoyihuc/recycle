@@ -1,6 +1,16 @@
 .popBox  {
     height: 580rpx;
 }
+.header_img{
+    width: 750rpx;
+    height: 300rpx;
+}
+.info_img{
+    width: 30px;
+    height: 30px;
+    margin-left: 30rpx;
+    margin-right: 24rpx;
+}
 
 .popuTop  {
     width: 540rpx;
@@ -93,39 +103,74 @@
 }
 
 .mineInfo  {
-    width: 651rpx;
-    height: 230rpx;
-    background: linear-gradient(180deg,#ffa434,#fec783);
-    border-radius: 30rpx;
+    width: 100%;
+    /*height: 230rpx;*/
     margin: 0 auto;
     display: flex;
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 24rpx 24rpx 0px 0px;
+    align-items: center;
+    position: relative;
+    padding: 10rpx 0;
 }
 
-.mineInfo .avatar  {
-    margin-top: 41rpx;
-    text-align: center;
+ .avatar  {
+     display: flex;
+     flex-direction: column;
+     margin-left: 30rpx;
 }
 
-.mineInfo .avatar text  {
-    display: block;
-    font-size: 30rpx;
-    font-weight: 400;
-    color: #fff;
+ .avatar_title  {
+
+     font-size: 32rpx;
+     font-family: PingFang SC;
+     font-weight: 600;
+     color: #28303E;
 }
 
-.mineInfo .info  {
+ .info  {
     padding-top: 61rpx;
     width: 200rpx;
 }
-
-.mineInfo .info text  {
+ .info_text  {
     display: block;
-    color: #fff;
+    /*color: #000;*/
     text-align: center;
+     font-size: 26rpx;
+     font-family: PingFang SC;
+     font-weight: 400;
+     color: #9498A0;
+     margin-top: 20rpx;
+     /*line-height: 33rpx;*/
 }
+.header_box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 80rpx;
+
+}
+.header_title{
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #28303E;
+    margin-top: 10rpx;
+    /*line-height: 33rpx;*/
+}
+.header_label{
+
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #9498A0;
+    margin-top: 20rpx;
+    /*line-height: 33px;*/
+}
+
 
 .mineInfo .info text :nth-of-type(2) {
     font-size: 48rpx;
@@ -137,6 +182,7 @@
 }
 
 .rankcon .li  {
+    width: 100%;
     height: 115rpx;
     display: flex;
     -webkit-box-pack: justify;
@@ -165,6 +211,15 @@
     height: 40rpx;
     text-align: center;
     line-height: 40rpx;
+}
+.rankcon .li:nth-child(1) {
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.7/first58top1@2x.png") no-repeat;
+}
+.rankcon .li:nth-child(2) {
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.7/first59top2@2x.png") no-repeat;
+}
+.rankcon .li:nth-child(3) {
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.7/first60top3@2x.png") no-repeat;
 }
 
 .rankcon .li:nth-child(1)>text  {

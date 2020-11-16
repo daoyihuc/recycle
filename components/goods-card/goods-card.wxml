@@ -1,10 +1,11 @@
 <view class="recommend-content ">
     <view class="recommend-content-item "  wx:for="{{goodlist}}" wx:key="index" bind:tap="jump" data-id="{{item.id}}">
         <image mode class="" src="{{item.image}}"></image>
+        <text class="recommend-content-item-text-2 ">{{item.name}}</text>
         <view class="recommend-content-item-text-1 ">
             <image mode class="" src="../../static/images/icon_huanbaobi@2x.png"></image>
             <text class="">{{item.price}}</text>
         </view>
-        <text class="recommend-content-item-text-2 ">{{item.name}}</text>
+
     </view>
 </view>

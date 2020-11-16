@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "选择地址",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-toast": "@vant/weapp/toast/index"
   }

@@ -15,22 +15,25 @@
     <!--        <text  >{{street+'排行总榜'}}</text>-->
     <!--        <image mode   src="../../../static/images/gnegudo@2x.png"></image>-->
     <!--    </view>-->
-    <view class="mineInfo  " hidden="{{!!show}}">
-        <view class="info  ">
-            <text>排名</text>
-            <text>{{ranking||'0'}}</text>
-        </view>
+    <image class="header_img" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.6/first56@2x.png"></image>
+
+    <view class="mineInfo "
+          hidden="{{!!show}}">
+        <image class="info_img" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.6/first57@2x.png"></image>
+        <u-avatar
+                round
+                width="3rem"
+                height="3rem"
+                src="{{avatar}}">
+        </u-avatar>
         <view class="avatar  ">
-            <u-avatar
-                    round
-                    width="4rem"
-                    height="4rem"
-                    src="{{avatar}}"></u-avatar>
-            <text>{{mine.nickname}}</text>
+            <text class="avatar_title">{{nickname}}</text>
+            <text class="info_text">排名{{ranking||'0'}}</text>
         </view>
-        <view class="info  ">
-            <text>回收币</text>
-            <text>{{money}}</text>
+        <view class="header_box">
+            <text class="header_title">{{money}}</text>
+            <text class="header_label">回收币</text>
+
         </view>
     </view>
     <view class="rankcon" wx:if="{{list.length}}">

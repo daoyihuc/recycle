@@ -1,12 +1,112 @@
 .withdrawal{
 
 }
+.headerBox{
+    background: #01BC6B;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*align-items: center;*/
+    padding-top: 47rpx;
+    padding-left: 30rpx;
+    padding-bottom: 57rpx;
+    padding-right: 28rpx;
+
+}
+.headerBox_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.headerBox_1_text{
+
+    font-size: 23rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.headerBox_1_number{
+
+    font-size: 64rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-top: 10rpx;
+}
+.headerBox2{
+    width: 148rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    border: 2rpx solid #FFFFFF;
+    border-radius: 28rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+}
+.sessionbox{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 60rpx;
+}
+.sessionbox_title{
+
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #28303E;
+    line-height: 43rpx;
+    margin-left: 42rpx;
+}
+.sessionbox_img{
+    width: 244rpx;
+    height: 88rpx;
+    margin-top: 27rpx;
+    margin-left: 42rpx;
+}
+.label_style{
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #28303E;
+    line-height: 43rpx;
+    margin-left: 15rpx;
+}
+.footer{
+    margin-top: 59rpx;
+
+}
+.footer_title{
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #000000;
+    margin-left: 42rpx;
+}
+.label_style2{
+    width: 29rpx;
+    height: 35rpx;
+    font-size: 48rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #000000;
+    padding: 0!important;
+    margin: 0 !important;
+}
+
 .top {
     padding: 40rpx;
 }
 
 .top-text {
-    font-size: 28rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #01BC6B;
+    margin-right: 22rpx;
 }
 
  .top-number {
@@ -37,7 +137,13 @@
 }
 
 .top2 {
+
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #9498A0;
     margin-top: 20rpx;
+    margin-left: 42rpx;
 }
 .center {
     padding: 20rpx 40rpx;
@@ -87,11 +193,13 @@
     height: 100rpx;
     line-height: 100rpx;
     text-align: center;
-    font-size: 30rpx;
-    background: #fcba03;
+    background: #01BC6B;
     position: fixed;
     bottom: 0;
     color: #fff;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
 }
 
 .withdrawal .top-box {
@@ -106,9 +214,10 @@
     /*height: 100rpx;*/
     /*font-size: 60rpx;*/
     /*border-bottom: 1rpx solid grey;*/
-    color: #fcba30;
-    -webkit-text-fill-color: #fcba30;/*输入文字、placeholder颜色*/
+    color: #000000;
+    color: black!important;
     font-size: 20px;
     font-weight: bolder;
     border-bottom: 1rpx solid  #000000;
+    margin-left: 10rpx!important;
 }

@@ -70,6 +70,8 @@
 }
 
 .confirm-order{
+    background: #F8F8F8;
+    padding-top: 30rpx;
 
 } 
 .confirm-order-address {
@@ -79,10 +81,11 @@
     -webkit-box-align: center;
     align-items: center;
     padding: 35rpx 20rpx;
+    background: white;
+    /*margin-top: 30rpx;*/
 }
-
-.confirm-order .confirm-order-address .confirm-order-address-text {
-    height: 60rpx;
+ .confirm-order-address-text {
+    /*height: 60rpx;*/
     font-size: 26rpx;
     color: grey;
     display: flex;
@@ -92,6 +95,28 @@
     -webkit-box-direction: normal;
     flex-direction: column;
 }
+ .confirm-order-address-text1{
+     width: 100%;
+     height: 60rpx;
+     display: flex;
+     -webkit-box-pack: center;
+     justify-content: center;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     flex-direction: column;
+     text-align: center;
+     font-size: 32rpx;
+     font-family: PingFang SC;
+     padding: 15rpx 35rpx;
+     font-weight: 500;
+     color: #01BC6B;
+     display: -webkit-box;
+     word-break: break-all;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp:2; /*设置超出两行进行隐藏*/
+ }
 
 .confirm-order .confirm-order-address .confirm-order-address-img {
     width: 18rpx;
@@ -110,6 +135,10 @@
 
 .confirm-order .confirm-order-detail {
     padding: 20rpx;
+    margin-top: 30rpx;
+    background: white;
+    /*padding-top: 20rpx;*/
+    border-radius: 10rpx;
 }
 
 .confirm-order .confirm-order-detail .confirm-order-detail-top {
@@ -135,6 +164,7 @@
     width: 200rpx;
     height: 200rpx;
     margin-right: 20rpx;
+    border-radius: 6px;
 }
 
 .confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text {
@@ -169,15 +199,26 @@
     align-items: center;
 }
 
-.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot1 image {
+ .dot1 image {
     width: 35rpx;
     height: 35rpx;
 }
+ .dot2 text{
 
-.confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot1 text {
-    color: #fcba03;
-    font-size: 36rpx;
+     font-size: 32rpx;
+     font-family: PingFang SC;
+     font-weight: 400;
+     color: #9498A0;
+ }
+
+ .dot1 text {
+    /*color: #fcba03;*/
+    /*font-size: 36rpx;*/
     margin-left: 10rpx;
+     font-size: 32rpx;
+     font-family: PingFang SC;
+     font-weight: 400;
+     color: #01BC6B;
 }
 
 .confirm-order .confirm-order-detail .confirm-order-detail-bottom .confirm-order-detail-bottom-text .confirm-order-detail-bottom-text-3 .dot2 text {
@@ -190,10 +231,18 @@
     justify-content: space-between;
     padding: 40rpx 20rpx;
     border-bottom: 2rpx solid #f2f2f2;
+    background: white;
 }
 
-.confirm-order .distribution .distribution-text {
+.distribution-text{
     font-size: 28rpx;
+    margin-left: 42rpx;
+}
+.distribution-text1 {
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #9498A0;
 }
 
 .confirm-order .confirm-order-amount {
@@ -203,6 +252,7 @@
     padding: 40rpx 20rpx;
     margin-bottom: 100rpx;
     align-items: center;
+    background: white;
 }
 
 .confirm-order .confirm-order-amount .confirm-order-amount-text-1 {
@@ -210,14 +260,30 @@
 }
 
 .confirm-order .confirm-order-amount .confirm-order-amount-text-2 {
-    color: #fcba03;
+    color: #01BC6B;
     font-size: 32rpx;
+}
+.address{
+
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #28303E;
+    margin-top: 21rpx;
+    margin-bottom: 21rpx;
+}
+.info{
+
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #474F5C;
 }
 
 .confirm-order .submit {
     width: 100%;
     height: 100rpx;
-    background: #fcba03;
+    background: #01BC6B;
     color: #fff;
     font-size: 36rpx;
     line-height: 100rpx;

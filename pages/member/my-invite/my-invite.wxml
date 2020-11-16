@@ -3,15 +3,19 @@
         <view class="num ">{{mans.length}}</view>
         <view class="text ">邀请人数</view>
     </view>
-    <view class="">
-        <view class="item " wx:for="{{mans}}" wx:key="index">
-            <view class="itemleft ">
-                <van-image width="80rpx" round height="80rpx" src="{{item.avatar}}" />
-                <text class="">{{item.nickname}}</text>
+    <view class="item_box">
+        <view class="item ">
+            <view class="item_title">好友列表</view>
+            <view  class="item_minBox" wx:for="{{mans}}" wx:key="index">
+                <view class="itemleft ">
+                    <van-image width="80rpx" round height="80rpx" src="{{item.avatar}}" />
+                    <text class="">{{item.nickname}}</text>
+                </view>
+                <view class="itemright ">
+                    <text class="">{{item.createtime}}</text>
+                </view>
             </view>
-            <view class="itemright ">
-                <text class="">{{item.createtime}}</text>
-            </view>
+
         </view>
     </view>
 </view>

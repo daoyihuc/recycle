@@ -124,6 +124,10 @@
     margin-top: 20rpx;
     /*position: absolute;*/
 }
+.search-class1{
+    background: white;
+
+}
 
 .notice {
     box-shadow: 0 0 20rpx hsla(0,0%,87.1%,.5);

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "回收价值排行榜",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "u-popup": "@vant/weapp/popup/index",
     "u-avatar": "@vant/weapp/image/index",

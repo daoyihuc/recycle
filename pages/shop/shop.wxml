@@ -27,6 +27,7 @@
 		<view class="notice ">
 			<van-notice-bar
 			 bgColor="#ffffff"
+			 class=""
 			 background="#ffffff"
 			 color="#000000"
 			 custom-class="noticebar"

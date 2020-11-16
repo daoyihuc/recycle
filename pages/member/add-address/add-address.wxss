@@ -6,7 +6,7 @@
     width: 676rpx;
     height: 82rpx;
     font-size: 36rpx;
-    background: #f6ba47;
+    background: #01BC6B;
     border-radius: 12rpx;
     text-align: center;
     line-height: 81rpx;

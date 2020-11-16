@@ -1,28 +1,62 @@
 <view class="address ">
-    <view class="noneLi " wx:if="{{!address.length}}">
-        <image mode class="" src="../../../static/images/none-add.png"></image>
+    <view class="noneLi " wx:if="{{!list.length}}">
+        <image mode style="width: 430rpx;height: 355rpx;" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.5/first50@2x.png"></image>
         <text class="">暂时没有添加地址哦</text>
     </view>
-    <view class="addList "
-          wx:for="{{address}}"
-          wx:for-index="index"
-          wx:key="id" bindtap="GoBack" data-index="{{index}}">
-        <view class="info ">
-            <view class="user ">
-                <text class="">{{item.contacts}}</text>
-                <text class="defaultActive " wx:if="{{item.is_default==1}}">默认</text>
-                <text class="default " wx:else></text>
-                <text class="">{{item.mobile}}</text>
+
+    <view class="item-box">
+        <view class="items">
+            <view class="item"
+                  wx:for="{{list}}"
+                  wx:for-index="index"
+                  wx:for-item="item"
+                  data-index="{{index}}"
+
+            >
+
+                <view bindtouchstart="touchS"
+                      bindtouchmove="touchM"
+                      bindtouchend="touchE"
+                      data-index="{{index}}"
+                      bindtap="GoBack"
+                      style="{{item.txtStyle}}" class="txt">
+                    <view class="info">
+                        <view class="user ">
+                            <text class="user_title">{{item.contacts}}</text>
+                            <text class="defaultActive " wx:if="{{item.is_default==1}}">默认</text>
+                            <text class="default " wx:else></text>
+                            <text class="user_phone">{{item.mobile}}</text>
+                        </view>
+                        <view class="address_info">
+                            {{''+(item.province||'')+(item.city||'')}}
+                            {{(item.district||'')+(item.street||'')+(item.address||'')+''}}
+                        </view>
+                    </view>
+
+                </view>
+                <view class="sanBox">
+
+                    <view data-index="{{index}}"  class="de"  catchtap="GoEditer" data-id="{{item.address_id}}">
+                        编辑
+                    </view>
+
+                    <view data-index="{{index}}"  class="del" catchtap="GoDelete" data-id="{{item.address_id}}">
+                        删除
+                    </view>
+
+                </view>
+
+
+<!--                <view data-index="{{index}}" bindtap="delItem" class="inner del">删除</view>-->
+
+                <!--        <view class="controls ">-->
+                <!--            <image mode catchtap="GoEditer" data-id="{{item.address_id}}" class=""  src="../../static/images/edit.png"></image>-->
+                <!--            <image mode catchtap="GoDelete" data-id="{{item.address_id}}" class=""  src="../../static/images/del.png"></image>-->
+                <!--        </view>-->
             </view>
-            <view class="">
-                {{''+(item.province||'')+(item.city||'')}}
-                {{(item.district||'')+(item.street||'')+(item.address||'')+''}}
-            </view>
-        </view>
-        <view class="controls ">
-            <image mode catchtap="GoEditer" data-id="{{item.address_id}}" class=""  src="../../static/images/edit.png"></image>
-            <image mode catchtap="GoDelete" data-id="{{item.address_id}}" class=""  src="../../static/images/del.png"></image>
         </view>
     </view>
+
+
     <view  class="address-add" bind:tap="addAddress">添加地址</view>
 </view>

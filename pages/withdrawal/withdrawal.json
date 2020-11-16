@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "提现",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-field": "@vant/weapp/field/index"
   }

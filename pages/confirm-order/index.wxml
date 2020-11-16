@@ -1,20 +1,22 @@
-<view class="confirm-order ">
+<view class="confirm-order"  >
 	<view bind:tap="selectedAddress" class="confirm-order-address ">
-		<view class="confirm-order-address-text"  wx:if="{{contacts===''}}">请选择收货地址</view>
+		<view class="confirm-order-address-text1"  wx:if="{{contacts===''}}">+ 请选择收货地址</view>
 		<view class="confirm-order-address-text " wx:else>
-			<view class="">{{''+contacts+' '+mobile+''}}</view>
-			<view class="">{{''+(province||'')+(city||'')+(district||'')+(street||'')+''+(address||'')+''}}</view>
+
+			<view class="">{{''+(province||'')+(city||'')+(district||'')}}</view>
+			<view class="address">{{(street||'')+''+(address||'')+''}}</view>
+			<view class="info">{{''+contacts+' '+mobile+''}}</view>
 		</view>
-		<image mode class="confirm-order-address-img " src="../../static/images/gnegudo@2x.png" />
+<!--		<image mode class="confirm-order-address-img " src="../../static/images/gnegudo@2x.png" />-->
 	</view>
-	<view class="confirm-order-segmentation ">
-		<image mode class="" src="../../static/images/heng.png" />
-	</view>
+<!--	<view class="confirm-order-segmentation ">-->
+<!--		<image mode class="" src="../../static/images/heng.png" />-->
+<!--	</view>-->
 	<view class="confirm-order-detail ">
-		<view class="confirm-order-detail-top ">
-			<image mode class="" src="../../static/images/allorder-icon-shop@2x.png" />
-			<text class="">{{goodList.name}}</text>
-		</view>
+<!--		<view class="confirm-order-detail-top ">-->
+<!--			<image mode class="" src="../../static/images/allorder-icon-shop@2x.png" />-->
+<!--			<text class="">{{goodList.name}}</text>-->
+<!--		</view>-->
 		<view class="confirm-order-detail-bottom " >
 			<image mode class="confirm-order-detail-bottom-img " src="{{GoodsInfo.img}}" />
 			<view class="confirm-order-detail-bottom-text ">
@@ -28,7 +30,8 @@
 						<text class="">{{GoodsInfo.goods_price}}</text>
 					</view>
 					<view class="dot2 ">
-						<text class="">{{GoodsInfo.sale_number===undefined?'':' '+GoodsInfo.sale_number}}</text>
+<!--						{{GoodsInfo.sale_number===undefined?'':' '+GoodsInfo.sale_number}}-->
+						<text class="">x1</text>
 					</view>
 				</view>
 			</view>
@@ -36,8 +39,9 @@
 	</view>
 	<view class="distribution ">
 		<view class="distribution-text ">配送方式</view>
-		<view class="distribution-text ">送货上门</view>
+		<view class="distribution-text1 ">送货上门</view>
 	</view>
+
 	<view class="confirm-order-amount ">
 		<view class="confirm-order-amount-text-1 ">共1件商品 合计：</view>
 		<view class="confirm-order-amount-text-2 ">{{OrderPrice||0+'环保币'}}</view>

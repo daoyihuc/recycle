@@ -26,7 +26,7 @@
 			<!--			<view class="header_box_text1">积分:</view>-->
 			<!--			<text class="header_box_text">{{integral||0}}</text>-->
 			<!--		</view>-->
-			<view class="withdraw">
+			<view class="withdraw" data-menuid="{{15}}" bind:tap="onClick">
 				去提现
 			</view>
 		</view>

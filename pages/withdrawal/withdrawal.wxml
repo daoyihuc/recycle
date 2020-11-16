@@ -1,37 +1,18 @@
 <view class="withdrawal ">
-    <view class="top ">
-        <view class="top-box ">
-            <text class="top-text ">账户环保金余额</text>
-            <text class="top-number ">{{money}}</text>
+    <view class="headerBox">
+        <view class="headerBox_1 ">
+            <text class="headerBox_1_text">账户环保金余额</text>
+            <text class="headerBox_1_number">{{money}}</text>
         </view>
-        <view class="">
-            <view class="top-text top1 ">提现金额</view>
-            <view class="price-contain ">
-                <van-field
-                        input-class="inp"
-                        placeholder="输入提现金额"
-                        maxlength="10"
-                        type="number"
-                        value="{{price}}"
-                        bind:change="onPrice">
-
-                </van-field>
-                <text  class="top-text " bind:tap="allWith">全部提现</text>
-            </view>
-            <view class="tip top2 ">注意：1环保币可兑换1人民币</view>
+        <view class="headerBox2">
+            提现明细
         </view>
     </view>
-    <view bindtap="__e" class="center " >
-        <view class="left ">
-            <text class="">{{"微信提现"}}</text>
-        </view>
-        <view class="right ">
-            <image mode class="" src="../../static/images/sel@2x.png"></image>
-        </view>
-    </view>
-    <view class="bottom ">
-        <image mode class="xing " src="../../static/images/xing@2x.png"></image>
+    <view  class="sessionbox " >
+        <text class="sessionbox_title">提现信息</text>
+        <image class="sessionbox_img" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.4/weixintixian@2x.png"></image>
         <van-field
+                label-class="label_style"
                 label="真实姓名:"
                 value="{{ value }}"
                 placeholder="您的真实姓名"
@@ -39,6 +20,7 @@
                 bind:change="realName"
         />
         <van-field
+                label-class="label_style"
                 label="微信昵称:"
                 value="{{ nickname }}"
                 placeholder="您的微信昵称"
@@ -46,14 +28,37 @@
                 readonly
                 bind:change="onChange"
         />
-        <van-field
-                label="微信账号:"
-                value="{{ value }}"
-                placeholder="您的微信账号"
-                border="{{ false }}"
-                bind:change="onChange"
-                style="display:none;"
-        />
     </view>
-    <view bindtap="sumbit" class="withdrawal-btn " >提现</view>
+    <view style="width: 710rpx;height: 1px;background: #E5E5E5;margin: 1rpx auto"></view>
+
+    <view class="footer ">
+        <view class="footer_title">提现金额</view>
+        <view class="price-contain ">
+            <van-field
+                    input-class="inp"
+                    input-align="left"
+                    placeholder="输入提现金额"
+                    custom-style="margin-top:10rpx"
+                    maxlength="10"
+                    type="number"
+                    value="{{price}}"
+                    bind:change="onPrice"
+                    />
+            <text  class="top-text " bind:tap="allWith">全部提现</text>
+        </view>
+        <view class="tip top2 ">注意：1环保币可兑换1人民币</view>
+    </view>
+
+<!--    <view class="bottom ">-->
+
+<!--        <van-field-->
+<!--                label="微信账号:"-->
+<!--                value="{{ value }}"-->
+<!--                placeholder="您的微信账号"-->
+<!--                border="{{ false }}"-->
+<!--                bind:change="onChange"-->
+<!--                style="display:none;"-->
+<!--        />-->
+<!--    </view>-->
+    <view bindtap="sumbit" class="withdrawal-btn " >确定提现</view>
 </view>
