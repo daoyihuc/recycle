@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "意见反馈",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-field": "@vant/weapp/field/index",
     "van-cell-group": "@vant/weapp/cell-group/index",

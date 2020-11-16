@@ -2,8 +2,8 @@
     <view class="top ">
         <view class="top-title ">请选择反馈类型</view>
         <van-radio-group value="{{ radio }}" bind:change="onChange" class="radiu_box">
-            <van-radio name="0">建议</van-radio>
-            <van-radio name="1"  style="margin-left: 20rpx">bug</van-radio>
+            <van-radio name="0" checked-color="#07c160">建议</van-radio>
+            <van-radio name="1"  checked-color="#07c160" style="margin-left: 20rpx">bug</van-radio>
         </van-radio-group>
     </view>
     <van-cell-group>

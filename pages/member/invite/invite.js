@@ -8,7 +8,7 @@ var that;
 Page({
     data: {
         id: "",
-        bac_img: "https://cdn.jsdelivr.net/gh/daoyihuc/recycle@1.5/static/images/shared.jpg",
+        bac_img: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.7/yaoqing@2x.png",
         down_bac_img: "",
         isShow: false,
         qrCode: "",
@@ -34,7 +34,7 @@ Page({
                 }
                 that.setData({
                     qrCode: res.data.erweima,
-                    bac_img: res.data.share_img
+                    // bac_img: res.data.share_img
                 });
             }else{
                 toast(res.msg,1);

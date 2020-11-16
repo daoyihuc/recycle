@@ -38,7 +38,7 @@
     height: 100rpx;
     line-height: 100rpx;
     text-align: center;
-    background: #fcba03;
+    background: #01BC6B;
     font-size: 32rpx;
     color: #fff;
     position: absolute;
