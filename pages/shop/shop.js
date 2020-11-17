@@ -22,7 +22,15 @@ Page({
         //     "img": "https://fg.996sh.com/123123123"
         // };
         for (let i = 0; i < imgs.length; i++) {
-            banner.push(imgs[i].img);
+            const a={
+                content: "",
+                img: "http://fgadmin.996sh.com/uploads/20201109/55a5410c29f3792cb246323fa5b8392c.png",
+                url: "",
+            }
+            a.content=imgs[i].content;
+            a.img=imgs[i].img;
+            a.url=imgs[i].url;
+            banner.push(a);
         }
         // banner.push("http://ptadmin.ccshpt.com///uploads/20200827/9dca86afc214a6d2aa5859252300a826.png");
         this.setData({
