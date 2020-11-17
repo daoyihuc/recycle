@@ -516,6 +516,26 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": 1001
+        },
+        {
+          "id": -1,
+          "name": "pages/member/admin-login/admin-login",
+          "pathName": "pages/member/admin-login/admin-login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/pay/pay",
+          "pathName": "pages/member/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/member/pay/pay",
+          "pathName": "pages/member/pay/pay",
+          "scene": null
         }
       ]
     }

@@ -252,7 +252,7 @@ rankcon .li:nth-child(1) .money{
 
 
 .rankcon .li:nth-child(1)>text  {
-    color: #fcd115;
+    /*color: #fcd115;*/
 }
 
 .rankcon .li:nth-child(1) .li-info .num  {

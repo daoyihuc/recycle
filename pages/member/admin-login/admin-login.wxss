@@ -1,4 +1,54 @@
 .login {
-    width: 70vw;
-    margin: 100rpx auto;
+    width: 100%;
+    /*margin: 100rpx auto;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20rpx;
+}
+.login_button{
+    width: 650rpx;
+    height: 92rpx;
+    background: #01BC6B;
+    border-radius: 46rpx;
+    color: white;
+    line-height: 92rpx;
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-top: 60rpx;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 44rpx 32rpx 20rpx 32rpx;
+}
+
+.header_img{
+    width: 340rpx;
+    height: 396rpx;
+}
+.header_box{
+    display: flex;
+    flex-direction: column;
+}
+.title1{
+
+    font-size: 48rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #28303E;
+}
+.title2{
+
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #9498A0;
+    margin-top: 27rpx;
 }

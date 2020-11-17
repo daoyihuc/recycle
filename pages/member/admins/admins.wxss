@@ -1,12 +1,14 @@
 .maxBox{
-    /*background: #999999;*/
+    background: #f8f8f8;
 }
 .itemMax{
-    margin: 10rpx 15rpx;
+    /*margin: 10rpx 15rpx;*/
     background: white;
-    box-shadow: 1px 1px 10px 1px #999999;
+    /*box-shadow: 1px 1px 10px 1px #999999;*/
     border-radius: 10rpx;
     margin-bottom: 100rpx;
+    margin-top: 30rpx;
+    padding-top: 30rpx;
 
 }
 .itemAddresbox{
@@ -15,12 +17,12 @@
     align-items: center;
 }
 .bottonSize{
-    width: 148rpx;
-    height: 65rpx;
-    background: #fcba30;
-    color: white;
-    line-height: 65rpx;
-    font-size: 30rpx;
+
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #01BC6B;
+    margin-left: 10rpx;
 }
 .address{
     overflow: hidden;
@@ -30,33 +32,142 @@
     -webkit-box-orient: vertical;
     -webkit-box-align: center;
     align-items: center;
-    width: 80%;
+    /*width: 80%;*/
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #28303E;
+    letter-spacing: 0.3;
 }
 .img{
     margin-right: 10rpx;
     margin-left: 20rpx;
+    margin-top: 20rpx;
 }
 .item{
     padding: 10rpx 0;
 }
 .itemBox{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
     padding: 0 10rpx;
+    margin-top: 62rpx;
     margin-bottom: 20rpx;
 
 }
 .buttonBox{
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     padding: 20rpx 0;
+    height: 100rpx;
 }
 .phone_box{
     display: flex;
     align-items: center;
+    margin-top: 28rpx;
 }
 .phone_icon{
-    width: 50rpx;
-    height: 50rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.header_title{
+    padding-left: 31rpx;
+}
+.header_title text{
+
+    font-size: 38rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #28303E;
+
+}
+.nikename{
+
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #28303E;
+    line-height: 40rpx;
+}
+.mobile{
+
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #28303E;
+    line-height: 40rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+.location_icon{
+    width: 23rpx;
+    height: 32rpx;
+}
+.itemBox2{
+    margin-left: 30rpx;
+}
+.r_btn{
+    /*width: 152rpx;*/
+    /*height: 60rpx;*/
+    /*line-height: 60rpx;*/
+    border: 1rpx solid #01BC6B;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #01BC6B;
+    background: white;
+    position: absolute;
+    padding: 5rpx 50rpx;
+    right: 20rpx;
+
+}
+.g_btn{
+    /*width: 152rpx;*/
+    /*height: 60rpx;*/
+    /*line-height: 60rpx;*/
+    border: 1rpx solid #e3df10;
+    border-radius: 10rpx;
+    background: white;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #e3df10;
+    position: absolute;
+    padding: 5rpx 50rpx;
+    right: 20rpx;
+}
+.c_btn{
+    /*width: 152rpx;*/
+    /*height: 60rpx;*/
+    /*line-height: 60rpx;*/
+    border: 1rpx solid #f10d45;
+    border-radius: 10rpx;
+    background: white;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #f10d45;
+    position: absolute;
+    padding: 5rpx 50rpx;
+    right: 20rpx;
+}
+.d_btn{
+    /*width: 152rpx;*/
+    /*height: 60rpx;*/
+    /*line-height: 60rpx;*/
+    border: 1rpx solid #eeeeee;
+    border-radius: 10rpx;
+    background: white;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #000;
+    position: absolute;
+    padding: 5rpx 50rpx;
+    right: 230rpx;
+
 }

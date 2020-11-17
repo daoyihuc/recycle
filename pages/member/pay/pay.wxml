@@ -1,5 +1,33 @@
-<view>
-    <view style="color: red;font-size: 28rpx;text-align: center">!重量按kg来输入哦</view>
+<view style="background: #f8f8f8">
+<!--    <view style="color: red;font-size: 28rpx;text-align: center">!重量按kg来输入哦</view>-->
+
+
+    <view class="itemBox1" bindtap="onPayChange" data-radio="{{'0'}}">
+        <image class="icon1" src="{{icon1.d1}}"></image>
+        <text class="iconTitle">环保金支付</text>
+        <image slot="icon" class="icon" src="{{ radio === '0' ? icon.active : icon.normal }}" />
+    </view>
+    <view class="itemBox1" bindtap="onPayChange" data-radio="{{'1'}}">
+        <image class="icon1" src="{{icon1.d2}}"></image>
+        <text class="iconTitle">现金支付</text>
+        <image slot="icon" class="icon" src="{{ radio === '1' ? icon.active : icon.normal }}" />
+    </view>
+
+<!--    <van-radio-group value="{{ radio }}" bind:change="onPayChange">-->
+<!--        <van-radio use-icon-slot value="{{ radio }}" name="0">-->
+<!--            <text>环保金支付</text>-->
+<!--            <image class="icon1" src="{{icon1.d1}}"></image>-->
+<!--            <image slot="icon" class="icon" src="{{ radio === '0' ? icon.active : icon.normal }}" />-->
+<!--        </van-radio>-->
+
+<!--        <van-radio use-icon-slot value="{{ radio }}" name="1">-->
+
+<!--            <text>现金支付</text>-->
+<!--            <image class="icon1" src="{{icon1.d1}}"></image>-->
+<!--            <image slot="icon" class="icon" src="{{ radio === '1' ? icon.active : icon.normal }}" />-->
+<!--        </van-radio>-->
+<!--    </van-radio-group>-->
+
     <view wx:for="{{classList}}" class="itemBox" wx:for-index="index">
         <van-field
                 label="{{item.label}}"
@@ -13,14 +41,12 @@
         />
     </view>
 
-    <van-radio-group value="{{ radio }}" bind:change="onPayChange">
-        <van-radio name="0" checked-color="#fcba30" class="margin">环保金支付</van-radio>
-        <van-radio name="1" checked-color="#fcba30" class="margin">现金支付</van-radio>
-    </van-radio-group>
-
     <view class="moneyBox">
-        <view>回收金额为: </view>
-        <view style="color: #fcba30;font-size: 30rpx; font-weight: bolder">￥:{{moneySum}} 元</view>
+        <view class="moneyBox1">
+            <view class="m_label">回收金额为: </view>
+            <view class="m_label1">重量按kg来输入哦～</view>
+        </view>
+        <view class="m_money">￥:{{moneySum}} 元</view>
     </view>
     <view class="button_box">
         <button

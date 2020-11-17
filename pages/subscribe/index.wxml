@@ -10,6 +10,8 @@
             <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.3/yuyue9.png" class="img_header"></image>
         </view>
 
+
+
         <view class="weight ">
             <view class="weightBox1">
                 <text class="title ">预约重量选择</text>

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "回收员登录",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "van-field": "@vant/weapp/field/index",
     "u-button": "@vant/weapp/button/index",

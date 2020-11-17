@@ -14,48 +14,58 @@ Page({
         subscribeList: [{
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home23.png",
             text: "全部预约",
-            menuId: 1.1
+            menuId: 1.1,
+            num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home38.png",
             text: "待上门",
-            menuId: 1.2
+            menuId: 1.2,
+            num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home42.png",
             text: "已完成",
-            menuId: 1.3
+            menuId: 1.3,
+            num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home40.png",
             text: "已取消",
-            menuId: 1.4
+            menuId: 1.4,
+            num:""
         }],
         orderList: [
             {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home19.png",
             text: "全部订单",
-            menuId: 2.1
+            menuId: 2.1,
+                num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home17.png",
             text: "已发货",
-            menuId: 2.2
+            menuId: 2.2,
+                num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home25.png",
             text: "已完成",
-            menuId: 2.3
+            menuId: 2.3,
+                num:""
         }, {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home22.png",
             text: "已取消",
-            menuId: 2.4
+            menuId: 2.4,
+                num:""
         }],
         toolList: [
             {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home4.png",
             text: "回收榜单",
             menuId: 3
-        }, {
-            imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home36.png",
-            text: "回收分类",
-            menuId: 4
-        }, {
+        },
+        //     {
+        //     imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home36.png",
+        //     text: "回收分类",
+        //     menuId: 4
+        // },
+            {
             imgUrl: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.2/home44.png",
             text: "回收指南",
             menuId: 5
@@ -107,7 +117,16 @@ Page({
         money: "", //环保金额
         appointments_num: "", // 回收次数
         ranking:"",
-        integral: ''// 积分
+        integral: '',// 积分
+        AllAppointmentOrder:"",
+        WaitServerOrder:"",
+        FinishedAppointmentOrder:"",
+        CancelAppointmentOrder:"",
+        AllOrder:"",
+        WaitGetOrder:"",
+        FinishedOrder:"",
+        CancelOrder:"",
+
     },
     onLoad: function (options) {
 
@@ -236,7 +255,20 @@ Page({
                     money: "",
                     appointments_num: "",
                     ranking:"",
-                    integral:""
+                    integral:"",
+                    AppointmentOrder:{
+                        AllAppointmentOrder:"",
+                        WaitServerOrder:"",
+                        FinishedAppointmentOrder:"",
+                        CancelAppointmentOrder:"",
+                    },
+                    ShopOrder:{
+                        AllOrder:"",
+                        WaitGetOrder:"",
+                        FinishedOrder:"",
+                        CancelOrder:"",
+                    },
+
                 };
                 a=res.data;
                 wx.setStorageSync("id",a.id);
@@ -247,6 +279,18 @@ Page({
                 wx.setStorageSync("ranking",a.ranking);
                 wx.setStorageSync("integral",a.integral); // 积分
 
+                var b=that.data.subscribeList;
+                b[0].num=a.AppointmentOrder.AllAppointmentOrder;
+                b[1].num=a.AppointmentOrder.WaitServerOrder;
+                b[2].num=a.AppointmentOrder.FinishedAppointmentOrder;
+                b[3].num=a.AppointmentOrder.CancelAppointmentOrder;
+
+                var d=that.data.orderList;
+                d[0].num=a.ShopOrder.AllOrder;
+                d[1].num=a.ShopOrder.WaitGetOrder;
+                d[2].num=a.ShopOrder.FinishedOrder;
+                d[3].num=a.ShopOrder.CancelOrder;
+
                 that.setData({
                     avatar: a.avatar,
                     nickname: a.nickname,
@@ -254,8 +298,20 @@ Page({
                     money: a.money,
                     appointments_num: a.appointments_num,
                     ranking:a.ranking,
-                    integral:a.integral
+                    integral:a.integral,
+                    AllAppointmentOrder:a.AppointmentOrder.AllAppointmentOrder,
+                    WaitServerOrder:a.AppointmentOrder.WaitServerOrder,
+                    FinishedAppointmentOrder:a.AppointmentOrder.FinishedAppointmentOrder,
+                    CancelAppointmentOrder:a.AppointmentOrder.CancelAppointmentOrder,
+                    AllOrder:a.ShopOrder.AllOrder,
+                    WaitGetOrder:a.ShopOrder.WaitGetOrder,
+                    FinishedOrder:a.ShopOrder.FinishedOrder,
+                    CancelOrder:a.ShopOrder.CancelOrder,
+                    subscribeList: b,
+                    orderList: d
                 });
+                console.log(that.data.subscribeList);
+
             }
         });
     }

@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "预约中心",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "u-avatar": "@vant/weapp/image/index",
     "van-tabbar": "@vant/weapp/tabbar/index",

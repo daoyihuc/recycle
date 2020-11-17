@@ -37,7 +37,7 @@
         </view>
     </view>
     <view class="rankcon" wx:if="{{list.length}}">
-        <view class="li" wx:for="{{list}}" wx:wx:for-index="index">
+        <view class="li" wx:for="{{list}}" wx:for-index="index">
             <view class="li-info  ">
                 <view class="num  ">{{''+(index+1)+''}}</view>
                 <u-avatar src="{{item.avatar}}"

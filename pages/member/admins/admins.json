@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "回收中心",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "u-avatar": "@vant/weapp/image/index",
     "u-modal": "@vant/weapp/popup/index",

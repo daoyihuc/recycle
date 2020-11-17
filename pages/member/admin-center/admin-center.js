@@ -30,7 +30,15 @@ Page({
     active: 0,
     activeB: 1,
     AdminInfo: {},
-    MoneyList:[]
+    MoneyList:[],
+    icon: {
+      normal: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-81@2x.png',
+      active: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-82@2x.png',
+    },
+    icon1: {
+      normal: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-84@2x.png',
+      active: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-83@2x.png',
+    },
   },
 
   /**

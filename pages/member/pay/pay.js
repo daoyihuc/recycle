@@ -22,7 +22,15 @@ Page({
         show: false,
         classList: [],
         radio: '0',
-        moneySum: 0
+        moneySum: 0,
+        icon: {
+            normal: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.9/first-114@2x.png',
+            active: 'https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.9/first-113@2x.png',
+        },
+        icon1:{
+            d1:"https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.0/first-1101@2x.png",
+            d2:"https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.9/first-110@2x.png"
+        }
     },
     onLoad: function (options) {
         let id=options.id;
@@ -160,9 +168,9 @@ Page({
     //支付方式改变
     onPayChange:function(event) {
         this.setData({
-            radio: event.detail,
+            radio: event.currentTarget.dataset.radio,
         });
-        aData2.pay_id=event.detail;
+        aData2.pay_id=event.currentTarget.dataset.radio;
     },
     // 称重结算
     HttpOrderWeight:function (params) {

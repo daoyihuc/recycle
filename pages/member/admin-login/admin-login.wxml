@@ -1,7 +1,18 @@
 <view>
+
+	<view class="header">
+		<view class="header_box">
+			<text class="title1">回收员登录</text>
+			<text class="title2">循环利用 变废为宝 为环保助力～ </text>
+		</view>
+		<image class="header_img" src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-76@2x.png"></image>
+	</view>
+
+
 	<view class="login">
-		<van-cell-group>
+
 			<van-field
+					style="width: 100%"
 					left-icon="contact"
 					type="text"
 					model:value="{{ account }}"
@@ -9,16 +20,19 @@
 					bind:change="usernames1"
 					bind:blur="usernames2"
 			/>
-		</van-cell-group>
+			<van-field
+					style="width: 100%;margin-top: 20rpx"
+					left-icon="lock"
+					password="true"
+					border="{{false}}"
+					placeholder="请填写用户密码"
+					bind:change="passwords"
+					bind:blur="passwords1"
+			/>
 
-		<van-field
-		 left-icon="lock"
-		 password="true"
-		 placeholder="请填写用户密码"
-		 bind:change="passwords"
-		 bind:blur="passwords1"
-		/>
-		<u-button color="#fdca30" block bind:tap="login">登录</u-button>
+
+
+		<button class="login_button" block bind:tap="login">登录</button>
 	</view>
 </view>
 

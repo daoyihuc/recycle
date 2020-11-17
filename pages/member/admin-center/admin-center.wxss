@@ -4,6 +4,42 @@
     padding: 10rpx 20rpx;
     display: flex;
 }
+.back{
+    background: #01BC6B;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    padding-top: 36rpx;
+
+}
+.moneyLabel{
+
+    height: 42rpx;
+    font-size: 26rpx!important;
+    font-family: PingFang SC;
+    font-weight: 400!important;
+    color: #FFFFFF!important;
+    margin-left: 20rpx;
+    line-height: 42rpx;
+}
+.money{
+    font-size: 56rpx!important;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF!important;
+    margin-top: 17rpx!important;
+    margin-left: 20rpx!important;
+    height: 42rpx;
+    line-height: 42rpx;
+}
+.money2{
+
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #28303E;
+}
+
 .headerItemTitle{
     color: #000000;
     font-weight: bolder;
@@ -11,11 +47,12 @@
     display: block;
     width: 150rpx;
     text-align: left;
+
 }
 .headerItemContent{
-    color: #fcba30;
+    color: #fff;
     font-size: 30rpx;
-    margin-left: 20rpx;
+    margin-left: 10rpx;
 }
 
 .itemMax{
@@ -27,6 +64,18 @@
     margin: 10rpx;
     box-shadow: 1px 1px 10px 1px #eeeeee;
 }
+.icon_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 48rpx;
+}
+
+.icon{
+    width: 20rpx;
+    height: 24rpx;
+    /*background: #FFFFFF;*/
+}
 .itemBox{
     display: flex;
     flex-direction: column;
@@ -35,7 +84,7 @@
     padding: 10rpx 10rpx;
 }
 .itemTitle{
-    color: #fcba30;
+    color: #01BC6B;
     font-size: 28rpx;
 }
 .itemRank{
@@ -46,10 +95,27 @@
     color: #999999;
     font-size: 20rpx;
 }
-.money{
-    margin-right: 10rpx;
-    color: #fcba30;
-    font-size: 38rpx;
-    font-weight: bolder;
+.username{
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-right: 20rpx;
+}
+.phone{
+
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-right: 20rpx;
+}
+.address{
+
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-right: 20rpx;
 }
 

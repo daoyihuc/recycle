@@ -65,19 +65,20 @@
 		</view>
 		<view class="my-en ">
 			<view class="my-en-top ">回收预约</view>
-			<van-grid column-num="4" border="{{ false }}" gutter="{{0}}" custom-class="grid_item">
+			<van-grid column-num="4" border="{{ false }}"  custom-class="grid_item">
 				<van-grid-item
 						use-slot
 						wx:for="{{ subscribeList }}"
 						wx:for-item="item"
 						bind:click="onClick"
-
 						data-menuid="{{item.menuId}}"
-
 						content-class="grid_item"
 				>
-					<image class="image_item" src="{{item.imgUrl}}" />
-					<text class="text_item">{{item.text}}</text>
+					<view class="grid_box">
+						<image class="image_item" src="{{item.imgUrl}}" />
+						<text class="text_item">{{item.text}}</text>
+						<text class="text_num" wx:if="{{item.num!==0}}">{{item.num>=99?"99+":item.num}}</text>
+					</view>
 				</van-grid-item>
 			</van-grid>
 		</view>
@@ -90,10 +91,14 @@
 						wx:for="{{ orderList }}"
 						wx:for-item="item"
 						bind:click="onClick"
+						badge="{{item.num}}"
 						data-menuid="{{item.menuId}}"
 				>
-					<image class="image_item" src="{{item.imgUrl}}" />
-					<text class="text_item">{{item.text}}</text>
+					<view class="grid_box">
+						<image class="image_item" src="{{item.imgUrl}}" />
+						<text class="text_item">{{item.text}}</text>
+						<text class="text_num" wx:if="{{item.num!==0}}">{{item.num>=99?"99+":item.num}}</text>
+					</view>
 				</van-grid-item>
 			</van-grid>
 		</view>

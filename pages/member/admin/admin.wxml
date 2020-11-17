@@ -57,12 +57,12 @@
 
 	<view class="_tabbar  ">
 		<view class="img  " bind:tap="onclick" data-number="{{0}}">
-			<image mode class=" " src="../../../static/images/home861.png" />
-			<text class=" ">全部</text>
+			<image mode class=" " src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-82@2x.png" />
+			<text class=" ">回收大厅</text>
 		</view>
 		<view class="img  " bind:tap="onclick" data-number="{{1}}">
-			<image mode class=" " src="../../../static/images/page863.png" />
-			<text class=" ">预约中心</text>
+			<image mode class=" " src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.8/first-84@2x.png" />
+			<text class=" ">管理中心</text>
 		</view>
 	</view>
 </view>
