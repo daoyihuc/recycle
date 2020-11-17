@@ -22,7 +22,10 @@
     "pages/shop/shop",
     "pages/confirm-order/index",
     "pages/Harvest_address/HarvestAddress",
-    "pages/gooddetails/gooddetails"
+    "pages/gooddetails/gooddetails",
+    "pages/banner-content/index",
+    "pages/banner-url/index",
+    "pages/store-info/index"
   ],
   "subPackages": [
     {

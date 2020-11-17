@@ -8,7 +8,9 @@
 	>
 		<block wx:for="{{imgs}}" wx:key="item">
 			<swiper-item style="border-radius:{{radius}}">
-				<image mode="aspectFill" src="{{item}}" style="border-radius:{{radius}}" />
+				<image mode="aspectFill" src="{{item.img}}" style="border-radius:{{radius}}" bind:tap="go"
+					   data-url="{{item.url}}"
+					   data-content="{{item.content}}"/>
 			</swiper-item>
 		</block>
 	</swiper>

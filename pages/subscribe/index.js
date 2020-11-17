@@ -1,8 +1,12 @@
 
 import {getLocation, getSetting, goRouter, toast} from '../../utils/macutils'
 import {AppointmentShow, MakeAnAppointmentNow} from "../../api/app";
-
-var app=getApp();
+import {CategoryList} from "../../api/order"
+// 引入SDK核心类
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
+const app = getApp()
+var that;
 var that;
 var aData={
     token:"",
@@ -32,6 +36,14 @@ Page({
         },
         currentDate: '12:00',// 当前时间
         Weight: '',// 体重选择
+        c_a:0,
+        class_value:[
+            "纸皮","易拉罐","金属制品","电池回收"
+        ],
+        Province: "",
+        City: "",
+        Country:"",
+        street: ""
     },
     onLoad: function (options) {
         console.log("subscribe",options);
@@ -51,7 +63,10 @@ Page({
         });
 
         this.Httpinfo();
-
+        qqmapsdk = new QQMapWX({
+            key: 'ORNBZ-U2M3U-VGLV2-2DLG2-SUH7V-5IFPD'
+        });
+        this.getLocationName();
     },
     onShow() {
         const address=app.globalData.address;
@@ -67,6 +82,12 @@ Page({
         console.log("weight",t.target.dataset.count);
         this.setData({
             currentSel: t.target.dataset.count
+        });
+    },
+    sel1: function(t) {
+        console.log("weight",t.target.dataset.count);
+        this.setData({
+            c_a: t.target.dataset.count
         });
     },
     addWeightList:function () {
@@ -91,6 +112,7 @@ Page({
         getLocation().then(res => {
             console.log(res);
         });
+        this.getLocationName();
 
     },
 
@@ -204,6 +226,108 @@ Page({
             currentDate: '12:00',// 当前时间
             Weight: '',// 体重选择
         });
+    },
+    // 获取位置
+    getLocationName:function () {
+        wx.getLocation({
+            success: function(res) {
+                console.log(res)
+
+                // 调用sdk接口
+                qqmapsdk.reverseGeocoder({
+                    location: {
+                        latitude: res.latitude,
+                        longitude: res.longitude
+                    },
+                    success: function (res) {
+                        //获取当前地址成功
+                        console.log(res.result.address);
+                        that.getArea(res.result.address);
+                        // that.setData({
+                        //     address: res.result.address
+                        // });
+                    },
+                    fail: function (res) {
+                        console.log(res);
+                        // toast("地址获取成功");
+                    }
+                });
+            },
+        })
+    },
+    //省市区截取
+    getArea: function(str) {
+        let area = {}
+        let index11 = 0
+        let index1 = str.indexOf("省")
+        if (index1 == -1) {
+            index11 = str.indexOf("自治区")
+            if (index11 != -1) {
+                area.Province = str.substring(0, index11 + 3)
+            } else {
+                area.Province = str.substring(0, 0)
+            }
+        } else {
+            area.Province = str.substring(0, index1 + 1)
+        }
+
+        let index2 = str.indexOf("市")
+        if (index11 == -1) {
+            area.City = str.substring(index11 + 1, index2 + 1)
+        } else {
+            if (index11 == 0) {
+                area.City = str.substring(index1 + 1, index2 + 1)
+            } else {
+                area.City = str.substring(index11 + 3, index2 + 1)
+            }
+        }
+
+        let index3 = str.lastIndexOf("区")
+        if (index3 == -1) {
+            index3 = str.indexOf("县")
+            area.Country = str.substring(index2 + 1, index3 + 1)
+        } else {
+            area.Country = str.substring(index2 + 1, index3 + 1)
+        }
+        if(index3<str.length){
+            area.street = str.substring(index3+1,str.length);
+        }
+        this.setData({
+            Province: area.Province,
+            City: area.City,
+            Country: area.Country,
+            street: area.street
+        })
+        const a={
+            token: wx.getStorageSync("TOKEN"),
+            district_name: area.Country
+        }
+        this.httpClass(a);
+        return area;
+    },
+
+    httpClass:function (param) {
+        CategoryList(param).then(res=>{
+            console.log(res);
+            const a={
+                id: 1,
+                image: "http://fgadmin.996sh.com/assets/img/qrcode.png",
+                name: "官方新闻",
+                NextList: []
+            }
+            let arr=[];
+            let b=6;
+            if(res.data.List.length<b){
+                b=res.data.List.length;
+            }
+            for(let i=0;i<b;i++){
+                arr.push(res.data.List[i].name);
+            }
+            that.setData({
+                class_value: arr
+            })
+
+        })
     }
 
 });

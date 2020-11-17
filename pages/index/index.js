@@ -252,7 +252,15 @@ Page({
             const bann=res.data.SlideList;
             // banner 数据清洗
             for(let i=0;i<bann.length;i++){
-                banners.push(bann[i].img);
+                const a={
+                    content: "",
+                    img: "http://fgadmin.996sh.com/uploads/20201109/55a5410c29f3792cb246323fa5b8392c.png",
+                    url: "",
+                }
+                a.content=bann[i].content;
+                a.img=bann[i].img;
+                a.url=bann[i].url;
+                banners.push(a);
             }
             that.setData({
                 bannerList: banners
