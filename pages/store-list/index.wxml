@@ -2,7 +2,7 @@
 <view class="max">
 
     <view>
-        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.3/new1.png" class="img"></image>
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/first201@2x.png" class="img"></image>
     </view>
     <view class="box1">
         <text class="title">推广门店列表</text>

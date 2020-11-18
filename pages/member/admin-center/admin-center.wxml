@@ -1,4 +1,4 @@
-<view>
+<view style="position: relative">
 
     <view>
         <view class="headerItem back">
@@ -15,6 +15,9 @@
             </view>
         </view>
 
+        <view class="logout" bindtap="logout">
+            退出
+        </view>
 
         <view class="headerItem">
 

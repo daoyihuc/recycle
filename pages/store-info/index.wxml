@@ -1,42 +1,69 @@
 
 <view class="max">
     <view>
-        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.1/first201@2x.png"
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.1/first-200@2x.png"
                class="header_img"></image>
     </view>
 
     <view class="max_box">
-        <van-uploader>
+        <van-uploader
+                bind:after-read="afterRead"
+        >
             <view>
-                <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.1/first-202@2x.png"
+                <image src="{{img}}"
                        class="upload_img"></image>
             </view>
 
         </van-uploader>
 
-        <van-cell-group>
+        <van-cell-group style="margin-bottom: 100rpx;width: 100%">
             <van-field
                     clearable
                     label="门店名称"
                     placeholder="请输入门店名称"
                     border="{{ false }}"
+                    value="{{name}}"
+                    bind:change="getUsername"
+                    bind:blur="getUsername1"
+            />
+            <van-field
+                    clearable
+                    label="店铺类型"
+                    placeholder="请输入店铺类型"
+                    border="{{ false }}"
+                    value="{{type}}"
+                    bind:change="getType"
+                    bind:blur="getType1"
             />
             <van-field
                     label="联系人"
                     placeholder="请输入联系人"
                     border="{{ false }}"
+                    value="{{username}}"
+                    bind:change="getName0"
+                    bind:blur="getName1"
             />
             <van-field
                     label="联系方式"
                     placeholder="请输入联系方式"
                     border="{{ false }}"
+                    value="{{phone}}"
+                    bind:change="getphone"
+                    bind:blur="getphone1"
             />
+            <view class="item " bind:tap="openMap">
+                <van-field  label="回收地址" placeholder="点击选择" value="{{Province+City+Country+street}}" readonly  ></van-field>
+            </view>
             <van-field
-                    label="门店地址"
+                    label="详细地址"
                     placeholder="门店地址"
                     border="{{ false }}"
+                    value="{{address}}"
+                    bind:change="getAddress"
+                    bind:blur="getAddress1"
             />
         </van-cell-group>
     </view>
+    <view class="sumbit_btn" >提交</view>
 
 </view>

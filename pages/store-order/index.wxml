@@ -1,0 +1,36 @@
+
+<view class="max">
+
+    <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-1@2x.png"
+           class="header_img"></image>
+    <text class="title">三年二班</text>
+    <text class="address">
+        地址: {{'湖南省长沙市岳麓区麓云路'}}
+    </text>
+    <text class="Hinfo">
+        回收员({{name?name:"快下单吧"}}): {{phone?phone:"等你哦"}}
+    </text>
+
+    <image src="{{img}}" class="button" bindtap="down_order" data-id="{{id}}"></image>
+    <view class="button_box" bindtap="onclick" data-id="{{2}}">
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-3@2x.png" class="button1"></image>
+        <text class="button_title">客服</text>
+    </view>
+    <view class="button_box1" bindtap="onclick" data-id="{{1}}">
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-4@2x.png" class="button1"></image>
+        <text class="button_title">我的</text>
+    </view>
+</view>
+
+<van-popup show="{{ show }}" bind:close="onClose">
+
+    <view class="dialog_box">
+        <text class="dialog_title">恭喜您已下单成功！</text>
+        <text class="dialog_title1">请稍等，骑手正在飞奔过来...！</text>
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-8@2x.png"
+               class="dialog_img"></image>
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-7@2x.png"
+               bindtap="close"
+               class="dialog_img1"></image>
+    </view>
+</van-popup>

@@ -119,3 +119,79 @@ export function toast(value,number) {
         icon: icons
     });
 }
+// 获取订阅消息
+export function messge() {
+   subscribeMessage();
+}
+
+function subscribeMessage(){
+    //需要订阅的消息模板，在微信公众平台手动配置获取模板ID
+    let message = [];
+    message=['VVoj1Q31KkVV6AIKVfWOh86lmUi76KUvrF1IjTApwsE',"WofiCxzkm18B1MKq7gu_cfpwPAMF-uNmbcPD394Znls"];
+    //如果总是拒绝（subscriptionsSetting，2.10.1库才支持）
+    if(this.versionCompare('2.10.1')){
+        wx.getSetting({
+            withSubscriptions: true,//是否同时获取用户订阅消息的订阅状态，默认不获取
+            success: (res)=> {
+                console.log(res)
+                if (res.subscriptionsSetting && res.subscriptionsSetting.itemSettings &&
+                    res.subscriptionsSetting.itemSettings[message] == "reject"){
+                    //打开设置去设置
+                    this.openConfirm('检测到您没打开推送权限，是否去设置打开？')
+                }else {
+                    wx.requestSubscribeMessage({
+                        tmplIds: [message],
+                        success: (res)=> {
+                            if (res[message] == 'accept'){
+                                //用户允许
+                            }
+                        },
+                        fail: (res)=> { console.info(res) },
+                    })
+                }
+            }
+        })
+    }else if(this.versionCompare('2.4.4')){
+        wx.requestSubscribeMessage({
+            tmplIds: [message],
+            success: (res)=> {
+                if (res[message] == 'accept'){
+                    //用户允许
+                }
+            },
+            fail: (res)=> { console.info(res) },
+        })
+    }
+}
+//打开设置
+ function openConfirm(message) {
+    wx.showModal({
+        content: message,
+        confirmText: "确认",
+        cancelText: "取消",
+        success: (res) => {
+            //点击“确认”时打开设置页面
+            if (res.confirm) {
+                wx.openSetting({
+                    success: (res) => {
+                        console.log(res.authSetting)
+                    },
+                    fail: (error) => {
+                        console.log(error)
+                    }
+                })
+            } else {
+                console.log('用户点击取消')
+            }
+        }
+    });
+}
+//基础库版本比较
+function versionCompare(v) {
+    const version = wx.getSystemInfoSync().SDKVersion
+    if (this.compareVersion(version, v) >= 0) {
+        return true
+    } else {
+        return false
+    }
+}

@@ -127,5 +127,13 @@ Page({
     aData.Page=1;
     ListData=[];
     this.getList(aData);
+  },
+  logout:function () {
+    wx.removeStorage({
+      key: 'atoken',
+      success (res) {
+        wx.switchTab({url:"/pages/my/my"})
+      }
+    })
   }
 })

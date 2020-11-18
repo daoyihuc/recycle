@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "一键下单",
+  "navigationBarBackgroundColor": "#01BC6B",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index"
+  }
+}

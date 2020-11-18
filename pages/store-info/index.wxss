@@ -21,3 +21,13 @@
     height: 180rpx;
     margin-bottom: 40rpx;
 }
+.sumbit_btn{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    background: #01BC6B;
+    width: 100%;
+    padding: 20rpx 0;
+    text-align: center;
+
+}

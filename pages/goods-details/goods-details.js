@@ -38,8 +38,15 @@ Page({
     },
     addBanner: function (list) {
         let banner = [];
+
         for(let i=0;i<list.length;i++){
-          banner.push(list[i].img);
+            const a={
+                content: "",
+                img: "http://fgadmin.996sh.com/uploads/20201109/55a5410c29f3792cb246323fa5b8392c.png",
+                url: "",
+            }
+            a.img=list[i].img;
+          banner.push(a);
         }
         // banner.push("../../static/images/testbanner.png");
         this.setData({

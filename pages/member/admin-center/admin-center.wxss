@@ -10,7 +10,17 @@
     flex-direction: column;
     /*align-items: center;*/
     padding-top: 36rpx;
-
+}
+.logout{
+    position: absolute;
+    color: white;
+    font-size: 28rpx;
+    font-weight: 400;
+    top: 101rpx;
+    right: 30rpx;
+    border: 1px #f8f8f8 solid;
+    border-radius: 10rpx;
+    padding: 10rpx 20rpx;
 }
 .moneyLabel{
 

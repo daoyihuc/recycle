@@ -215,6 +215,9 @@ Page({
             case 16: // 明细
                 url = "/pages/subsidiary/subsidiary";
                 break;
+            case 17: // 门店推广
+                url = "/pages/store-list/index";
+                break;
 
         }
         goRouter(url);

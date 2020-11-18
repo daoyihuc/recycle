@@ -26,7 +26,8 @@
     "pages/banner-content/index",
     "pages/banner-url/index",
     "pages/store-info/index",
-    "pages/store-list/index"
+    "pages/store-list/index",
+    "pages/store-order/index"
   ],
   "subPackages": [
     {

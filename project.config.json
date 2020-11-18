@@ -535,6 +535,18 @@
         {
           "name": "pages/store-info/index",
           "pathName": "pages/store-info/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/store-list/index",
+          "pathName": "pages/store-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/store-order/index",
+          "pathName": "pages/store-order/index",
           "scene": null
         }
       ]

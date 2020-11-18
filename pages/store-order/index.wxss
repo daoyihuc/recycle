@@ -1,0 +1,127 @@
+
+page{
+    height: 100%;
+    width: 100%;
+}
+
+.max{
+    width: 100%;
+    height: 100%;
+    background: url("https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-1@2x.png") no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    position: relative;
+}
+.header_img{
+    width: 260rpx;
+    height: 260rpx;
+    border-radius: 8rpx;
+    margin-top: 112rpx;
+
+}
+.title{
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #28303E;
+    margin-top: 30rpx;
+}
+.address{
+    font-size: 36rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #000;
+    margin-top: 30rpx;
+}
+.Hinfo{
+
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+.button{
+    width: 260rpx;
+    height: 260rpx;
+    /*background: #FFFFFF;*/
+    /*border: 20rpx solid #01BC6B;*/
+    /*box-shadow: 0rpx 10rpx 40rpx 0rpx #08716E;*/
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20rpx;
+}
+.button_box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20rpx;
+    left: 20rpx;
+    align-items: center;
+
+}
+.button_box1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+    align-items: center;
+
+}
+.button1{
+    width: 70rpx;
+    height: 70rpx;
+    /*background: #FFFFFF;*/
+    border-radius: 50%;
+}
+.button_title{
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.dialog_box{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 550rpx;
+    height: 660rpx;
+    border-radius: 12rpx;
+}
+.dialog_img{
+    width: 550rpx;
+    height: 400rpx;
+    background: #FFFFFF;
+    border-radius: 12rpx;
+    position: absolute;
+    bottom: 0;
+}
+.dialog_title{
+
+    font-size: 42rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #01BC6B;
+    margin-top: 101rpx;
+}
+.dialog_title1{
+
+
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #9498A0;
+}
+.dialog_img1{
+    width: 48rpx;
+    height: 48rpx;
+    /*background: #CCCCCC;*/
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
