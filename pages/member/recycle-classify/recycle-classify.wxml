@@ -1,2 +1,32 @@
-<import src="../../../wxParse/wxParse.wxml"></import>
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+<view class="max">
+    <image src="{{img}}" class="header_img"></image>
+    <view
+            class="recommend "
+            wx:for="{{List}}"
+            wx:key="index"
+            wx:for-item="item"
+    >
+        <view class="">
+            <text class="recommend-title">{{item.name}}</text>
+        </view>
+        <view class="recommend-content">
+            <view
+                    class="recommend-content-item "
+                    wx:for="{{item.NextList}}"
+                    wx:for-index="index2"
+                    wx:for-item="item2"
+                    wx:key="index2"
+                    data-id="{{item2.id}}"
+            >
+                <image mode class="q_image" src="{{item2.image}}" />
+                <text class="recommend-content-item-text-2 ">{{item2.name}}</text>
+                <view class="recommend-content-item-text-1 ">
+                    <text>回收价:</text>
+                    <text class="">{{item2.price}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+

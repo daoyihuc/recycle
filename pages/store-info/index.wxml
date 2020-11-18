@@ -1,1 +1,42 @@
-<web-view src="{{urlq}}"></web-view>
+
+<view class="max">
+    <view>
+        <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.1/first201@2x.png"
+               class="header_img"></image>
+    </view>
+
+    <view class="max_box">
+        <van-uploader>
+            <view>
+                <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.1/first-202@2x.png"
+                       class="upload_img"></image>
+            </view>
+
+        </van-uploader>
+
+        <van-cell-group>
+            <van-field
+                    clearable
+                    label="门店名称"
+                    placeholder="请输入门店名称"
+                    border="{{ false }}"
+            />
+            <van-field
+                    label="联系人"
+                    placeholder="请输入联系人"
+                    border="{{ false }}"
+            />
+            <van-field
+                    label="联系方式"
+                    placeholder="请输入联系方式"
+                    border="{{ false }}"
+            />
+            <van-field
+                    label="门店地址"
+                    placeholder="门店地址"
+                    border="{{ false }}"
+            />
+        </van-cell-group>
+    </view>
+
+</view>

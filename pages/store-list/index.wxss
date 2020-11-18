@@ -1,0 +1,50 @@
+.max{
+    background: #01BC6B;
+}
+
+.img{
+    width: 750rpx;
+    height: 240rpx;
+}
+.box1{
+    background: white;
+    border-radius: 10px 10px 0 0;
+    padding-top: 48rpx;
+    padding-right: 42rpx;
+    padding-left: 42rpx;
+}
+.box2{
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20rpx 0;
+    margin-top: 50rpx;
+    border-bottom: 1px #f8f8f8 solid;
+}
+.store_img{
+    width: 72rpx;
+    height: 72rpx;
+}
+.store_title{
+    font-size: 35rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #1A203C;
+    margin-left: 29rpx;
+}
+.store_time{
+    position: absolute;
+    right: 0;
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #9498A0;
+}
+.title{
+
+    font-size: 40rpx;
+    font-family: PingFang SC;
+    font-weight: 600;
+    color: #1A203C;
+}

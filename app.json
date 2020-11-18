@@ -25,7 +25,8 @@
     "pages/gooddetails/gooddetails",
     "pages/banner-content/index",
     "pages/banner-url/index",
-    "pages/store-info/index"
+    "pages/store-info/index",
+    "pages/store-list/index"
   ],
   "subPackages": [
     {

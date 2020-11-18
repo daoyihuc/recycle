@@ -1,0 +1,23 @@
+
+.max{
+    background: #01BC6B;
+}
+.max_box{
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 10rpx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100rpx;
+}
+.header_img{
+    width: 750rpx;
+    height: 300rpx;
+}
+.upload_img{
+    width: 180rpx;
+    height: 180rpx;
+    margin-bottom: 40rpx;
+}
