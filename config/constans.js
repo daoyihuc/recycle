@@ -45,6 +45,9 @@ export const API={
     OrderWeight: BASE_URL+"OrderWeight", //  回收员称重提交接口
     BookingCenter: BASE_URL+"BookingCenter", //  预约中心接口
     PoliteInvitation: BASE_URL+"PoliteInvitation", //  邀请有礼
+    ApplyStore: BASE_URL+"ApplyStore", //  提交门店信息接口
+    ApplyStoreStatus: BASE_URL+"ApplyStoreStatus", //  判断该二维码是否绑定门店接口
+    GetStoreAddress: BASE_URL+"GetStoreAddress", //  通过二维码ID获取门店地址信息
 
 
 }

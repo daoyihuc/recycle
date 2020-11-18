@@ -1,14 +1,25 @@
-import {goRouter} from "../../utils/macutils";
+import {goRouter, toast} from "../../utils/macutils";
 import {PHONE} from "../../config/constans";
+import {GetStoreAddress} from "../../api/order";
+import {MakeAnAppointmentNow} from "../../api/app";
 
+var aData={
+    token: wx.getStorageSync('token'),
+    id: ""
+};
+var value={};
+var that;
 Page({
     data: {
         img: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-5@2x.png",
         id: 1, // 1.下单 2.取消订单
-        show: false
+        show: false,
+        vas: {}
     },
     onLoad: function (options) {
-
+        that=this;
+        aData.id=options.id;
+        this.httpInfo(aData);
     },
     down_order:function (e) {
         if(e.currentTarget.dataset.id===1){
@@ -42,5 +53,38 @@ Page({
         this.setData({
             show:false
         })
-    }
+    },
+    httpInfo:function (params) {
+        GetStoreAddress(params).then(res=>{
+            let a={
+                connect_name: null,
+                store_address: "，您",
+                store_city: "长沙市",
+                store_district: "芙蓉区",
+                store_img: "http://fgadmin.996sh.com/uploads/20201119/b50f09d09bf8df590c87b4a5c3bf0da3.jpg",
+                store_mobile: "18673497779",
+                store_name: "道翼",
+                store_province: "湖南省",
+                store_street: "地铁2号线,地铁5号线",
+                type: null
+            }
+            a=res.data;
+            that.setData({
+                vas: a
+            })
+
+            console.log(res);
+        })
+    },
+    // 立即预约
+    HttpSubscriber: function (params) {
+        MakeAnAppointmentNow(params).then(res => {
+            if (res.code == 1) {
+                console.log("开始清除数据");
+                toast(res.msg, 0);
+            } else {
+                toast(res.msg, 1);
+            }
+        })
+    },
 });

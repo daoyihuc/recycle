@@ -1,11 +1,11 @@
 
 <view class="max">
 
-    <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/mendian-1@2x.png"
+    <image src="{{vas.store_img}}"
            class="header_img"></image>
-    <text class="title">三年二班</text>
+    <text class="title">{{vas.store_name}}</text>
     <text class="address">
-        地址: {{'湖南省长沙市岳麓区麓云路'}}
+        地址: {{(vas.store_province)+(vas.store_city)+(vas.store_district)+(vas.store_street)+(vas.store_address)}}
     </text>
     <text class="Hinfo">
         回收员({{name?name:"快下单吧"}}): {{phone?phone:"等你哦"}}

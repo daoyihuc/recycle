@@ -1,8 +1,8 @@
 import {
     getUserinfo,
-    goRouter
+    goRouter, toast
 } from '../../utils/macutils'
-import {Mine} from "../../api/order";
+import {Mine,ApplyStoreStatus} from "../../api/order";
 import {PHONE} from "../../config/constans";
 
 var that;
@@ -188,6 +188,16 @@ Page({
                 wx.scanCode({
                     success(res) {
                         console.log("scancode:"+JSON.stringify(res));
+                        console.log("patH:",res.path);
+                        let a=res.path;
+                        let b=a.split("?")[1];
+                        let c=b.split("=")[1];
+                        var d={
+                            token: wx.getStorageSync("token"),
+                            id: c,
+                        };
+                        that.HttpISORStore(d);
+                        console.log(c);
                     }
                 });
                 break
@@ -317,5 +327,19 @@ Page({
 
             }
         });
+    },
+
+    //二维码是否绑定门店
+    HttpISORStore:function (params) {
+        ApplyStoreStatus(params).then(res=>{
+            if(res.data.status===0){ //前往填写信息
+                goRouter("/pages/store-info/index?id="+res.data.id);
+            }else if(res.data.status===1){ //前往预约订单
+                goRouter("/pages/store-order/index?id="+res.data.id);
+            }else if(res.data.status===2){ //前往预约订单
+                toast("很遗憾您不是推广员哦，期待您的加入",1)
+            }
+        })
     }
+
 });

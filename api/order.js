@@ -281,4 +281,31 @@ export function PoliteInvitation(params) {
         'content-type':'application/json'
     })
 }
+// 提交门店信息接口
+export function ApplyStore(params) {
+    return request({
+        url: API.ApplyStore,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    })
+}
+// 判断该二维码是否绑定门店接口
+export function ApplyStoreStatus(params) {
+    return request({
+        url: API.ApplyStoreStatus,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    })
+}
+// 通过二维码ID获取门店地址信息
+export function GetStoreAddress(params) {
+    return request({
+        url: API.GetStoreAddress,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    })
+}
 

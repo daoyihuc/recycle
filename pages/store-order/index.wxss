@@ -35,6 +35,13 @@ page{
     font-weight: 600;
     color: #000;
     margin-top: 30rpx;
+    margin-left: 20rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2; /*设置超出两行进行隐藏*/
 }
 .Hinfo{
 

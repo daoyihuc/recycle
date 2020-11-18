@@ -1,17 +1,20 @@
-import {authorize, toast} from "../../utils/macutils";
+import {authorize, back, toast} from "../../utils/macutils";
+import {ApplyStore} from "../../api/order";
 
 var that;
 
 var aDatas={
-    name: "", //店铺名称
-    username: "", // 姓名
-    phone: "", // 手机
-    address: "", // 详细地址
-    Province: "", // 省
-    City: "", // 市
-    Country: "", // 区
-    street: "", // 街道
-    img: "", // base64图片
+    token: "",
+    id: "",
+    store_name: "", //店铺名称
+    connect_name: "", // 姓名
+    store_mobile: "", // 手机
+    store_address: "", // 详细地址
+    store_province: "", // 省
+    store_city: "", // 市
+    store_district: "", // 区
+    store_street: "", // 街道
+    store_img: "", // base64图片
     type: "" // 类型
 };
 var FSM = wx.getFileSystemManager();
@@ -24,6 +27,8 @@ Page({
         img: "https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@2.2/first-202@2x.png"
     },
     onLoad: function (options) {
+        aDatas.id=options.id;
+        aDatas.token=wx.getStorageSync("token");
         that=this;
     },
     // 地图选择位置
@@ -92,10 +97,10 @@ Page({
         if(index3<str.length){
             area.street = str.substring(index3+1,str.length);
         }
-        aDatas.Province=area.Province;
-        aDatas.City=area.City;
-        aDatas.Country=area.Country;
-        aDatas.street=area.street;
+        aDatas.store_province=area.Province;
+        aDatas.store_city=area.City;
+        aDatas.store_district=area.Country;
+        aDatas.store_street=area.street;
         this.setData({
             Province: area.Province,
             City: area.City,
@@ -119,7 +124,7 @@ Page({
             encoding: "base64",
             success: function(data) {
                 console.log(data.data);
-                aDatas.img=data.data
+                aDatas.store_img=data.data
                 // toast(data.data);
             }
         });
@@ -134,14 +139,14 @@ Page({
         // this.setData({
         //     password: e.detail
         // });
-        aDatas.username=e.detail;
+        aDatas.connect_name=e.detail;
     },
     getUsername1:function(e){
         console.log(e.detail);
         // this.setData({
         //     password: e.detail.value
         // });
-        aDatas.username=e.detail.value;
+        aDatas.connect_name=e.detail.value;
     },
     // 店铺姓名
     getName0:function (e) {
@@ -149,14 +154,14 @@ Page({
         // this.setData({
         //     password: e.detail
         // });
-        aDatas.name=e.detail;
+        aDatas.store_name=e.detail;
     },
     getName1:function(e){
         console.log(e.detail);
         // this.setData({
         //     password: e.detail.value
         // });
-        aDatas.name=e.detail.value;
+        aDatas.store_name=e.detail.value;
     },
     // 店铺手机
     getphone:function (e) {
@@ -164,14 +169,14 @@ Page({
         // this.setData({
         //     password: e.detail
         // });
-        aDatas.phone=e.detail;
+        aDatas.store_mobile=e.detail;
     },
     getphone1:function(e){
         console.log(e.detail);
         // this.setData({
         //     password: e.detail.value
         // });
-        aDatas.phone=e.detail.value;
+        aDatas.store_mobile=e.detail.value;
     },
     // 店铺地址
     getAddress:function (e) {
@@ -179,14 +184,14 @@ Page({
         // this.setData({
         //     password: e.detail
         // });
-        aDatas.address=e.detail;
+        aDatas.store_address=e.detail;
     },
     getAddress1:function(e){
         console.log(e.detail);
         // this.setData({
         //     password: e.detail.value
         // });
-        aDatas.address=e.detail.value;
+        aDatas.store_address=e.detail.value;
     },
     // 店铺类型
     getType:function (e) {
@@ -201,6 +206,18 @@ Page({
         // this.setData({
         //     password: e.detail.value
         // });
-        aDatas.type1=e.detail.value;
+        aDatas.type=e.detail.value;
     },
+    sumbit:function(){
+      this.http(aDatas);
+    },
+    http:function (param) {
+        ApplyStore(param).then(res=>{
+            console.log(res);
+            if(res.code===1){
+               back(1);
+            }
+            toast(res.msg,1);
+        })
+    }
 });
