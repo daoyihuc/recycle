@@ -49,6 +49,7 @@ export const API={
     ApplyStoreStatus: BASE_URL+"ApplyStoreStatus", //  判断该二维码是否绑定门店接口
     GetStoreAddress: BASE_URL+"GetStoreAddress", //  通过二维码ID获取门店地址信息
     AwayOrder: BASE_URL+"AwayOrder", //  回收元取消訂單
+    PromoteStoreList: BASE_URL+"PromoteStoreList", //  门店列表
 
 
 }

@@ -103,5 +103,86 @@ Page({
         }
         goRouter(url);
     },
+    subscribeMessage1:function() {
+        //需要订阅的消息模板，在微信公众平台手动配置获取模板ID
+        let message = [];
+        message = ["_YYhl1CBHLu_eETqA2M9KJBGmeHjn3LTFLIBeNSQKWQ"];
+        //如果总是拒绝（subscriptionsSetting，2.10.1库才支持）
+        // if (this.versionCompare('2.10.1')) {
+        wx.getSetting({
+            withSubscriptions: true,//是否同时获取用户订阅消息的订阅状态，默认不获取
+            success: (res) => {
+                console.log(res)
+                if (res.subscriptionsSetting && res.subscriptionsSetting.itemSettings &&
+                    res.subscriptionsSetting.itemSettings[message[0]] == "reject") {
+                    //打开设置去设置
+                    this.openConfirm('检测到您没打开推送权限，是否去设置打开？')
+                } else {
+                    wx.requestSubscribeMessage({
+                        tmplIds: message,
+                        success: (res) => {
+                            if (res[message[0]] == 'accept') {
+                                //用户允许
+                            }
+                        },
+                        fail: (res) => {
+                            console.info(res)
+                        },
+                        complete: (res) =>{
+                            that.sumbit();
+                        }
+                    })
+                }
+            }
+        })
+        // } else if (this.versionCompare('2.4.4')) {
+        //     wx.requestSubscribeMessage({
+        //         tmplIds: message,
+        //         success: (res) => {
+        //             if (res[message[0]] == 'accept') {
+        //                 //用户允许
+        //             }
+        //         },
+        //         fail: (res) => {
+        //             console.info(res)
+        //         },
+        //     })
+        // }
+    },
+//打开设置
+    openConfirm: function (message) {
+        wx.showModal({
+            content: message,
+            confirmText: "确认",
+            cancelText: "取消",
+            success: (res) => {
+                //点击“确认”时打开设置页面
+                if (res.confirm) {
+                    wx.openSetting({
+                        success: (res) => {
+                            console.log(res.authSetting)
+                        },
+                        fail: (error) => {
+                            console.log(error)
+                        },
+                        complete: (res) =>{
+                            that.sumbit();
+                        }
+                    })
+                } else {
+                    console.log('用户点击取消')
+                }
+            }
+        });
+    },
+//基础库版本比较
+    versionCompare(v) {
+        const version = wx.getSystemInfoSync().SDKVersion
+        if (this.compareVersion(version, v) >= 0) {
+            return true
+        } else {
+            return false
+        }
+    },
 
 });

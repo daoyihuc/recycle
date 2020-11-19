@@ -60,5 +60,5 @@
 <!--                style="display:none;"-->
 <!--        />-->
 <!--    </view>-->
-    <view bindtap="sumbit" class="withdrawal-btn " >确定提现</view>
+    <view bindtap="subscribeMessage1" class="withdrawal-btn " >确定提现</view>
 </view>

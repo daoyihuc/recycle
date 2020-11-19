@@ -316,5 +316,13 @@ export function AwayOrder(params) {
         params: params,
         'content-type':'application/json'
     })
+}//  AwayOrder：回收取消订单
+export function PromoteStoreList(params) {
+    return request({
+        url: API.PromoteStoreList,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    })
 }
 

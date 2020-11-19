@@ -344,7 +344,7 @@ Page({
     subscribeMessage1:function() {
         //需要订阅的消息模板，在微信公众平台手动配置获取模板ID
         let message = [];
-        message = ['VVoj1Q31KkVV6AIKVfWOh86lmUi76KUvrF1IjTApwsE', "WofiCxzkm18B1MKq7gu_cfpwPAMF-uNmbcPD394Znls"];
+        message = ['Xf6a3TPaEIRai4Y1pG_a61yfj0pX_Io_akNmUlNsvyo', "3uTksDE2mTUqZdUW5OvAvW_lxKAnvRtisbBPUAer5yU"];
         //如果总是拒绝（subscriptionsSetting，2.10.1库才支持）
         // if (this.versionCompare('2.10.1')) {
             wx.getSetting({

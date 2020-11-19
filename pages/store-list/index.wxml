@@ -7,10 +7,10 @@
     <view class="box1">
         <text class="title">推广门店列表</text>
         <van-empty description="快去推广吧" wx:if="{{!List.length}}"/>
-        <view class="box2" wx:else>
-            <image src="https://cdn.jsdelivr.net/gh/daoyihuc/recyclerresouce@1.3/new1.png" class="store_img"></image>
-            <text class="store_title">步步高</text>
-            <text class="store_time">2020-02-26</text>
+        <view class="box2" wx:for="{{List}}">
+            <image src="{{item.code_img}}" class="store_img"></image>
+            <text class="store_title">{{item.store_name}}</text>
+            <text class="store_time">{{item.store_district}}</text>
         </view>
     </view>
 </view>
