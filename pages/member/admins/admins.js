@@ -1,6 +1,12 @@
 // pages/admin/admin.js
 import {goRouter, toast} from "../../../utils/macutils";
-import {AdminAppointmentList, AdminCategoryList, ReceivingOrders, UpdateOrderStatus} from "../../../api/order";
+import {
+    AdminAppointmentList,
+    AdminCategoryList,
+    AwayOrder,
+    ReceivingOrders,
+    UpdateOrderStatus
+} from "../../../api/order";
 
 
 // 引入SDK核心类
@@ -256,6 +262,32 @@ Page({
         let id=e.currentTarget.dataset.id;
         goRouter("/pages/member/pay/pay?id="+id);
     },
+    // 订单取消
+    cancelOrder:function(e){
+        let ids=e.currentTarget.dataset.id;
+        const a ={
+            token: wx.getStorageSync("token"),
+            id: ids
+        }
+        this.HttpAwayOrder(a);
+
+    },
+    HttpAwayOrder:function(params){
+      AwayOrder(params).then(res=>{
+          if(res.code===1){
+              toast("订单已经送回到抢单大厅,努力接单哦",1);
+              setTimeout(()=>{
+                  aData1.Page=1;
+                  listData=[];
+                  this.HttpAdminAppointmentList(aData1);
+              },1000);
+
+          }else{
+              toast("网络请求失败",1)
+          }
+      })
+    },
+
     mapNavigation(e) {
         // console.log(e)
         console.log(e.target.dataset.addr);

@@ -51,6 +51,11 @@
                                     data-id="{{item.id}}"
                                     wx:if="{{item.admin_status===0&&item.status===0}}"
                         >前往回收</button>
+                        <button     class="delete_btn"
+                                    bind:tap="cancelOrder"
+                                    data-id="{{item.id}}"
+                                    wx:if="{{item.admin_status===0&&item.status===0}}"
+                        >取消订单</button>
                         <button class="c_btn"
                                     bind:tap="WeighingEvent"
                                     data-id="{{item.id}}"

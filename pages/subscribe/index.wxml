@@ -55,7 +55,7 @@
             </view>
         </view>
         <view class="buttonbox">
-            <view  class="submit " bindtap="sumbitEvent">立即预约</view>
+            <view  class="submit "  bind:tap="subscribeMessage1">立即预约</view>
         </view>
 
     </view>

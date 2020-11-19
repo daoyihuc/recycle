@@ -67,7 +67,7 @@ Page({
         });
         this.getLocationName();
         // messge();
-        this.subscribeMessage();
+        // this.subscribeMessage();
         // wx.requestSubscribeMessage({
         //     tmplIds: ['VVoj1Q31KkVV6AIKVfWOh86lmUi76KUvrF1IjTApwsE',"WofiCxzkm18B1MKq7gu_cfpwPAMF-uNmbcPD394Znls"],
         //     success (res) {
@@ -335,13 +335,18 @@ Page({
 
         })
     },
+    text:function(){
+        wx.requestSubscribeMessage({
+            tmplIds: ['VVoj1Q31KkVV6AIKVfWOh86lmUi76KUvrF1IjTApwsE']
+        })
+    },
 
-    subscribeMessage() {
+    subscribeMessage1:function() {
         //需要订阅的消息模板，在微信公众平台手动配置获取模板ID
         let message = [];
         message = ['VVoj1Q31KkVV6AIKVfWOh86lmUi76KUvrF1IjTApwsE', "WofiCxzkm18B1MKq7gu_cfpwPAMF-uNmbcPD394Znls"];
         //如果总是拒绝（subscriptionsSetting，2.10.1库才支持）
-        if (this.versionCompare('2.10.1')) {
+        // if (this.versionCompare('2.10.1')) {
             wx.getSetting({
                 withSubscriptions: true,//是否同时获取用户订阅消息的订阅状态，默认不获取
                 success: (res) => {
@@ -361,23 +366,26 @@ Page({
                             fail: (res) => {
                                 console.info(res)
                             },
+                            complete: (res) =>{
+                                that.sumbitEvent();
+                            }
                         })
                     }
                 }
             })
-        } else if (this.versionCompare('2.4.4')) {
-            wx.requestSubscribeMessage({
-                tmplIds: message,
-                success: (res) => {
-                    if (res[message[0]] == 'accept') {
-                        //用户允许
-                    }
-                },
-                fail: (res) => {
-                    console.info(res)
-                },
-            })
-        }
+        // } else if (this.versionCompare('2.4.4')) {
+        //     wx.requestSubscribeMessage({
+        //         tmplIds: message,
+        //         success: (res) => {
+        //             if (res[message[0]] == 'accept') {
+        //                 //用户允许
+        //             }
+        //         },
+        //         fail: (res) => {
+        //             console.info(res)
+        //         },
+        //     })
+        // }
     },
 //打开设置
     openConfirm: function (message) {
@@ -394,6 +402,9 @@ Page({
                         },
                         fail: (error) => {
                             console.log(error)
+                        },
+                        complete: (res) =>{
+                            that.sumbitEvent();
                         }
                     })
                 } else {

@@ -308,4 +308,13 @@ export function GetStoreAddress(params) {
         'content-type':'application/json'
     })
 }
+//  AwayOrder：回收取消订单
+export function AwayOrder(params) {
+    return request({
+        url: API.AwayOrder,
+        method: "POST",
+        params: params,
+        'content-type':'application/json'
+    })
+}
 

@@ -140,6 +140,23 @@
     padding: 5rpx 50rpx;
     right: 20rpx;
 }
+.delete_btn{
+    /*width: 152rpx;*/
+    /*height: 60rpx;*/
+    /*line-height: 60rpx;*/
+    border: 1rpx solid #f10d45;
+    border-radius: 10rpx;
+    background: white;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #f10d45;
+    position: absolute;
+    padding: 5rpx 50rpx;
+    left: 20rpx;
+}
+
+
 .c_btn{
     /*width: 152rpx;*/
     /*height: 60rpx;*/
