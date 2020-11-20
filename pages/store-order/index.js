@@ -13,7 +13,7 @@ var aData2 = {
     NowTime: "",// 时间
     NowDate: "", // 日期
     AddressId: "", // 地址id
-    address_type: "2"
+    address_type: "1"
 
 }
 var value = {};
