@@ -29,8 +29,10 @@ Page({
         that = this;
         aData.id = options.id;
         aData2.AddressId = options.id;
-        aData2.NowTime=this.dateFormat("yyyy-MM-dd",new Date());
-        aData2.NowDate=this.dateFormat("hh:mm",new Date());
+        aData2.NowTime=this.dateFormat("YYYY-mm-dd",new Date());
+        aData2.NowDate=this.dateFormat("HH:MM",new Date());
+        console.log(aData2.NowDate);
+        console.log(aData2.NowTime);
         this.httpInfo(aData);
     },
     down_order: function (e) {
