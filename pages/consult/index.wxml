@@ -3,7 +3,7 @@
     <van-tabs active="{{ active }}"
               sticky
               nav-class="tabback"
-              color="#fff"
+              color="#fff"0
               ellipsis="{{true}}"
               tab-class="tabcolor"
               bind:change="onChange">

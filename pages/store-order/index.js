@@ -27,6 +27,7 @@ Page({
     },
     onLoad: function (options) {
         that = this;
+        console.log(options.id);
         aData.id = options.id;
         aData2.AddressId = options.id;
         aData2.NowTime=this.dateFormat("YYYY-mm-dd",new Date());
